@@ -31,6 +31,7 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'pg'
 gem 'pundit'
+gem 'rest-client', '2.0.2'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'binding_of_caller'
 end
 group :test do
   gem 'database_cleaner'

@@ -1,2 +1,883 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<!DOCTYPE html>
+<html lang="pt-br" itemscope="" itemtype="http://schema.org/WebPage" class=" overthrow-enabled has-not-regua">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tabela | brasileirão série a | Champz.com</title>
+  <meta name="title" content="tabela | brasileirão série a | Champz.com">
+  <meta name="description" content="Acompanhe a classificação e os jogos do Brasileirão série a, e as notícias sobre o Brasileirão no Champz.com">
+  <style>
+    .theme a{color:#3b9c00}.theme a:hover{color:#328400}body *::selection,body *::-moz-selection{background:rgba(59,156,0,0.2)}.theme-hover a:hover{color:#328400}.theme-color-primary,.theme-color-primary-first-letter::first-letter ,.theme-ordered-list-color-primary li::before{color:#3b9c00;fill:currentColor}.theme-border-color-primary,.theme-border-color-primary-before::before,.theme-border-color-primary-after::after{border-color:#3b9c00}.theme-bg-color-primary,.gui-color-primary-bg{background-color:#3b9c00}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}a{text-decoration:none}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.ttf") format("truetype");font-style:normal;font-weight:300}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.ttf") format("truetype");font-style:normal;font-weight:600}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.ttf") format("truetype");font-style:normal;font-weight:700}@font-face{font-family:opensans-light;src:url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.ttf") format("truetype");font-style:normal;font-weight:300}@font-face{font-family:opensans-regular;src:url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:opensans-semibold;src:url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.ttf") format("truetype");font-style:normal;font-weight:600}@font-face{font-family:opensans-bold;src:url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.ttf") format("truetype");font-style:normal;font-weight:bold}@font-face{font-family:"proximanova-bold";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-light";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-regular";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-light";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:ProximaNova;src:url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:ProximaNova;src:url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.ttf") format("truetype");font-style:normal;font-weight:bold}.row{max-width:85rem;margin-left:auto;margin-right:auto}.row::before,.row::after{content:' ';display:table;flex-basis:0;order:1}.row::after{clear:both}.row.collapse>.column,.row.collapse>.columns{padding-left:0;padding-right:0}.row .row{margin-left:-.75rem;margin-right:-.75rem}.row .row.collapse{margin-left:0;margin-right:0}.row.expanded{max-width:none}.row.expanded .row{margin-left:auto;margin-right:auto}.column,.columns{width:100%;float:left;padding-left:.75rem;padding-right:.75rem}.column:last-child:not(:first-child),.columns:last-child:not(:first-child){float:right}.column.end:last-child:last-child,.end.columns:last-child:last-child{float:left}.column.row.row,.row.row.columns{float:none}.row .column.row.row,.row .row.row.columns{padding-left:0;padding-right:0;margin-left:0;margin-right:0}.small-1{width:4.16667%}.small-push-1{position:relative;left:4.16667%}.small-pull-1{position:relative;left:-4.16667%}.small-offset-0{margin-left:0}.small-2{width:8.33333%}.small-push-2{position:relative;left:8.33333%}.small-pull-2{position:relative;left:-8.33333%}.small-offset-1{margin-left:4.16667%}.small-3{width:12.5%}.small-push-3{position:relative;left:12.5%}.small-pull-3{position:relative;left:-12.5%}.small-offset-2{margin-left:8.33333%}.small-4{width:16.66667%}.small-push-4{position:relative;left:16.66667%}.small-pull-4{position:relative;left:-16.66667%}.small-offset-3{margin-left:12.5%}.small-5{width:20.83333%}.small-push-5{position:relative;left:20.83333%}.small-pull-5{position:relative;left:-20.83333%}.small-offset-4{margin-left:16.66667%}.small-6{width:25%}.small-push-6{position:relative;left:25%}.small-pull-6{position:relative;left:-25%}.small-offset-5{margin-left:20.83333%}.small-7{width:29.16667%}.small-push-7{position:relative;left:29.16667%}.small-pull-7{position:relative;left:-29.16667%}.small-offset-6{margin-left:25%}.small-8{width:33.33333%}.small-push-8{position:relative;left:33.33333%}.small-pull-8{position:relative;left:-33.33333%}.small-offset-7{margin-left:29.16667%}.small-9{width:37.5%}.small-push-9{position:relative;left:37.5%}.small-pull-9{position:relative;left:-37.5%}.small-offset-8{margin-left:33.33333%}.small-10{width:41.66667%}.small-push-10{position:relative;left:41.66667%}.small-pull-10{position:relative;left:-41.66667%}.small-offset-9{margin-left:37.5%}.small-11{width:45.83333%}.small-push-11{position:relative;left:45.83333%}.small-pull-11{position:relative;left:-45.83333%}.small-offset-10{margin-left:41.66667%}.small-12{width:50%}.small-push-12{position:relative;left:50%}.small-pull-12{position:relative;left:-50%}.small-offset-11{margin-left:45.83333%}.small-13{width:54.16667%}.small-push-13{position:relative;left:54.16667%}.small-pull-13{position:relative;left:-54.16667%}.small-offset-12{margin-left:50%}.small-14{width:58.33333%}.small-push-14{position:relative;left:58.33333%}.small-pull-14{position:relative;left:-58.33333%}.small-offset-13{margin-left:54.16667%}.small-15{width:62.5%}.small-push-15{position:relative;left:62.5%}.small-pull-15{position:relative;left:-62.5%}.small-offset-14{margin-left:58.33333%}.small-16{width:66.66667%}.small-push-16{position:relative;left:66.66667%}.small-pull-16{position:relative;left:-66.66667%}.small-offset-15{margin-left:62.5%}.small-17{width:70.83333%}.small-push-17{position:relative;left:70.83333%}.small-pull-17{position:relative;left:-70.83333%}.small-offset-16{margin-left:66.66667%}.small-18{width:75%}.small-push-18{position:relative;left:75%}.small-pull-18{position:relative;left:-75%}.small-offset-17{margin-left:70.83333%}.small-19{width:79.16667%}.small-push-19{position:relative;left:79.16667%}.small-pull-19{position:relative;left:-79.16667%}.small-offset-18{margin-left:75%}.small-20{width:83.33333%}.small-push-20{position:relative;left:83.33333%}.small-pull-20{position:relative;left:-83.33333%}.small-offset-19{margin-left:79.16667%}.small-21{width:87.5%}.small-push-21{position:relative;left:87.5%}.small-pull-21{position:relative;left:-87.5%}.small-offset-20{margin-left:83.33333%}.small-22{width:91.66667%}.small-push-22{position:relative;left:91.66667%}.small-pull-22{position:relative;left:-91.66667%}.small-offset-21{margin-left:87.5%}.small-23{width:95.83333%}.small-push-23{position:relative;left:95.83333%}.small-pull-23{position:relative;left:-95.83333%}.small-offset-22{margin-left:91.66667%}.small-24{width:100%}.small-offset-23{margin-left:95.83333%}.small-up-1>.column,.small-up-1>.columns{width:100%;float:left}.small-up-1>.column:nth-of-type(1n),.small-up-1>.columns:nth-of-type(1n){clear:none}.small-up-1>.column:nth-of-type(1n+1),.small-up-1>.columns:nth-of-type(1n+1){clear:both}.small-up-1>.column:last-child,.small-up-1>.columns:last-child{float:left}.small-up-2>.column,.small-up-2>.columns{width:50%;float:left}.small-up-2>.column:nth-of-type(1n),.small-up-2>.columns:nth-of-type(1n){clear:none}.small-up-2>.column:nth-of-type(2n+1),.small-up-2>.columns:nth-of-type(2n+1){clear:both}.small-up-2>.column:last-child,.small-up-2>.columns:last-child{float:left}.small-up-3>.column,.small-up-3>.columns{width:33.33333%;float:left}.small-up-3>.column:nth-of-type(1n),.small-up-3>.columns:nth-of-type(1n){clear:none}.small-up-3>.column:nth-of-type(3n+1),.small-up-3>.columns:nth-of-type(3n+1){clear:both}.small-up-3>.column:last-child,.small-up-3>.columns:last-child{float:left}.small-up-4>.column,.small-up-4>.columns{width:25%;float:left}.small-up-4>.column:nth-of-type(1n),.small-up-4>.columns:nth-of-type(1n){clear:none}.small-up-4>.column:nth-of-type(4n+1),.small-up-4>.columns:nth-of-type(4n+1){clear:both}.small-up-4>.column:last-child,.small-up-4>.columns:last-child{float:left}.small-up-5>.column,.small-up-5>.columns{width:20%;float:left}.small-up-5>.column:nth-of-type(1n),.small-up-5>.columns:nth-of-type(1n){clear:none}.small-up-5>.column:nth-of-type(5n+1),.small-up-5>.columns:nth-of-type(5n+1){clear:both}.small-up-5>.column:last-child,.small-up-5>.columns:last-child{float:left}.small-up-6>.column,.small-up-6>.columns{width:16.66667%;float:left}.small-up-6>.column:nth-of-type(1n),.small-up-6>.columns:nth-of-type(1n){clear:none}.small-up-6>.column:nth-of-type(6n+1),.small-up-6>.columns:nth-of-type(6n+1){clear:both}.small-up-6>.column:last-child,.small-up-6>.columns:last-child{float:left}.small-up-7>.column,.small-up-7>.columns{width:14.28571%;float:left}.small-up-7>.column:nth-of-type(1n),.small-up-7>.columns:nth-of-type(1n){clear:none}.small-up-7>.column:nth-of-type(7n+1),.small-up-7>.columns:nth-of-type(7n+1){clear:both}.small-up-7>.column:last-child,.small-up-7>.columns:last-child{float:left}.small-up-8>.column,.small-up-8>.columns{width:12.5%;float:left}.small-up-8>.column:nth-of-type(1n),.small-up-8>.columns:nth-of-type(1n){clear:none}.small-up-8>.column:nth-of-type(8n+1),.small-up-8>.columns:nth-of-type(8n+1){clear:both}.small-up-8>.column:last-child,.small-up-8>.columns:last-child{float:left}.small-collapse>.column,.small-collapse>.columns{padding-left:0;padding-right:0}.small-collapse .row{margin-left:0;margin-right:0}.small-uncollapse>.column,.small-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.small-centered{float:none;margin-left:auto;margin-right:auto}.small-uncentered,.small-push-0,.small-pull-0{position:static;margin-left:0;margin-right:0;float:left}@media screen and (min-width:40em){.medium-1{width:4.16667%}.medium-push-1{position:relative;left:4.16667%}.medium-pull-1{position:relative;left:-4.16667%}.medium-offset-0{margin-left:0}.medium-2{width:8.33333%}.medium-push-2{position:relative;left:8.33333%}.medium-pull-2{position:relative;left:-8.33333%}.medium-offset-1{margin-left:4.16667%}.medium-3{width:12.5%}.medium-push-3{position:relative;left:12.5%}.medium-pull-3{position:relative;left:-12.5%}.medium-offset-2{margin-left:8.33333%}.medium-4{width:16.66667%}.medium-push-4{position:relative;left:16.66667%}.medium-pull-4{position:relative;left:-16.66667%}.medium-offset-3{margin-left:12.5%}.medium-5{width:20.83333%}.medium-push-5{position:relative;left:20.83333%}.medium-pull-5{position:relative;left:-20.83333%}.medium-offset-4{margin-left:16.66667%}.medium-6{width:25%}.medium-push-6{position:relative;left:25%}.medium-pull-6{position:relative;left:-25%}.medium-offset-5{margin-left:20.83333%}.medium-7{width:29.16667%}.medium-push-7{position:relative;left:29.16667%}.medium-pull-7{position:relative;left:-29.16667%}.medium-offset-6{margin-left:25%}.medium-8{width:33.33333%}.medium-push-8{position:relative;left:33.33333%}.medium-pull-8{position:relative;left:-33.33333%}.medium-offset-7{margin-left:29.16667%}.medium-9{width:37.5%}.medium-push-9{position:relative;left:37.5%}.medium-pull-9{position:relative;left:-37.5%}.medium-offset-8{margin-left:33.33333%}.medium-10{width:41.66667%}.medium-push-10{position:relative;left:41.66667%}.medium-pull-10{position:relative;left:-41.66667%}.medium-offset-9{margin-left:37.5%}.medium-11{width:45.83333%}.medium-push-11{position:relative;left:45.83333%}.medium-pull-11{position:relative;left:-45.83333%}.medium-offset-10{margin-left:41.66667%}.medium-12{width:50%}.medium-push-12{position:relative;left:50%}.medium-pull-12{position:relative;left:-50%}.medium-offset-11{margin-left:45.83333%}.medium-13{width:54.16667%}.medium-push-13{position:relative;left:54.16667%}.medium-pull-13{position:relative;left:-54.16667%}.medium-offset-12{margin-left:50%}.medium-14{width:58.33333%}.medium-push-14{position:relative;left:58.33333%}.medium-pull-14{position:relative;left:-58.33333%}.medium-offset-13{margin-left:54.16667%}.medium-15{width:62.5%}.medium-push-15{position:relative;left:62.5%}.medium-pull-15{position:relative;left:-62.5%}.medium-offset-14{margin-left:58.33333%}.medium-16{width:66.66667%}.medium-push-16{position:relative;left:66.66667%}.medium-pull-16{position:relative;left:-66.66667%}.medium-offset-15{margin-left:62.5%}.medium-17{width:70.83333%}.medium-push-17{position:relative;left:70.83333%}.medium-pull-17{position:relative;left:-70.83333%}.medium-offset-16{margin-left:66.66667%}.medium-18{width:75%}.medium-push-18{position:relative;left:75%}.medium-pull-18{position:relative;left:-75%}.medium-offset-17{margin-left:70.83333%}.medium-19{width:79.16667%}.medium-push-19{position:relative;left:79.16667%}.medium-pull-19{position:relative;left:-79.16667%}.medium-offset-18{margin-left:75%}.medium-20{width:83.33333%}.medium-push-20{position:relative;left:83.33333%}.medium-pull-20{position:relative;left:-83.33333%}.medium-offset-19{margin-left:79.16667%}.medium-21{width:87.5%}.medium-push-21{position:relative;left:87.5%}.medium-pull-21{position:relative;left:-87.5%}.medium-offset-20{margin-left:83.33333%}.medium-22{width:91.66667%}.medium-push-22{position:relative;left:91.66667%}.medium-pull-22{position:relative;left:-91.66667%}.medium-offset-21{margin-left:87.5%}.medium-23{width:95.83333%}.medium-push-23{position:relative;left:95.83333%}.medium-pull-23{position:relative;left:-95.83333%}.medium-offset-22{margin-left:91.66667%}.medium-24{width:100%}.medium-offset-23{margin-left:95.83333%}.medium-up-1>.column,.medium-up-1>.columns{width:100%;float:left}.medium-up-1>.column:nth-of-type(1n),.medium-up-1>.columns:nth-of-type(1n){clear:none}.medium-up-1>.column:nth-of-type(1n+1),.medium-up-1>.columns:nth-of-type(1n+1){clear:both}.medium-up-1>.column:last-child,.medium-up-1>.columns:last-child{float:left}.medium-up-2>.column,.medium-up-2>.columns{width:50%;float:left}.medium-up-2>.column:nth-of-type(1n),.medium-up-2>.columns:nth-of-type(1n){clear:none}.medium-up-2>.column:nth-of-type(2n+1),.medium-up-2>.columns:nth-of-type(2n+1){clear:both}.medium-up-2>.column:last-child,.medium-up-2>.columns:last-child{float:left}.medium-up-3>.column,.medium-up-3>.columns{width:33.33333%;float:left}.medium-up-3>.column:nth-of-type(1n),.medium-up-3>.columns:nth-of-type(1n){clear:none}.medium-up-3>.column:nth-of-type(3n+1),.medium-up-3>.columns:nth-of-type(3n+1){clear:both}.medium-up-3>.column:last-child,.medium-up-3>.columns:last-child{float:left}.medium-up-4>.column,.medium-up-4>.columns{width:25%;float:left}.medium-up-4>.column:nth-of-type(1n),.medium-up-4>.columns:nth-of-type(1n){clear:none}.medium-up-4>.column:nth-of-type(4n+1),.medium-up-4>.columns:nth-of-type(4n+1){clear:both}.medium-up-4>.column:last-child,.medium-up-4>.columns:last-child{float:left}.medium-up-5>.column,.medium-up-5>.columns{width:20%;float:left}.medium-up-5>.column:nth-of-type(1n),.medium-up-5>.columns:nth-of-type(1n){clear:none}.medium-up-5>.column:nth-of-type(5n+1),.medium-up-5>.columns:nth-of-type(5n+1){clear:both}.medium-up-5>.column:last-child,.medium-up-5>.columns:last-child{float:left}.medium-up-6>.column,.medium-up-6>.columns{width:16.66667%;float:left}.medium-up-6>.column:nth-of-type(1n),.medium-up-6>.columns:nth-of-type(1n){clear:none}.medium-up-6>.column:nth-of-type(6n+1),.medium-up-6>.columns:nth-of-type(6n+1){clear:both}.medium-up-6>.column:last-child,.medium-up-6>.columns:last-child{float:left}.medium-up-7>.column,.medium-up-7>.columns{width:14.28571%;float:left}.medium-up-7>.column:nth-of-type(1n),.medium-up-7>.columns:nth-of-type(1n){clear:none}.medium-up-7>.column:nth-of-type(7n+1),.medium-up-7>.columns:nth-of-type(7n+1){clear:both}.medium-up-7>.column:last-child,.medium-up-7>.columns:last-child{float:left}.medium-up-8>.column,.medium-up-8>.columns{width:12.5%;float:left}.medium-up-8>.column:nth-of-type(1n),.medium-up-8>.columns:nth-of-type(1n){clear:none}.medium-up-8>.column:nth-of-type(8n+1),.medium-up-8>.columns:nth-of-type(8n+1){clear:both}.medium-up-8>.column:last-child,.medium-up-8>.columns:last-child{float:left}.medium-collapse>.column,.medium-collapse>.columns{padding-left:0;padding-right:0}.medium-collapse .row{margin-left:0;margin-right:0}.medium-uncollapse>.column,.medium-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.medium-centered{float:none;margin-left:auto;margin-right:auto}.medium-uncentered,.medium-push-0,.medium-pull-0{position:static;margin-left:0;margin-right:0;float:left}}@media screen and (min-width:60.0625em){.large-1{width:4.16667%}.large-push-1{position:relative;left:4.16667%}.large-pull-1{position:relative;left:-4.16667%}.large-offset-0{margin-left:0}.large-2{width:8.33333%}.large-push-2{position:relative;left:8.33333%}.large-pull-2{position:relative;left:-8.33333%}.large-offset-1{margin-left:4.16667%}.large-3{width:12.5%}.large-push-3{position:relative;left:12.5%}.large-pull-3{position:relative;left:-12.5%}.large-offset-2{margin-left:8.33333%}.large-4{width:16.66667%}.large-push-4{position:relative;left:16.66667%}.large-pull-4{position:relative;left:-16.66667%}.large-offset-3{margin-left:12.5%}.large-5{width:20.83333%}.large-push-5{position:relative;left:20.83333%}.large-pull-5{position:relative;left:-20.83333%}.large-offset-4{margin-left:16.66667%}.large-6{width:25%}.large-push-6{position:relative;left:25%}.large-pull-6{position:relative;left:-25%}.large-offset-5{margin-left:20.83333%}.large-7{width:29.16667%}.large-push-7{position:relative;left:29.16667%}.large-pull-7{position:relative;left:-29.16667%}.large-offset-6{margin-left:25%}.large-8{width:33.33333%}.large-push-8{position:relative;left:33.33333%}.large-pull-8{position:relative;left:-33.33333%}.large-offset-7{margin-left:29.16667%}.large-9{width:37.5%}.large-push-9{position:relative;left:37.5%}.large-pull-9{position:relative;left:-37.5%}.large-offset-8{margin-left:33.33333%}.large-10{width:41.66667%}.large-push-10{position:relative;left:41.66667%}.large-pull-10{position:relative;left:-41.66667%}.large-offset-9{margin-left:37.5%}.large-11{width:45.83333%}.large-push-11{position:relative;left:45.83333%}.large-pull-11{position:relative;left:-45.83333%}.large-offset-10{margin-left:41.66667%}.large-12{width:50%}.large-push-12{position:relative;left:50%}.large-pull-12{position:relative;left:-50%}.large-offset-11{margin-left:45.83333%}.large-13{width:54.16667%}.large-push-13{position:relative;left:54.16667%}.large-pull-13{position:relative;left:-54.16667%}.large-offset-12{margin-left:50%}.large-14{width:58.33333%}.large-push-14{position:relative;left:58.33333%}.large-pull-14{position:relative;left:-58.33333%}.large-offset-13{margin-left:54.16667%}.large-15{width:62.5%}.large-push-15{position:relative;left:62.5%}.large-pull-15{position:relative;left:-62.5%}.large-offset-14{margin-left:58.33333%}.large-16{width:66.66667%}.large-push-16{position:relative;left:66.66667%}.large-pull-16{position:relative;left:-66.66667%}.large-offset-15{margin-left:62.5%}.large-17{width:70.83333%}.large-push-17{position:relative;left:70.83333%}.large-pull-17{position:relative;left:-70.83333%}.large-offset-16{margin-left:66.66667%}.large-18{width:75%}.large-push-18{position:relative;left:75%}.large-pull-18{position:relative;left:-75%}.large-offset-17{margin-left:70.83333%}.large-19{width:79.16667%}.large-push-19{position:relative;left:79.16667%}.large-pull-19{position:relative;left:-79.16667%}.large-offset-18{margin-left:75%}.large-20{width:83.33333%}.large-push-20{position:relative;left:83.33333%}.large-pull-20{position:relative;left:-83.33333%}.large-offset-19{margin-left:79.16667%}.large-21{width:87.5%}.large-push-21{position:relative;left:87.5%}.large-pull-21{position:relative;left:-87.5%}.large-offset-20{margin-left:83.33333%}.large-22{width:91.66667%}.large-push-22{position:relative;left:91.66667%}.large-pull-22{position:relative;left:-91.66667%}.large-offset-21{margin-left:87.5%}.large-23{width:95.83333%}.large-push-23{position:relative;left:95.83333%}.large-pull-23{position:relative;left:-95.83333%}.large-offset-22{margin-left:91.66667%}.large-24{width:100%}.large-offset-23{margin-left:95.83333%}.large-up-1>.column,.large-up-1>.columns{width:100%;float:left}.large-up-1>.column:nth-of-type(1n),.large-up-1>.columns:nth-of-type(1n){clear:none}.large-up-1>.column:nth-of-type(1n+1),.large-up-1>.columns:nth-of-type(1n+1){clear:both}.large-up-1>.column:last-child,.large-up-1>.columns:last-child{float:left}.large-up-2>.column,.large-up-2>.columns{width:50%;float:left}.large-up-2>.column:nth-of-type(1n),.large-up-2>.columns:nth-of-type(1n){clear:none}.large-up-2>.column:nth-of-type(2n+1),.large-up-2>.columns:nth-of-type(2n+1){clear:both}.large-up-2>.column:last-child,.large-up-2>.columns:last-child{float:left}.large-up-3>.column,.large-up-3>.columns{width:33.33333%;float:left}.large-up-3>.column:nth-of-type(1n),.large-up-3>.columns:nth-of-type(1n){clear:none}.large-up-3>.column:nth-of-type(3n+1),.large-up-3>.columns:nth-of-type(3n+1){clear:both}.large-up-3>.column:last-child,.large-up-3>.columns:last-child{float:left}.large-up-4>.column,.large-up-4>.columns{width:25%;float:left}.large-up-4>.column:nth-of-type(1n),.large-up-4>.columns:nth-of-type(1n){clear:none}.large-up-4>.column:nth-of-type(4n+1),.large-up-4>.columns:nth-of-type(4n+1){clear:both}.large-up-4>.column:last-child,.large-up-4>.columns:last-child{float:left}.large-up-5>.column,.large-up-5>.columns{width:20%;float:left}.large-up-5>.column:nth-of-type(1n),.large-up-5>.columns:nth-of-type(1n){clear:none}.large-up-5>.column:nth-of-type(5n+1),.large-up-5>.columns:nth-of-type(5n+1){clear:both}.large-up-5>.column:last-child,.large-up-5>.columns:last-child{float:left}.large-up-6>.column,.large-up-6>.columns{width:16.66667%;float:left}.large-up-6>.column:nth-of-type(1n),.large-up-6>.columns:nth-of-type(1n){clear:none}.large-up-6>.column:nth-of-type(6n+1),.large-up-6>.columns:nth-of-type(6n+1){clear:both}.large-up-6>.column:last-child,.large-up-6>.columns:last-child{float:left}.large-up-7>.column,.large-up-7>.columns{width:14.28571%;float:left}.large-up-7>.column:nth-of-type(1n),.large-up-7>.columns:nth-of-type(1n){clear:none}.large-up-7>.column:nth-of-type(7n+1),.large-up-7>.columns:nth-of-type(7n+1){clear:both}.large-up-7>.column:last-child,.large-up-7>.columns:last-child{float:left}.large-up-8>.column,.large-up-8>.columns{width:12.5%;float:left}.large-up-8>.column:nth-of-type(1n),.large-up-8>.columns:nth-of-type(1n){clear:none}.large-up-8>.column:nth-of-type(8n+1),.large-up-8>.columns:nth-of-type(8n+1){clear:both}.large-up-8>.column:last-child,.large-up-8>.columns:last-child{float:left}.large-collapse>.column,.large-collapse>.columns{padding-left:0;padding-right:0}.large-collapse .row{margin-left:0;margin-right:0}.large-uncollapse>.column,.large-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.large-centered{float:none;margin-left:auto;margin-right:auto}.large-uncentered,.large-push-0,.large-pull-0{position:static;margin-left:0;margin-right:0;float:left}}@media screen and (min-width:85.4375em){.xlarge-1{width:4.16667%}.xlarge-push-1{position:relative;left:4.16667%}.xlarge-pull-1{position:relative;left:-4.16667%}.xlarge-offset-0{margin-left:0}.xlarge-2{width:8.33333%}.xlarge-push-2{position:relative;left:8.33333%}.xlarge-pull-2{position:relative;left:-8.33333%}.xlarge-offset-1{margin-left:4.16667%}.xlarge-3{width:12.5%}.xlarge-push-3{position:relative;left:12.5%}.xlarge-pull-3{position:relative;left:-12.5%}.xlarge-offset-2{margin-left:8.33333%}.xlarge-4{width:16.66667%}.xlarge-push-4{position:relative;left:16.66667%}.xlarge-pull-4{position:relative;left:-16.66667%}.xlarge-offset-3{margin-left:12.5%}.xlarge-5{width:20.83333%}.xlarge-push-5{position:relative;left:20.83333%}.xlarge-pull-5{position:relative;left:-20.83333%}.xlarge-offset-4{margin-left:16.66667%}.xlarge-6{width:25%}.xlarge-push-6{position:relative;left:25%}.xlarge-pull-6{position:relative;left:-25%}.xlarge-offset-5{margin-left:20.83333%}.xlarge-7{width:29.16667%}.xlarge-push-7{position:relative;left:29.16667%}.xlarge-pull-7{position:relative;left:-29.16667%}.xlarge-offset-6{margin-left:25%}.xlarge-8{width:33.33333%}.xlarge-push-8{position:relative;left:33.33333%}.xlarge-pull-8{position:relative;left:-33.33333%}.xlarge-offset-7{margin-left:29.16667%}.xlarge-9{width:37.5%}.xlarge-push-9{position:relative;left:37.5%}.xlarge-pull-9{position:relative;left:-37.5%}.xlarge-offset-8{margin-left:33.33333%}.xlarge-10{width:41.66667%}.xlarge-push-10{position:relative;left:41.66667%}.xlarge-pull-10{position:relative;left:-41.66667%}.xlarge-offset-9{margin-left:37.5%}.xlarge-11{width:45.83333%}.xlarge-push-11{position:relative;left:45.83333%}.xlarge-pull-11{position:relative;left:-45.83333%}.xlarge-offset-10{margin-left:41.66667%}.xlarge-12{width:50%}.xlarge-push-12{position:relative;left:50%}.xlarge-pull-12{position:relative;left:-50%}.xlarge-offset-11{margin-left:45.83333%}.xlarge-13{width:54.16667%}.xlarge-push-13{position:relative;left:54.16667%}.xlarge-pull-13{position:relative;left:-54.16667%}.xlarge-offset-12{margin-left:50%}.xlarge-14{width:58.33333%}.xlarge-push-14{position:relative;left:58.33333%}.xlarge-pull-14{position:relative;left:-58.33333%}.xlarge-offset-13{margin-left:54.16667%}.xlarge-15{width:62.5%}.xlarge-push-15{position:relative;left:62.5%}.xlarge-pull-15{position:relative;left:-62.5%}.xlarge-offset-14{margin-left:58.33333%}.xlarge-16{width:66.66667%}.xlarge-push-16{position:relative;left:66.66667%}.xlarge-pull-16{position:relative;left:-66.66667%}.xlarge-offset-15{margin-left:62.5%}.xlarge-17{width:70.83333%}.xlarge-push-17{position:relative;left:70.83333%}.xlarge-pull-17{position:relative;left:-70.83333%}.xlarge-offset-16{margin-left:66.66667%}.xlarge-18{width:75%}.xlarge-push-18{position:relative;left:75%}.xlarge-pull-18{position:relative;left:-75%}.xlarge-offset-17{margin-left:70.83333%}.xlarge-19{width:79.16667%}.xlarge-push-19{position:relative;left:79.16667%}.xlarge-pull-19{position:relative;left:-79.16667%}.xlarge-offset-18{margin-left:75%}.xlarge-20{width:83.33333%}.xlarge-push-20{position:relative;left:83.33333%}.xlarge-pull-20{position:relative;left:-83.33333%}.xlarge-offset-19{margin-left:79.16667%}.xlarge-21{width:87.5%}.xlarge-push-21{position:relative;left:87.5%}.xlarge-pull-21{position:relative;left:-87.5%}.xlarge-offset-20{margin-left:83.33333%}.xlarge-22{width:91.66667%}.xlarge-push-22{position:relative;left:91.66667%}.xlarge-pull-22{position:relative;left:-91.66667%}.xlarge-offset-21{margin-left:87.5%}.xlarge-23{width:95.83333%}.xlarge-push-23{position:relative;left:95.83333%}.xlarge-pull-23{position:relative;left:-95.83333%}.xlarge-offset-22{margin-left:91.66667%}.xlarge-24{width:100%}.xlarge-offset-23{margin-left:95.83333%}.xlarge-up-1>.column,.xlarge-up-1>.columns{width:100%;float:left}.xlarge-up-1>.column:nth-of-type(1n),.xlarge-up-1>.columns:nth-of-type(1n){clear:none}.xlarge-up-1>.column:nth-of-type(1n+1),.xlarge-up-1>.columns:nth-of-type(1n+1){clear:both}.xlarge-up-1>.column:last-child,.xlarge-up-1>.columns:last-child{float:left}.xlarge-up-2>.column,.xlarge-up-2>.columns{width:50%;float:left}.xlarge-up-2>.column:nth-of-type(1n),.xlarge-up-2>.columns:nth-of-type(1n){clear:none}.xlarge-up-2>.column:nth-of-type(2n+1),.xlarge-up-2>.columns:nth-of-type(2n+1){clear:both}.xlarge-up-2>.column:last-child,.xlarge-up-2>.columns:last-child{float:left}.xlarge-up-3>.column,.xlarge-up-3>.columns{width:33.33333%;float:left}.xlarge-up-3>.column:nth-of-type(1n),.xlarge-up-3>.columns:nth-of-type(1n){clear:none}.xlarge-up-3>.column:nth-of-type(3n+1),.xlarge-up-3>.columns:nth-of-type(3n+1){clear:both}.xlarge-up-3>.column:last-child,.xlarge-up-3>.columns:last-child{float:left}.xlarge-up-4>.column,.xlarge-up-4>.columns{width:25%;float:left}.xlarge-up-4>.column:nth-of-type(1n),.xlarge-up-4>.columns:nth-of-type(1n){clear:none}.xlarge-up-4>.column:nth-of-type(4n+1),.xlarge-up-4>.columns:nth-of-type(4n+1){clear:both}.xlarge-up-4>.column:last-child,.xlarge-up-4>.columns:last-child{float:left}.xlarge-up-5>.column,.xlarge-up-5>.columns{width:20%;float:left}.xlarge-up-5>.column:nth-of-type(1n),.xlarge-up-5>.columns:nth-of-type(1n){clear:none}.xlarge-up-5>.column:nth-of-type(5n+1),.xlarge-up-5>.columns:nth-of-type(5n+1){clear:both}.xlarge-up-5>.column:last-child,.xlarge-up-5>.columns:last-child{float:left}.xlarge-up-6>.column,.xlarge-up-6>.columns{width:16.66667%;float:left}.xlarge-up-6>.column:nth-of-type(1n),.xlarge-up-6>.columns:nth-of-type(1n){clear:none}.xlarge-up-6>.column:nth-of-type(6n+1),.xlarge-up-6>.columns:nth-of-type(6n+1){clear:both}.xlarge-up-6>.column:last-child,.xlarge-up-6>.columns:last-child{float:left}.xlarge-up-7>.column,.xlarge-up-7>.columns{width:14.28571%;float:left}.xlarge-up-7>.column:nth-of-type(1n),.xlarge-up-7>.columns:nth-of-type(1n){clear:none}.xlarge-up-7>.column:nth-of-type(7n+1),.xlarge-up-7>.columns:nth-of-type(7n+1){clear:both}.xlarge-up-7>.column:last-child,.xlarge-up-7>.columns:last-child{float:left}.xlarge-up-8>.column,.xlarge-up-8>.columns{width:12.5%;float:left}.xlarge-up-8>.column:nth-of-type(1n),.xlarge-up-8>.columns:nth-of-type(1n){clear:none}.xlarge-up-8>.column:nth-of-type(8n+1),.xlarge-up-8>.columns:nth-of-type(8n+1){clear:both}.xlarge-up-8>.column:last-child,.xlarge-up-8>.columns:last-child{float:left}.xlarge-collapse>.column,.xlarge-collapse>.columns{padding-left:0;padding-right:0}.xlarge-collapse .row{margin-left:0;margin-right:0}.xlarge-uncollapse>.column,.xlarge-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.xlarge-centered{float:none;margin-left:auto;margin-right:auto}.xlarge-uncentered,.xlarge-push-0,.xlarge-pull-0{position:static;margin-left:0;margin-right:0;float:left}}.hide{display:none !important}.invisible{visibility:hidden}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none !important}}@media screen and (max-width:0),screen and (min-width:40em){.show-for-small-only{display:none !important}}@media screen and (min-width:40em){.hide-for-medium{display:none !important}}@media screen and (max-width:39.9375em){.show-for-medium{display:none !important}}@media screen and (min-width:40em) and (max-width:60em){.hide-for-medium-only{display:none !important}}@media screen and (max-width:39.9375em),screen and (min-width:60.0625em){.show-for-medium-only{display:none !important}}@media screen and (min-width:60.0625em){.hide-for-large{display:none !important}}@media screen and (max-width:60em){.show-for-large{display:none !important}}@media screen and (min-width:60.0625em) and (max-width:85.375em){.hide-for-large-only{display:none !important}}@media screen and (max-width:60em),screen and (min-width:85.4375em){.show-for-large-only{display:none !important}}@media screen and (min-width:85.4375em){.hide-for-xlarge{display:none !important}}@media screen and (max-width:85.375em){.show-for-xlarge{display:none !important}}@media screen and (min-width:85.4375em) and (max-width:85.375em){.hide-for-xlarge-only{display:none !important}}@media screen and (max-width:85.375em),screen and (min-width:85.4375em){.show-for-xlarge-only{display:none !important}}.show-for-sr,.show-on-focus{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.show-on-focus:active,.show-on-focus:focus{position:static !important;height:auto;width:auto;overflow:visible;clip:auto}.show-for-landscape,.hide-for-portrait{display:block !important}@media screen and (orientation:landscape){.show-for-landscape,.hide-for-portrait{display:block !important}}@media screen and (orientation:portrait){.show-for-landscape,.hide-for-portrait{display:none !important}}.hide-for-landscape,.show-for-portrait{display:none !important}@media screen and (orientation:landscape){.hide-for-landscape,.show-for-portrait{display:none !important}}@media screen and (orientation:portrait){.hide-for-landscape,.show-for-portrait{display:block !important}}.float-left{float:left !important}.float-right{float:right !important}.float-center{display:block;margin-left:auto;margin-right:auto}.clearfix::before,.clearfix::after{content:' ';display:table;flex-basis:0;order:1}.clearfix::after{clear:both}.progressive-img{background-color:#f6f6f6;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}.progressive-img img{opacity:0;width:100%;transition:opacity .3s linear;position:absolute;top:0;left:0}.progressive-img .placeholder-container{position:relative}.progressive-img .progressive-draft{opacity:1;filter:blur(.625rem);position:absolute;transform:scale(1);top:0;left:auto;max-height:100%}.progressive-img .progressive-loaded{opacity:1}body,.tabela-body{background-color:#fcfcfc}#header-produto .barra-globocom{padding:0}#menu-container{display:none}.menu-item.menu-item-separator>a{display:none}#busca-padrao,.floating-bar,.glb-on-app.has-regua .header-navegacao,.glbbarrawidget,.header-home .banner,.header-home .header-subtitle,.header-home .header-title,.header-navegacao .bottom,.menu-area,.search-area,.svg-container{display:none}.header-navegacao{font-size:0;font-family:Arial,sans-serif}.header-navegacao *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.header-navegacao-color{background-color:currentColor}.header-navegacao.header-editoria .logo{position:relative;top:50%;-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);transform:translateY(-50%)}.header-navegacao.header-editoria .logo-area{left:.75rem;position:absolute;top:0;height:100%}.header-navegacao.header-editoria.header-no-link .header-subeditoria--link{cursor:text;pointer-events:none}.header-navegacao.header-editoria.header-no-link .header-subeditoria--link:hover{opacity:1}.header-navegacao .row{width:100%}.header-navegacao .grid-12{width:90.625%;margin:0 auto;display:block;position:relative}.header-navegacao .logo{font-weight:700;color:#fff;display:inline-block;margin:0;padding:0;font-size:0}.header-navegacao .logo-area{vertical-align:middle;line-height:1;display:inline-block;margin:0;padding:0;font-size:0}.header-navegacao .logo-mobile{display:inline}.header-navegacao .logo-desktop{display:none}.header-navegacao .area-principal{height:50px;line-height:50px;text-align:center;position:relative}.header-navegacao .header-subtitle{height:30px;line-height:30px;text-align:center}@media(min-width:768px){.header-navegacao .area-principal{height:74px;line-height:74px;font-size:0}.header-navegacao .header-subtitle{height:35px;line-height:35px}.header-navegacao .logo-mobile{display:none}.header-navegacao .logo-desktop{display:inline}}.header-editoria--link{font-family:Arial,sans-serif;display:inline-block;vertical-align:middle;font-size:22px;text-decoration:none;text-transform:uppercase;font-weight:400;color:#fff;line-height:normal;max-width:100%}@media(min-width:768px){.header-editoria .logo-area{margin-left:42px}.header-editoria--link{font-size:30px}}@media(min-width:1065px){.header-editoria .logo-area{margin-left:92px;padding-left:20px}}.header-title{letter-spacing:-1px;margin:0 auto;line-height:1;font-size:0;height:auto;width:100%;display:inline-block;vertical-align:middle}.header-title-content{font-size:0;height:auto;width:100%;display:inline-block;vertical-align:middle;padding:0 16px}@media(min-width:1065px){.header-title{padding:0 16px}}.header-subeditoria--link{font-family:Arial,sans-serif;color:#fff;font-size:12px;text-transform:uppercase;padding:0 8px}@media(min-width:768px){.header-subeditoria--link{font-size:16px}}#glb-cabecalho{z-index:99999}#glb-cabecalho>.glb-conteudo{width:100%;min-width:100%}@media(min-width:768px){.glbbarrawidget{display:block;height:44px;background-color:#fff}}.glb-on-app .header-navegacao{display:none}.glb-on-app.has-not-regua .header-navegacao{display:block}.mosaico{display:none}.mosaico__tabs[type="radio"]{display:none}.mosaico .icons-escudo-header,.mosaico__header-personalization--times-label{display:none}#mosaico__wrapper{display:none}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.ttf") format("truetype");font-style:normal;font-weight:300}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.ttf") format("truetype");font-style:normal;font-weight:600}@font-face{font-family:opensans;src:url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.ttf") format("truetype");font-style:normal;font-weight:700}@font-face{font-family:opensans-light;src:url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/light.ttf") format("truetype");font-style:normal;font-weight:300}@font-face{font-family:opensans-regular;src:url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:opensans-semibold;src:url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/semibold.ttf") format("truetype");font-style:normal;font-weight:600}@font-face{font-family:opensans-bold;src:url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/opensans/bold.ttf") format("truetype");font-style:normal;font-weight:bold}@font-face{font-family:"proximanova-bold";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-light";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-regular";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:"proximanova-light";src:url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/light.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:ProximaNova;src:url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/regular.ttf") format("truetype");font-style:normal;font-weight:normal}@font-face{font-family:ProximaNova;src:url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff2") format("woff2"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.woff") format("woff"),url("https://s3.glbimg.com/cdn/fonts/proximanova/bold.ttf") format("truetype");font-style:normal;font-weight:bold}.row{max-width:85rem;margin-left:auto;margin-right:auto}.row::before,.row::after{content:' ';display:table;flex-basis:0;order:1}.row::after{clear:both}.row.collapse>.column,.row.collapse>.columns{padding-left:0;padding-right:0}.row .row{margin-left:-.75rem;margin-right:-.75rem}.row .row.collapse{margin-left:0;margin-right:0}.row.expanded{max-width:none}.row.expanded .row{margin-left:auto;margin-right:auto}.column,.columns{width:100%;float:left;padding-left:.75rem;padding-right:.75rem}.column:last-child:not(:first-child),.columns:last-child:not(:first-child){float:right}.column.end:last-child:last-child,.end.columns:last-child:last-child{float:left}.column.row.row,.row.row.columns{float:none}.row .column.row.row,.row .row.row.columns{padding-left:0;padding-right:0;margin-left:0;margin-right:0}.small-1{width:4.16667%}.small-push-1{position:relative;left:4.16667%}.small-pull-1{position:relative;left:-4.16667%}.small-offset-0{margin-left:0}.small-2{width:8.33333%}.small-push-2{position:relative;left:8.33333%}.small-pull-2{position:relative;left:-8.33333%}.small-offset-1{margin-left:4.16667%}.small-3{width:12.5%}.small-push-3{position:relative;left:12.5%}.small-pull-3{position:relative;left:-12.5%}.small-offset-2{margin-left:8.33333%}.small-4{width:16.66667%}.small-push-4{position:relative;left:16.66667%}.small-pull-4{position:relative;left:-16.66667%}.small-offset-3{margin-left:12.5%}.small-5{width:20.83333%}.small-push-5{position:relative;left:20.83333%}.small-pull-5{position:relative;left:-20.83333%}.small-offset-4{margin-left:16.66667%}.small-6{width:25%}.small-push-6{position:relative;left:25%}.small-pull-6{position:relative;left:-25%}.small-offset-5{margin-left:20.83333%}.small-7{width:29.16667%}.small-push-7{position:relative;left:29.16667%}.small-pull-7{position:relative;left:-29.16667%}.small-offset-6{margin-left:25%}.small-8{width:33.33333%}.small-push-8{position:relative;left:33.33333%}.small-pull-8{position:relative;left:-33.33333%}.small-offset-7{margin-left:29.16667%}.small-9{width:37.5%}.small-push-9{position:relative;left:37.5%}.small-pull-9{position:relative;left:-37.5%}.small-offset-8{margin-left:33.33333%}.small-10{width:41.66667%}.small-push-10{position:relative;left:41.66667%}.small-pull-10{position:relative;left:-41.66667%}.small-offset-9{margin-left:37.5%}.small-11{width:45.83333%}.small-push-11{position:relative;left:45.83333%}.small-pull-11{position:relative;left:-45.83333%}.small-offset-10{margin-left:41.66667%}.small-12{width:50%}.small-push-12{position:relative;left:50%}.small-pull-12{position:relative;left:-50%}.small-offset-11{margin-left:45.83333%}.small-13{width:54.16667%}.small-push-13{position:relative;left:54.16667%}.small-pull-13{position:relative;left:-54.16667%}.small-offset-12{margin-left:50%}.small-14{width:58.33333%}.small-push-14{position:relative;left:58.33333%}.small-pull-14{position:relative;left:-58.33333%}.small-offset-13{margin-left:54.16667%}.small-15{width:62.5%}.small-push-15{position:relative;left:62.5%}.small-pull-15{position:relative;left:-62.5%}.small-offset-14{margin-left:58.33333%}.small-16{width:66.66667%}.small-push-16{position:relative;left:66.66667%}.small-pull-16{position:relative;left:-66.66667%}.small-offset-15{margin-left:62.5%}.small-17{width:70.83333%}.small-push-17{position:relative;left:70.83333%}.small-pull-17{position:relative;left:-70.83333%}.small-offset-16{margin-left:66.66667%}.small-18{width:75%}.small-push-18{position:relative;left:75%}.small-pull-18{position:relative;left:-75%}.small-offset-17{margin-left:70.83333%}.small-19{width:79.16667%}.small-push-19{position:relative;left:79.16667%}.small-pull-19{position:relative;left:-79.16667%}.small-offset-18{margin-left:75%}.small-20{width:83.33333%}.small-push-20{position:relative;left:83.33333%}.small-pull-20{position:relative;left:-83.33333%}.small-offset-19{margin-left:79.16667%}.small-21{width:87.5%}.small-push-21{position:relative;left:87.5%}.small-pull-21{position:relative;left:-87.5%}.small-offset-20{margin-left:83.33333%}.small-22{width:91.66667%}.small-push-22{position:relative;left:91.66667%}.small-pull-22{position:relative;left:-91.66667%}.small-offset-21{margin-left:87.5%}.small-23{width:95.83333%}.small-push-23{position:relative;left:95.83333%}.small-pull-23{position:relative;left:-95.83333%}.small-offset-22{margin-left:91.66667%}.small-24{width:100%}.small-offset-23{margin-left:95.83333%}.small-up-1>.column,.small-up-1>.columns{width:100%;float:left}.small-up-1>.column:nth-of-type(1n),.small-up-1>.columns:nth-of-type(1n){clear:none}.small-up-1>.column:nth-of-type(1n+1),.small-up-1>.columns:nth-of-type(1n+1){clear:both}.small-up-1>.column:last-child,.small-up-1>.columns:last-child{float:left}.small-up-2>.column,.small-up-2>.columns{width:50%;float:left}.small-up-2>.column:nth-of-type(1n),.small-up-2>.columns:nth-of-type(1n){clear:none}.small-up-2>.column:nth-of-type(2n+1),.small-up-2>.columns:nth-of-type(2n+1){clear:both}.small-up-2>.column:last-child,.small-up-2>.columns:last-child{float:left}.small-up-3>.column,.small-up-3>.columns{width:33.33333%;float:left}.small-up-3>.column:nth-of-type(1n),.small-up-3>.columns:nth-of-type(1n){clear:none}.small-up-3>.column:nth-of-type(3n+1),.small-up-3>.columns:nth-of-type(3n+1){clear:both}.small-up-3>.column:last-child,.small-up-3>.columns:last-child{float:left}.small-up-4>.column,.small-up-4>.columns{width:25%;float:left}.small-up-4>.column:nth-of-type(1n),.small-up-4>.columns:nth-of-type(1n){clear:none}.small-up-4>.column:nth-of-type(4n+1),.small-up-4>.columns:nth-of-type(4n+1){clear:both}.small-up-4>.column:last-child,.small-up-4>.columns:last-child{float:left}.small-up-5>.column,.small-up-5>.columns{width:20%;float:left}.small-up-5>.column:nth-of-type(1n),.small-up-5>.columns:nth-of-type(1n){clear:none}.small-up-5>.column:nth-of-type(5n+1),.small-up-5>.columns:nth-of-type(5n+1){clear:both}.small-up-5>.column:last-child,.small-up-5>.columns:last-child{float:left}.small-up-6>.column,.small-up-6>.columns{width:16.66667%;float:left}.small-up-6>.column:nth-of-type(1n),.small-up-6>.columns:nth-of-type(1n){clear:none}.small-up-6>.column:nth-of-type(6n+1),.small-up-6>.columns:nth-of-type(6n+1){clear:both}.small-up-6>.column:last-child,.small-up-6>.columns:last-child{float:left}.small-up-7>.column,.small-up-7>.columns{width:14.28571%;float:left}.small-up-7>.column:nth-of-type(1n),.small-up-7>.columns:nth-of-type(1n){clear:none}.small-up-7>.column:nth-of-type(7n+1),.small-up-7>.columns:nth-of-type(7n+1){clear:both}.small-up-7>.column:last-child,.small-up-7>.columns:last-child{float:left}.small-up-8>.column,.small-up-8>.columns{width:12.5%;float:left}.small-up-8>.column:nth-of-type(1n),.small-up-8>.columns:nth-of-type(1n){clear:none}.small-up-8>.column:nth-of-type(8n+1),.small-up-8>.columns:nth-of-type(8n+1){clear:both}.small-up-8>.column:last-child,.small-up-8>.columns:last-child{float:left}.small-collapse>.column,.small-collapse>.columns{padding-left:0;padding-right:0}.small-collapse .row{margin-left:0;margin-right:0}.small-uncollapse>.column,.small-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.small-centered{float:none;margin-left:auto;margin-right:auto}.small-uncentered,.small-push-0,.small-pull-0{position:static;margin-left:0;margin-right:0;float:left}@media screen and (min-width:40em){.medium-1{width:4.16667%}.medium-push-1{position:relative;left:4.16667%}.medium-pull-1{position:relative;left:-4.16667%}.medium-offset-0{margin-left:0}.medium-2{width:8.33333%}.medium-push-2{position:relative;left:8.33333%}.medium-pull-2{position:relative;left:-8.33333%}.medium-offset-1{margin-left:4.16667%}.medium-3{width:12.5%}.medium-push-3{position:relative;left:12.5%}.medium-pull-3{position:relative;left:-12.5%}.medium-offset-2{margin-left:8.33333%}.medium-4{width:16.66667%}.medium-push-4{position:relative;left:16.66667%}.medium-pull-4{position:relative;left:-16.66667%}.medium-offset-3{margin-left:12.5%}.medium-5{width:20.83333%}.medium-push-5{position:relative;left:20.83333%}.medium-pull-5{position:relative;left:-20.83333%}.medium-offset-4{margin-left:16.66667%}.medium-6{width:25%}.medium-push-6{position:relative;left:25%}.medium-pull-6{position:relative;left:-25%}.medium-offset-5{margin-left:20.83333%}.medium-7{width:29.16667%}.medium-push-7{position:relative;left:29.16667%}.medium-pull-7{position:relative;left:-29.16667%}.medium-offset-6{margin-left:25%}.medium-8{width:33.33333%}.medium-push-8{position:relative;left:33.33333%}.medium-pull-8{position:relative;left:-33.33333%}.medium-offset-7{margin-left:29.16667%}.medium-9{width:37.5%}.medium-push-9{position:relative;left:37.5%}.medium-pull-9{position:relative;left:-37.5%}.medium-offset-8{margin-left:33.33333%}.medium-10{width:41.66667%}.medium-push-10{position:relative;left:41.66667%}.medium-pull-10{position:relative;left:-41.66667%}.medium-offset-9{margin-left:37.5%}.medium-11{width:45.83333%}.medium-push-11{position:relative;left:45.83333%}.medium-pull-11{position:relative;left:-45.83333%}.medium-offset-10{margin-left:41.66667%}.medium-12{width:50%}.medium-push-12{position:relative;left:50%}.medium-pull-12{position:relative;left:-50%}.medium-offset-11{margin-left:45.83333%}.medium-13{width:54.16667%}.medium-push-13{position:relative;left:54.16667%}.medium-pull-13{position:relative;left:-54.16667%}.medium-offset-12{margin-left:50%}.medium-14{width:58.33333%}.medium-push-14{position:relative;left:58.33333%}.medium-pull-14{position:relative;left:-58.33333%}.medium-offset-13{margin-left:54.16667%}.medium-15{width:62.5%}.medium-push-15{position:relative;left:62.5%}.medium-pull-15{position:relative;left:-62.5%}.medium-offset-14{margin-left:58.33333%}.medium-16{width:66.66667%}.medium-push-16{position:relative;left:66.66667%}.medium-pull-16{position:relative;left:-66.66667%}.medium-offset-15{margin-left:62.5%}.medium-17{width:70.83333%}.medium-push-17{position:relative;left:70.83333%}.medium-pull-17{position:relative;left:-70.83333%}.medium-offset-16{margin-left:66.66667%}.medium-18{width:75%}.medium-push-18{position:relative;left:75%}.medium-pull-18{position:relative;left:-75%}.medium-offset-17{margin-left:70.83333%}.medium-19{width:79.16667%}.medium-push-19{position:relative;left:79.16667%}.medium-pull-19{position:relative;left:-79.16667%}.medium-offset-18{margin-left:75%}.medium-20{width:83.33333%}.medium-push-20{position:relative;left:83.33333%}.medium-pull-20{position:relative;left:-83.33333%}.medium-offset-19{margin-left:79.16667%}.medium-21{width:87.5%}.medium-push-21{position:relative;left:87.5%}.medium-pull-21{position:relative;left:-87.5%}.medium-offset-20{margin-left:83.33333%}.medium-22{width:91.66667%}.medium-push-22{position:relative;left:91.66667%}.medium-pull-22{position:relative;left:-91.66667%}.medium-offset-21{margin-left:87.5%}.medium-23{width:95.83333%}.medium-push-23{position:relative;left:95.83333%}.medium-pull-23{position:relative;left:-95.83333%}.medium-offset-22{margin-left:91.66667%}.medium-24{width:100%}.medium-offset-23{margin-left:95.83333%}.medium-up-1>.column,.medium-up-1>.columns{width:100%;float:left}.medium-up-1>.column:nth-of-type(1n),.medium-up-1>.columns:nth-of-type(1n){clear:none}.medium-up-1>.column:nth-of-type(1n+1),.medium-up-1>.columns:nth-of-type(1n+1){clear:both}.medium-up-1>.column:last-child,.medium-up-1>.columns:last-child{float:left}.medium-up-2>.column,.medium-up-2>.columns{width:50%;float:left}.medium-up-2>.column:nth-of-type(1n),.medium-up-2>.columns:nth-of-type(1n){clear:none}.medium-up-2>.column:nth-of-type(2n+1),.medium-up-2>.columns:nth-of-type(2n+1){clear:both}.medium-up-2>.column:last-child,.medium-up-2>.columns:last-child{float:left}.medium-up-3>.column,.medium-up-3>.columns{width:33.33333%;float:left}.medium-up-3>.column:nth-of-type(1n),.medium-up-3>.columns:nth-of-type(1n){clear:none}.medium-up-3>.column:nth-of-type(3n+1),.medium-up-3>.columns:nth-of-type(3n+1){clear:both}.medium-up-3>.column:last-child,.medium-up-3>.columns:last-child{float:left}.medium-up-4>.column,.medium-up-4>.columns{width:25%;float:left}.medium-up-4>.column:nth-of-type(1n),.medium-up-4>.columns:nth-of-type(1n){clear:none}.medium-up-4>.column:nth-of-type(4n+1),.medium-up-4>.columns:nth-of-type(4n+1){clear:both}.medium-up-4>.column:last-child,.medium-up-4>.columns:last-child{float:left}.medium-up-5>.column,.medium-up-5>.columns{width:20%;float:left}.medium-up-5>.column:nth-of-type(1n),.medium-up-5>.columns:nth-of-type(1n){clear:none}.medium-up-5>.column:nth-of-type(5n+1),.medium-up-5>.columns:nth-of-type(5n+1){clear:both}.medium-up-5>.column:last-child,.medium-up-5>.columns:last-child{float:left}.medium-up-6>.column,.medium-up-6>.columns{width:16.66667%;float:left}.medium-up-6>.column:nth-of-type(1n),.medium-up-6>.columns:nth-of-type(1n){clear:none}.medium-up-6>.column:nth-of-type(6n+1),.medium-up-6>.columns:nth-of-type(6n+1){clear:both}.medium-up-6>.column:last-child,.medium-up-6>.columns:last-child{float:left}.medium-up-7>.column,.medium-up-7>.columns{width:14.28571%;float:left}.medium-up-7>.column:nth-of-type(1n),.medium-up-7>.columns:nth-of-type(1n){clear:none}.medium-up-7>.column:nth-of-type(7n+1),.medium-up-7>.columns:nth-of-type(7n+1){clear:both}.medium-up-7>.column:last-child,.medium-up-7>.columns:last-child{float:left}.medium-up-8>.column,.medium-up-8>.columns{width:12.5%;float:left}.medium-up-8>.column:nth-of-type(1n),.medium-up-8>.columns:nth-of-type(1n){clear:none}.medium-up-8>.column:nth-of-type(8n+1),.medium-up-8>.columns:nth-of-type(8n+1){clear:both}.medium-up-8>.column:last-child,.medium-up-8>.columns:last-child{float:left}.medium-collapse>.column,.medium-collapse>.columns{padding-left:0;padding-right:0}.medium-collapse .row{margin-left:0;margin-right:0}.medium-uncollapse>.column,.medium-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.medium-centered{float:none;margin-left:auto;margin-right:auto}.medium-uncentered,.medium-push-0,.medium-pull-0{position:static;margin-left:0;margin-right:0;float:left}}@media screen and (min-width:60.0625em){.large-1{width:4.16667%}.large-push-1{position:relative;left:4.16667%}.large-pull-1{position:relative;left:-4.16667%}.large-offset-0{margin-left:0}.large-2{width:8.33333%}.large-push-2{position:relative;left:8.33333%}.large-pull-2{position:relative;left:-8.33333%}.large-offset-1{margin-left:4.16667%}.large-3{width:12.5%}.large-push-3{position:relative;left:12.5%}.large-pull-3{position:relative;left:-12.5%}.large-offset-2{margin-left:8.33333%}.large-4{width:16.66667%}.large-push-4{position:relative;left:16.66667%}.large-pull-4{position:relative;left:-16.66667%}.large-offset-3{margin-left:12.5%}.large-5{width:20.83333%}.large-push-5{position:relative;left:20.83333%}.large-pull-5{position:relative;left:-20.83333%}.large-offset-4{margin-left:16.66667%}.large-6{width:25%}.large-push-6{position:relative;left:25%}.large-pull-6{position:relative;left:-25%}.large-offset-5{margin-left:20.83333%}.large-7{width:29.16667%}.large-push-7{position:relative;left:29.16667%}.large-pull-7{position:relative;left:-29.16667%}.large-offset-6{margin-left:25%}.large-8{width:33.33333%}.large-push-8{position:relative;left:33.33333%}.large-pull-8{position:relative;left:-33.33333%}.large-offset-7{margin-left:29.16667%}.large-9{width:37.5%}.large-push-9{position:relative;left:37.5%}.large-pull-9{position:relative;left:-37.5%}.large-offset-8{margin-left:33.33333%}.large-10{width:41.66667%}.large-push-10{position:relative;left:41.66667%}.large-pull-10{position:relative;left:-41.66667%}.large-offset-9{margin-left:37.5%}.large-11{width:45.83333%}.large-push-11{position:relative;left:45.83333%}.large-pull-11{position:relative;left:-45.83333%}.large-offset-10{margin-left:41.66667%}.large-12{width:50%}.large-push-12{position:relative;left:50%}.large-pull-12{position:relative;left:-50%}.large-offset-11{margin-left:45.83333%}.large-13{width:54.16667%}.large-push-13{position:relative;left:54.16667%}.large-pull-13{position:relative;left:-54.16667%}.large-offset-12{margin-left:50%}.large-14{width:58.33333%}.large-push-14{position:relative;left:58.33333%}.large-pull-14{position:relative;left:-58.33333%}.large-offset-13{margin-left:54.16667%}.large-15{width:62.5%}.large-push-15{position:relative;left:62.5%}.large-pull-15{position:relative;left:-62.5%}.large-offset-14{margin-left:58.33333%}.large-16{width:66.66667%}.large-push-16{position:relative;left:66.66667%}.large-pull-16{position:relative;left:-66.66667%}.large-offset-15{margin-left:62.5%}.large-17{width:70.83333%}.large-push-17{position:relative;left:70.83333%}.large-pull-17{position:relative;left:-70.83333%}.large-offset-16{margin-left:66.66667%}.large-18{width:75%}.large-push-18{position:relative;left:75%}.large-pull-18{position:relative;left:-75%}.large-offset-17{margin-left:70.83333%}.large-19{width:79.16667%}.large-push-19{position:relative;left:79.16667%}.large-pull-19{position:relative;left:-79.16667%}.large-offset-18{margin-left:75%}.large-20{width:83.33333%}.large-push-20{position:relative;left:83.33333%}.large-pull-20{position:relative;left:-83.33333%}.large-offset-19{margin-left:79.16667%}.large-21{width:87.5%}.large-push-21{position:relative;left:87.5%}.large-pull-21{position:relative;left:-87.5%}.large-offset-20{margin-left:83.33333%}.large-22{width:91.66667%}.large-push-22{position:relative;left:91.66667%}.large-pull-22{position:relative;left:-91.66667%}.large-offset-21{margin-left:87.5%}.large-23{width:95.83333%}.large-push-23{position:relative;left:95.83333%}.large-pull-23{position:relative;left:-95.83333%}.large-offset-22{margin-left:91.66667%}.large-24{width:100%}.large-offset-23{margin-left:95.83333%}.large-up-1>.column,.large-up-1>.columns{width:100%;float:left}.large-up-1>.column:nth-of-type(1n),.large-up-1>.columns:nth-of-type(1n){clear:none}.large-up-1>.column:nth-of-type(1n+1),.large-up-1>.columns:nth-of-type(1n+1){clear:both}.large-up-1>.column:last-child,.large-up-1>.columns:last-child{float:left}.large-up-2>.column,.large-up-2>.columns{width:50%;float:left}.large-up-2>.column:nth-of-type(1n),.large-up-2>.columns:nth-of-type(1n){clear:none}.large-up-2>.column:nth-of-type(2n+1),.large-up-2>.columns:nth-of-type(2n+1){clear:both}.large-up-2>.column:last-child,.large-up-2>.columns:last-child{float:left}.large-up-3>.column,.large-up-3>.columns{width:33.33333%;float:left}.large-up-3>.column:nth-of-type(1n),.large-up-3>.columns:nth-of-type(1n){clear:none}.large-up-3>.column:nth-of-type(3n+1),.large-up-3>.columns:nth-of-type(3n+1){clear:both}.large-up-3>.column:last-child,.large-up-3>.columns:last-child{float:left}.large-up-4>.column,.large-up-4>.columns{width:25%;float:left}.large-up-4>.column:nth-of-type(1n),.large-up-4>.columns:nth-of-type(1n){clear:none}.large-up-4>.column:nth-of-type(4n+1),.large-up-4>.columns:nth-of-type(4n+1){clear:both}.large-up-4>.column:last-child,.large-up-4>.columns:last-child{float:left}.large-up-5>.column,.large-up-5>.columns{width:20%;float:left}.large-up-5>.column:nth-of-type(1n),.large-up-5>.columns:nth-of-type(1n){clear:none}.large-up-5>.column:nth-of-type(5n+1),.large-up-5>.columns:nth-of-type(5n+1){clear:both}.large-up-5>.column:last-child,.large-up-5>.columns:last-child{float:left}.large-up-6>.column,.large-up-6>.columns{width:16.66667%;float:left}.large-up-6>.column:nth-of-type(1n),.large-up-6>.columns:nth-of-type(1n){clear:none}.large-up-6>.column:nth-of-type(6n+1),.large-up-6>.columns:nth-of-type(6n+1){clear:both}.large-up-6>.column:last-child,.large-up-6>.columns:last-child{float:left}.large-up-7>.column,.large-up-7>.columns{width:14.28571%;float:left}.large-up-7>.column:nth-of-type(1n),.large-up-7>.columns:nth-of-type(1n){clear:none}.large-up-7>.column:nth-of-type(7n+1),.large-up-7>.columns:nth-of-type(7n+1){clear:both}.large-up-7>.column:last-child,.large-up-7>.columns:last-child{float:left}.large-up-8>.column,.large-up-8>.columns{width:12.5%;float:left}.large-up-8>.column:nth-of-type(1n),.large-up-8>.columns:nth-of-type(1n){clear:none}.large-up-8>.column:nth-of-type(8n+1),.large-up-8>.columns:nth-of-type(8n+1){clear:both}.large-up-8>.column:last-child,.large-up-8>.columns:last-child{float:left}.large-collapse>.column,.large-collapse>.columns{padding-left:0;padding-right:0}.large-collapse .row{margin-left:0;margin-right:0}.large-uncollapse>.column,.large-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.large-centered{float:none;margin-left:auto;margin-right:auto}.large-uncentered,.large-push-0,.large-pull-0{position:static;margin-left:0;margin-right:0;float:left}}@media screen and (min-width:85.4375em){.xlarge-1{width:4.16667%}.xlarge-push-1{position:relative;left:4.16667%}.xlarge-pull-1{position:relative;left:-4.16667%}.xlarge-offset-0{margin-left:0}.xlarge-2{width:8.33333%}.xlarge-push-2{position:relative;left:8.33333%}.xlarge-pull-2{position:relative;left:-8.33333%}.xlarge-offset-1{margin-left:4.16667%}.xlarge-3{width:12.5%}.xlarge-push-3{position:relative;left:12.5%}.xlarge-pull-3{position:relative;left:-12.5%}.xlarge-offset-2{margin-left:8.33333%}.xlarge-4{width:16.66667%}.xlarge-push-4{position:relative;left:16.66667%}.xlarge-pull-4{position:relative;left:-16.66667%}.xlarge-offset-3{margin-left:12.5%}.xlarge-5{width:20.83333%}.xlarge-push-5{position:relative;left:20.83333%}.xlarge-pull-5{position:relative;left:-20.83333%}.xlarge-offset-4{margin-left:16.66667%}.xlarge-6{width:25%}.xlarge-push-6{position:relative;left:25%}.xlarge-pull-6{position:relative;left:-25%}.xlarge-offset-5{margin-left:20.83333%}.xlarge-7{width:29.16667%}.xlarge-push-7{position:relative;left:29.16667%}.xlarge-pull-7{position:relative;left:-29.16667%}.xlarge-offset-6{margin-left:25%}.xlarge-8{width:33.33333%}.xlarge-push-8{position:relative;left:33.33333%}.xlarge-pull-8{position:relative;left:-33.33333%}.xlarge-offset-7{margin-left:29.16667%}.xlarge-9{width:37.5%}.xlarge-push-9{position:relative;left:37.5%}.xlarge-pull-9{position:relative;left:-37.5%}.xlarge-offset-8{margin-left:33.33333%}.xlarge-10{width:41.66667%}.xlarge-push-10{position:relative;left:41.66667%}.xlarge-pull-10{position:relative;left:-41.66667%}.xlarge-offset-9{margin-left:37.5%}.xlarge-11{width:45.83333%}.xlarge-push-11{position:relative;left:45.83333%}.xlarge-pull-11{position:relative;left:-45.83333%}.xlarge-offset-10{margin-left:41.66667%}.xlarge-12{width:50%}.xlarge-push-12{position:relative;left:50%}.xlarge-pull-12{position:relative;left:-50%}.xlarge-offset-11{margin-left:45.83333%}.xlarge-13{width:54.16667%}.xlarge-push-13{position:relative;left:54.16667%}.xlarge-pull-13{position:relative;left:-54.16667%}.xlarge-offset-12{margin-left:50%}.xlarge-14{width:58.33333%}.xlarge-push-14{position:relative;left:58.33333%}.xlarge-pull-14{position:relative;left:-58.33333%}.xlarge-offset-13{margin-left:54.16667%}.xlarge-15{width:62.5%}.xlarge-push-15{position:relative;left:62.5%}.xlarge-pull-15{position:relative;left:-62.5%}.xlarge-offset-14{margin-left:58.33333%}.xlarge-16{width:66.66667%}.xlarge-push-16{position:relative;left:66.66667%}.xlarge-pull-16{position:relative;left:-66.66667%}.xlarge-offset-15{margin-left:62.5%}.xlarge-17{width:70.83333%}.xlarge-push-17{position:relative;left:70.83333%}.xlarge-pull-17{position:relative;left:-70.83333%}.xlarge-offset-16{margin-left:66.66667%}.xlarge-18{width:75%}.xlarge-push-18{position:relative;left:75%}.xlarge-pull-18{position:relative;left:-75%}.xlarge-offset-17{margin-left:70.83333%}.xlarge-19{width:79.16667%}.xlarge-push-19{position:relative;left:79.16667%}.xlarge-pull-19{position:relative;left:-79.16667%}.xlarge-offset-18{margin-left:75%}.xlarge-20{width:83.33333%}.xlarge-push-20{position:relative;left:83.33333%}.xlarge-pull-20{position:relative;left:-83.33333%}.xlarge-offset-19{margin-left:79.16667%}.xlarge-21{width:87.5%}.xlarge-push-21{position:relative;left:87.5%}.xlarge-pull-21{position:relative;left:-87.5%}.xlarge-offset-20{margin-left:83.33333%}.xlarge-22{width:91.66667%}.xlarge-push-22{position:relative;left:91.66667%}.xlarge-pull-22{position:relative;left:-91.66667%}.xlarge-offset-21{margin-left:87.5%}.xlarge-23{width:95.83333%}.xlarge-push-23{position:relative;left:95.83333%}.xlarge-pull-23{position:relative;left:-95.83333%}.xlarge-offset-22{margin-left:91.66667%}.xlarge-24{width:100%}.xlarge-offset-23{margin-left:95.83333%}.xlarge-up-1>.column,.xlarge-up-1>.columns{width:100%;float:left}.xlarge-up-1>.column:nth-of-type(1n),.xlarge-up-1>.columns:nth-of-type(1n){clear:none}.xlarge-up-1>.column:nth-of-type(1n+1),.xlarge-up-1>.columns:nth-of-type(1n+1){clear:both}.xlarge-up-1>.column:last-child,.xlarge-up-1>.columns:last-child{float:left}.xlarge-up-2>.column,.xlarge-up-2>.columns{width:50%;float:left}.xlarge-up-2>.column:nth-of-type(1n),.xlarge-up-2>.columns:nth-of-type(1n){clear:none}.xlarge-up-2>.column:nth-of-type(2n+1),.xlarge-up-2>.columns:nth-of-type(2n+1){clear:both}.xlarge-up-2>.column:last-child,.xlarge-up-2>.columns:last-child{float:left}.xlarge-up-3>.column,.xlarge-up-3>.columns{width:33.33333%;float:left}.xlarge-up-3>.column:nth-of-type(1n),.xlarge-up-3>.columns:nth-of-type(1n){clear:none}.xlarge-up-3>.column:nth-of-type(3n+1),.xlarge-up-3>.columns:nth-of-type(3n+1){clear:both}.xlarge-up-3>.column:last-child,.xlarge-up-3>.columns:last-child{float:left}.xlarge-up-4>.column,.xlarge-up-4>.columns{width:25%;float:left}.xlarge-up-4>.column:nth-of-type(1n),.xlarge-up-4>.columns:nth-of-type(1n){clear:none}.xlarge-up-4>.column:nth-of-type(4n+1),.xlarge-up-4>.columns:nth-of-type(4n+1){clear:both}.xlarge-up-4>.column:last-child,.xlarge-up-4>.columns:last-child{float:left}.xlarge-up-5>.column,.xlarge-up-5>.columns{width:20%;float:left}.xlarge-up-5>.column:nth-of-type(1n),.xlarge-up-5>.columns:nth-of-type(1n){clear:none}.xlarge-up-5>.column:nth-of-type(5n+1),.xlarge-up-5>.columns:nth-of-type(5n+1){clear:both}.xlarge-up-5>.column:last-child,.xlarge-up-5>.columns:last-child{float:left}.xlarge-up-6>.column,.xlarge-up-6>.columns{width:16.66667%;float:left}.xlarge-up-6>.column:nth-of-type(1n),.xlarge-up-6>.columns:nth-of-type(1n){clear:none}.xlarge-up-6>.column:nth-of-type(6n+1),.xlarge-up-6>.columns:nth-of-type(6n+1){clear:both}.xlarge-up-6>.column:last-child,.xlarge-up-6>.columns:last-child{float:left}.xlarge-up-7>.column,.xlarge-up-7>.columns{width:14.28571%;float:left}.xlarge-up-7>.column:nth-of-type(1n),.xlarge-up-7>.columns:nth-of-type(1n){clear:none}.xlarge-up-7>.column:nth-of-type(7n+1),.xlarge-up-7>.columns:nth-of-type(7n+1){clear:both}.xlarge-up-7>.column:last-child,.xlarge-up-7>.columns:last-child{float:left}.xlarge-up-8>.column,.xlarge-up-8>.columns{width:12.5%;float:left}.xlarge-up-8>.column:nth-of-type(1n),.xlarge-up-8>.columns:nth-of-type(1n){clear:none}.xlarge-up-8>.column:nth-of-type(8n+1),.xlarge-up-8>.columns:nth-of-type(8n+1){clear:both}.xlarge-up-8>.column:last-child,.xlarge-up-8>.columns:last-child{float:left}.xlarge-collapse>.column,.xlarge-collapse>.columns{padding-left:0;padding-right:0}.xlarge-collapse .row{margin-left:0;margin-right:0}.xlarge-uncollapse>.column,.xlarge-uncollapse>.columns{padding-left:.75rem;padding-right:.75rem}.xlarge-centered{float:none;margin-left:auto;margin-right:auto}.xlarge-uncentered,.xlarge-push-0,.xlarge-pull-0{position:static;margin-left:0;margin-right:0;float:left}}.hide{display:none !important}.invisible{visibility:hidden}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none !important}}@media screen and (max-width:0),screen and (min-width:40em){.show-for-small-only{display:none !important}}@media screen and (min-width:40em){.hide-for-medium{display:none !important}}@media screen and (max-width:39.9375em){.show-for-medium{display:none !important}}@media screen and (min-width:40em) and (max-width:60em){.hide-for-medium-only{display:none !important}}@media screen and (max-width:39.9375em),screen and (min-width:60.0625em){.show-for-medium-only{display:none !important}}@media screen and (min-width:60.0625em){.hide-for-large{display:none !important}}@media screen and (max-width:60em){.show-for-large{display:none !important}}@media screen and (min-width:60.0625em) and (max-width:85.375em){.hide-for-large-only{display:none !important}}@media screen and (max-width:60em),screen and (min-width:85.4375em){.show-for-large-only{display:none !important}}@media screen and (min-width:85.4375em){.hide-for-xlarge{display:none !important}}@media screen and (max-width:85.375em){.show-for-xlarge{display:none !important}}@media screen and (min-width:85.4375em) and (max-width:85.375em){.hide-for-xlarge-only{display:none !important}}@media screen and (max-width:85.375em),screen and (min-width:85.4375em){.show-for-xlarge-only{display:none !important}}.show-for-sr,.show-on-focus{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.show-on-focus:active,.show-on-focus:focus{position:static !important;height:auto;width:auto;overflow:visible;clip:auto}.show-for-landscape,.hide-for-portrait{display:block !important}@media screen and (orientation:landscape){.show-for-landscape,.hide-for-portrait{display:block !important}}@media screen and (orientation:portrait){.show-for-landscape,.hide-for-portrait{display:none !important}}.hide-for-landscape,.show-for-portrait{display:none !important}@media screen and (orientation:landscape){.hide-for-landscape,.show-for-portrait{display:none !important}}@media screen and (orientation:portrait){.hide-for-landscape,.show-for-portrait{display:block !important}}.float-left{float:left !important}.float-right{float:right !important}.float-center{display:block;margin-left:auto;margin-right:auto}.clearfix::before,.clearfix::after{content:' ';display:table;flex-basis:0;order:1}.clearfix::after{clear:both}body,html{overflow-x:hidden}#widget-classificacao *{-webkit-font-smoothing:antialiased}#container-para-tabela-simulador-ou-navegacao-js{position:relative}#widget-classificacao{position:relative}@media only screen and (max-width:38.75em){#widget-classificacao{margin-bottom:40px;padding-top:30px}}@media only screen and (min-width:38.8125em){#widget-classificacao{margin:-30px 0 46px;padding-top:41px}}@media only screen and (min-width:62.5625em) and (max-width:75em){#widget-classificacao .mata-mata-conteudo .placar-jogo{height:309px;padding-top:24px;text-align:center}#widget-classificacao .mata-mata-conteudo .placar-jogo .tabela-icone-versus{margin:0 5px}#widget-classificacao .mata-mata-conteudo .lista-de-jogos-dentro-grupo .placar-jogo-equipes-nome{display:inline-block}#widget-classificacao .mata-mata-conteudo .lista-de-jogos-dentro-grupo .placar-jogo-equipes-sigla{display:none}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-nome{display:inline-block}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-sigla{display:none}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-escudo-mandante{margin:0 0 0 6px}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-escudo-visitante{margin:0 6px 0 0}#widget-classificacao .mata-mata-conteudo .lista-de-jogos-dentro-grupo .placar-jogo-equipes{display:inline-block}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes{font-size:15px;line-height:16px}}@media only screen and (min-width:75em){#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-escudo-mandante{margin:0 0 0 8px}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-escudo-visitante{margin:0 8px 0 0}}.placar-jogo-equipes-placar{width:26%}.placar-jogo-placeholder .placar-jogo-equipes-placar{width:4%}.mata-mata-conteudo .placar-jogo{padding-top:24px;text-align:center}.mata-mata-conteudo .placar-jogo .tabela-icone-versus{margin:0 5px}.mata-mata-conteudo .placar-jogo-link{display:block;margin-top:-5px}.mata-mata-conteudo .placar-jogo-informacoes{color:#666;font-family:proximanova-bold;font-size:11px;letter-spacing:-.3px;text-transform:uppercase;height:13px}.mata-mata-conteudo .placar-jogo-informacoes-local{font-family:proximanova-regular}.mata-mata-conteudo .placar-jogo-equipes{font-family:opensans;font-style:normal;font-weight:300;-webkit-font-smoothing:antialiased;font-size:18px;color:#333;display:table;padding:5px 0 4px;width:100%}.mata-mata-conteudo .placar-jogo-equipes-item{display:table-cell;height:40px;vertical-align:middle}.mata-mata-conteudo .placar-jogo-equipes-item img,.mata-mata-conteudo .placar-jogo-equipes-item span{vertical-align:middle}.mata-mata-conteudo .placar-jogo-equipes-placar{font-family:opensans-bold}.mata-mata-conteudo .placar-jogo-equipes-placar,.mata-mata-conteudo .placar-jogo-equipes-mandante,.mata-mata-conteudo .placar-jogo-equipes-visitante{width:33%}.mata-mata-conteudo .placar-jogo-equipes-sigla{display:inline-block}.mata-mata-conteudo .placar-jogo-equipes-nome{display:none}.mata-mata-conteudo .placar-jogo-equipes-escudo-mandante,.mata-mata-conteudo .placar-jogo-equipes-escudo-visitante{height:30px;width:30px}.mata-mata-conteudo .placar-jogo-equipes-escudo-mandante{margin-left:8px}.mata-mata-conteudo .placar-jogo-equipes-escudo-visitante{margin-right:8px}.mata-mata-conteudo .placar-jogo-equipes-placar-mandante,.mata-mata-conteudo .placar-jogo-equipes-placar-visitante{font-size:21px}.mata-mata-conteudo .placar-jogo-equipes-placar-separador{font-size:16px}.mata-mata-conteudo .placar-jogo-equipes-placar-penalties{font-size:14px}.mata-mata-conteudo .placar-jogo-complemento{font-family:ProximaNova;font-weight:bold;font-size:11px;text-transform:uppercase}.mata-mata-conteudo .placar-jogo-placeholder{padding-top:22px}.mata-mata-conteudo .placar-jogo-placeholder .placar-jogo-equipes-item{width:48%}.mata-mata-conteudo .placar-jogo-placeholder .placar-jogo-equipes-placar{width:4%}.mata-mata-conteudo .placar-jogo-equipes-placeholder{font-family:opensans;font-weight:bold;font-size:12px;line-height:12px;vertical-align:middle}.mata-mata-conteudo .placar-jogo-equipes-item-pre-classificado{display:block;padding-top:3px}.mata-mata-conteudo .placar-jogo-equipes-item-pre-classificado .placar-jogo-equipes-nome{display:inline-block}.mata-mata-conteudo .placar-jogo-equipes-sigla,.mata-mata-conteudo .placar-jogo-equipes-nome{line-height:23px;max-width:70%;max-height:42px;text-overflow:ellipsis;overflow:hidden}#widget-classificacao .tabela-header-titulo{font-size:26px;margin-bottom:14px}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-header-titulo{margin-bottom:19px}}.sprite-sprite{background-image:url("../img/sprite-sbdb20223d6.png");background-repeat:no-repeat}#widget-classificacao .tabela-icone{display:inline-block;height:5px;overflow:hidden;width:5px}#widget-classificacao .tabela-icone-circulo{border-radius:50%}#widget-classificacao .tabela-icone-v{background-color:#51a81e}#widget-classificacao .tabela-icone-e,#widget-classificacao .tabela-icone-neutra{background-color:#ccc}#widget-classificacao .tabela-icone-d{background-color:red}#widget-classificacao .tabela-icone-negativa,#widget-classificacao .tabela-icone-positiva{background:url("../img/sprite-tabela-icones.svg") no-repeat left 1px;background-size:10px auto;height:7px}#widget-classificacao .tabela-icone-negativa{background-position:right 1px}#widget-classificacao .tabela-icone-versus{background:url(https://s.glbimg.com/es/ge/static/live/widget_classificacao_responsivo/img/sprite-tabela-icones.svg?5dfb76dc3509) no-repeat left bottom;background-size:12px auto;height:6px;display:inline-block;width:6px}#widget-classificacao .tabela-icone-simulador{background:url("../img/sprite-tabela-icones.svg") no-repeat left -8px;background-size:11px auto;height:9px;width:12px}#widget-classificacao .tabela-times .tabela-icone{height:7px;margin-left:3px;width:7px}#widget-classificacao .tabela-times .tabela-icone-negativa,#widget-classificacao .tabela-times .tabela-icone-positiva{background-size:14px auto;height:8px}#widget-classificacao .tabela-pontos .tabela-icone{height:6px;margin-left:2px;width:6px}#widget-classificacao .tabela-pontos .tabela-icone:first-child{margin-left:0}#widget-classificacao .tabela-pontos .tabela-icone.bs-tabela{margin-left:0}@media only screen and (max-width:600px){#widget-classificacao .placar-jogo .tabela-icone-versus{background-position:0 100%;background-size:1em;height:9px;width:9px}}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-icone{height:8px;width:8px}#widget-classificacao .tabela-icone-negativa,#widget-classificacao .tabela-icone-positiva{background-size:14px auto}#widget-classificacao .tabela-icone-versus{background-size:19px auto;height:11px;width:9px}#widget-classificacao .placar-jogo .tabela-icone-versus{background-position:0 -46px}#widget-classificacao .tabela-icone-simulador{background-position:left -10px;background-size:14px auto;height:11px;width:14px}#widget-classificacao .tabela-times .tabela-icone-negativa,#widget-classificacao .tabela-times .tabela-icone-positiva{background-size:17px auto;height:10px;width:8px}#widget-classificacao .tabela-pontos .tabela-icone{height:7px;width:7px}}#widget-classificacao .no-svg .tabela-icone-negativa,#widget-classificacao .no-svg .tabela-icone-positiva,#widget-classificacao .no-svg .tabela-icone-versus,#widget-classificacao .no-svg .tabela-icone-simulador{background:url("../img/sprite-sbdb20223d6.png") no-repeat;background-size:16px auto}#widget-classificacao .no-svg .tabela-icone-negativa,#widget-classificacao .no-svg .tabela-icone-positiva{height:8px;width:7px}#widget-classificacao .no-svg .tabela-icone-negativa{background-position:0 0}#widget-classificacao .no-svg .tabela-icone-positiva{background-position:0 -8px}#widget-classificacao .no-svg .tabela-icone-versus{background-position:0 -28px;height:9px;width:9px}#widget-classificacao .no-svg .tabela-icone-simulador{background-position:0 -16px;height:12px;width:16px}#widget-classificacao .tabela-navegacao{border-bottom:1px solid silver;border-top:1px solid #ddd;color:#333;font-family:ProximaNova;font-weight:bold;font-size:14px;position:relative;text-align:center;text-transform:uppercase}#widget-classificacao .tabela-navegacao-setas,#widget-classificacao .tabela-navegacao-seletor{line-height:44px}#widget-classificacao .tabela-navegacao-setas{color:#ccc;position:absolute;top:0}#widget-classificacao .tabela-navegacao-setas-ativa{color:#3b9c00;cursor:pointer}#widget-classificacao .tabela-navegacao-anterior{left:0;padding-right:20px}#widget-classificacao .tabela-navegacao-proximo{padding-left:20px;right:0}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-navegacao{font-size:24px}#widget-classificacao .tabela-navegacao-setas,#widget-classificacao .tabela-navegacao-seletor{line-height:63px}#widget-classificacao .tabela-navegacao-anterior{padding-right:40px}#widget-classificacao .tabela-navegacao-proximo{padding-left:40px}}#widget-classificacao .tabela-navegacao-fases{border-top:0;margin-bottom:30px}#widget-classificacao .tabela-navegacao-fases .tabela-navegacao-seletor{display:none}#widget-classificacao .tabela-navegacao-fases .tabela-navegacao-seletor-ativo{display:inline-block}@media only screen and (max-width:38.75em){#widget-classificacao .tabela-navegacao-fases{margin-top:-30px}}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-navegacao-fases{margin:-20px 0 41px}}@media only screen and (min-width:62.5625em){#widget-classificacao .tabela-navegacao-jogos{font-size:15px}#widget-classificacao .tabela-navegacao-jogos .tabela-navegacao-setas,#widget-classificacao .tabela-navegacao-jogos .tabela-navegacao-seletor{line-height:39px}#widget-classificacao .tabela-navegacao-jogos .tabela-navegacao-seletor{font-size:15px}}#widget-classificacao .legenda-classificacao{color:#999;font-size:9px;line-height:16px;margin:8px 0 36px;font-family:opensans}#widget-classificacao .legenda-grupos,#widget-classificacao .legenda-grupo,#widget-classificacao .legenda-label,#widget-classificacao .legenda-regulamento{display:inline-block}#widget-classificacao .legenda-grupo{white-space:nowrap}#widget-classificacao .legenda-label{margin-right:10px;text-transform:lowercase}#widget-classificacao .legenda-regulamento{color:#51a81e;cursor:pointer;transition:color .35s;white-space:nowrap}#widget-classificacao .legenda-regulamento:hover{color:#48c30b}#widget-classificacao .disclaimer{font-family:opensans;font-style:italic;margin-top:12px}#widget-classificacao .regulamento-texto-js{display:none}@media only screen and (min-width:480px){#widget-classificacao .legenda-grupos{width:85%}#widget-classificacao .legenda-regulamento{text-align:right;vertical-align:top;width:14%}}@media only screen and (min-width:38.8125em){#widget-classificacao .legenda-classificacao{font-size:11px;margin:12px 0 68px}#widget-classificacao .legenda-label{margin-right:20px}}@media only screen and (min-width:62.5625em){#widget-classificacao .legenda-classificacao{margin-top:9px}}#widget-classificacao .lista-de-jogos{position:relative}#widget-classificacao .lista-de-jogos-conteudo{opacity:1;transition:opacity .35s}#widget-classificacao .lista-de-jogos-item{border-bottom:1px solid #e3e3e3}#widget-classificacao .lista-de-jogos-dentro-grupo .tabela-header-titulo{font-size:17px;margin-bottom:11px}@media only screen and (min-width:480px){#widget-classificacao .lista-de-jogos .placar-jogo-equipes-nome{display:inline-block}#widget-classificacao .lista-de-jogos .placar-jogo-equipes-sigla{display:none}}@media only screen and (min-width:38.8125em){#widget-classificacao .lista-de-jogos-dentro-grupo .tabela-header-titulo{font-size:28px;margin-bottom:16px}#widget-classificacao .lista-de-jogos-dentro-grupo .placar-jogo-equipes-item{width:38%}#widget-classificacao .lista-de-jogos-dentro-grupo .placar-jogo-equipes-placar{width:16%}#widget-classificacao .lista-de-jogos-dentro-grupo .placar-jogo-equipes-nome{display:none}#widget-classificacao .lista-de-jogos-dentro-grupo .placar-jogo-equipes-sigla{display:inline-block}}@media only screen and (min-width:62.5625em){#widget-classificacao .lista-de-jogos .placar-jogo-equipes-item{width:33%}#widget-classificacao .lista-de-jogos .placar-jogo-equipes-placar{width:34%}#widget-classificacao .lista-de-jogos .placar-jogo-equipes-nome{display:none}#widget-classificacao .lista-de-jogos .placar-jogo-equipes-sigla{display:inline-block}#widget-classificacao .lista-de-jogos .tabela-navegacao-setas,#widget-classificacao .lista-de-jogos .tabela-navegacao-seletor{font-size:16px;line-height:39px}#widget-classificacao .lista-de-jogos-dentro-grupo{display:inline-block;border-left:1px solid #ccc;float:right;vertical-align:top;width:32%}#widget-classificacao .lista-de-jogos-dentro-grupo .tabela-header-titulo{display:none}#widget-classificacao .lista-de-jogos-dentro-grupo .tabela-navegacao-anterior{padding-left:10px}#widget-classificacao .lista-de-jogos-dentro-grupo .tabela-navegacao-proximo{padding-right:10px}#widget-classificacao .lista-de-jogos-fora-grupo{border-left:1px solid #ddd;padding-left:32px;position:absolute;right:0;top:0;width:34%}}@media only screen and (min-width:1044px){#widget-classificacao .lista-de-jogos-fora-grupo{width:34%}}#widget-classificacao .section-container{margin-bottom:36px}#widget-classificacao .section-container-last{margin-bottom:0}#widget-classificacao .tabela{color:#333;font-family:opensans;position:relative}#widget-classificacao .tabela th,#widget-classificacao .tabela td{vertical-align:middle}#widget-classificacao .tabela-head-linha{border-bottom:1px solid silver;border-top:1px solid #ddd;color:#999;font-size:9px;height:30px}#widget-classificacao .tabela-body-linha{border-bottom:solid 1px #ddd;height:40px}#widget-classificacao .tabela-body-linha td{background-color:#fcfcfc;line-height:14px}#widget-classificacao .tabela-scroll{opacity:1;overflow:hidden;position:relative;transition:opacity .35s;z-index:5}#widget-classificacao .tabela-scroll-ativo{margin-right:-10px;overflow:auto;-webkit-overflow-scrolling:touch}#widget-classificacao .tabela-scroll-ativo .tabela-pontos{background-color:#fcfcfc;width:auto}#widget-classificacao .tabela-fake{left:0;position:absolute;right:-10px;top:0;z-index:1}#widget-classificacao .tabela-fake .tabela-fake-table{width:100%}#widget-classificacao .tabela-fake .coluna-fake-left{width:70%}#widget-classificacao .tabela-fake td:nth-child(odd){background-color:#f5f5f5}#widget-classificacao .tabela-com-jogos-por-grupo{margin-bottom:21px}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela{font-size:15px}#widget-classificacao .tabela-scroll-ativo{margin-right:0}#widget-classificacao .tabela-fake{right:0}#widget-classificacao .tabela-com-jogos-por-grupo{margin-bottom:29px}#widget-classificacao .tabela-head-linha{font-size:11px;height:40px}#widget-classificacao .tabela-body-linha{height:55px}}@media only screen and (min-width:62.5625em){#widget-classificacao .section-container{width:65%}#widget-classificacao .pontos-corridos-grupado .section-container{width:97%}#widget-classificacao .tabela-com-jogos-por-grupo{display:inline-block;margin-bottom:0;vertical-align:top;width:65%}#widget-classificacao .dentro .tabela-com-jogos-por-grupo{width:68%}#widget-classificacao .tabela-com-jogos-por-grupo .tabela-head-linha{height:40px}}@media only screen and (min-width:1044px){#widget-classificacao .section-container{width:65%}#widget-classificacao .pontos-corridos-grupado .section-container{width:97%}}#widget-classificacao .tabela-times{background-color:#fcfcfc;font-size:13px;position:absolute;table-layout:fixed;width:140px;z-index:10}#widget-classificacao .tabela-times-scrolling .tabela-times-time-nome{display:none}#widget-classificacao .tabela-times-scrolling .tabela-times-time-sigla{display:inline-block}#widget-classificacao .tabela-times-com-borda{box-shadow:1px 0 0 0 rgba(153,153,153,0.25)}#widget-classificacao .tabela-times-com-borda tr{border-right:1px solid #999}#widget-classificacao .tabela-times-col-posicao{width:18px}#widget-classificacao .tabela-times-col-time{width:auto}#widget-classificacao .tabela-times-col-variacao{width:32px}#widget-classificacao .tabela-times-head,.artilharia-wrapper .ranking-header{line-height:10px;text-align:left;text-transform:uppercase}#widget-classificacao .tabela-times-posicao{color:#999;letter-spacing:-1px}#widget-classificacao .tabela-times-time{letter-spacing:-1px}#widget-classificacao .tabela-times-time-link{color:#333;display:table-cell;height:39px;vertical-align:middle;width:140px}#widget-classificacao .tabela-times-time-link:hover{color:#48c30b}#widget-classificacao .tabela-times-time-nome{display:inline-block;font-weight:normal}#widget-classificacao .tabela-times-time-sigla{display:none}#widget-classificacao .tabela-times-variacao{color:#bebebe;font-size:9px;padding:3px 0 0 8px}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-times{font-size:17px;width:250px}#widget-classificacao .tabela-times-col-posicao{width:25px}#widget-classificacao .tabela-times-col-variacao{width:38px}#widget-classificacao .tabela-times-head,.artilharia-wrapper .ranking-header{letter-spacing:-.3px}#widget-classificacao .tabela-times-posicao{letter-spacing:-2px}#widget-classificacao .tabela-times-time-link{height:54px;width:250px}#widget-classificacao .tabela-times-variacao{font-size:11px;padding:3px 0 0 12px}#widget-classificacao .tabela-com-jogos-por-grupo .tabela-times{width:221px}}@media only screen and (min-width:62.5625em){#widget-classificacao .tabela-com-jogos-por-grupo .tabela-times{width:239px}}#widget-classificacao .tabela-pontos{font-size:14px;width:100%}#widget-classificacao .tabela-pontos .tabela-head-linha,#widget-classificacao .tabela-pontos .tabela-body-linha{text-align:center}#widget-classificacao .tabela-pontos .tabela-head-linha{font-family:opensans}#widget-classificacao .tabela-pontos th{padding:0 17px;white-space:nowrap}#widget-classificacao .tabela-pontos td:nth-child(odd){background-color:#f5f5f5}#widget-classificacao .tabela-pontos-th-duplo{padding:0 13px}#widget-classificacao .tabela-pontos-th-longo{padding:0 10px}#widget-classificacao .tabela-pontos-ponto{font-family:opensans;font-weight:bold}@media only screen and (min-width:480px){#widget-classificacao{margin-top:0}#widget-classificacao .tabela-pontos th{padding:0 15px}}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-pontos th{padding:0 16px}#widget-classificacao .tabela-pontos td{padding-top:2px}#widget-classificacao .tabela-pontos .tabela-pontos-ultimos-jogos{padding-top:19px;vertical-align:baseline}}@media only screen and (min-width:62.5625em){#widget-classificacao .tabela-pontos th{padding:0 17px}#widget-classificacao .tabela-pontos .tabela-pontos-th-duplo{padding:0 14px}#widget-classificacao .tabela-pontos .tabela-pontos-th-longo{padding:0 7px}}@media only screen and (max-width:38.75em){.areatemplate-meio{background-color:#fff}.areatemplate-topo:not(:empty),.areatemplate-showtime:not(:empty),.areatemplate-meio:not(:empty){padding-top:2.5rem;margin-top:0}}#widget-classificacao .chave-jogo-espacador{margin-bottom:35px;position:relative}#widget-classificacao .chave-jogo-com-chave-posterior{padding-right:15px}#widget-classificacao .chave-jogo-com-chave-posterior .chave-jogo-conector-linha{display:block}#widget-classificacao .chave-jogo{background-color:#fcfcfc;border:1px solid silver;border-radius:3px;margin-bottom:15px;position:relative;z-index:5}#widget-classificacao .chave-jogo-separador{height:1px;left:0;position:absolute;right:0;top:0;z-index:10}#widget-classificacao .chave-jogo-nome-centralizador{left:50%;position:absolute;top:-11px}#widget-classificacao .chave-jogo-nome{background-color:#fcfcfc;border:1px solid #ddd;border-radius:9px;color:#999;display:inline-block;font-family:opensans;font-size:9px;line-height:14px;margin-left:-50%;padding:0 14px;text-transform:lowercase;white-space:nowrap}#widget-classificacao .chave-jogo-conector-anterior{background-color:#ddd;height:1px;left:-100%;position:absolute;right:100%;top:50%;z-index:1}#widget-classificacao .chave-jogo-conector-posterior{height:1px;left:50%;position:absolute;right:15px;z-index:1}#widget-classificacao .chave-jogo-conector-posterior-duplo{border:solid #ddd;border-width:1px 1px 1px 0;height:120px;right:0;top:50px}#widget-classificacao .chave-2-jogo-conector-posterior-duplo{height:238px;top:111px}#widget-classificacao .chave-3-jogo-conector-posterior-duplo{height:326px;top:151px}#widget-classificacao .chave-jogo-conector-linha{background-color:#ddd;display:none;height:1px;position:absolute;right:-1200px;top:50%;width:1200px}#widget-classificacao .chave-2-jogos .chave-jogo-separador{background-color:#ddd;top:50%}#widget-classificacao .chave-2-jogos .chave-jogo-conector-posterior-duplo{height:238px}@media only screen and (min-width:480px){#widget-classificacao .chave-1-jogos .placar-jogo-equipes-nome{display:inline-block}#widget-classificacao .chave-1-jogos .placar-jogo-equipes-sigla{display:none}}@media only screen and (max-width:38.75em){#widget-classificacao .chave-2-jogos .placar-jogo:first-child{padding-top:20px}#widget-classificacao .chave-2-jogos .placar-jogo:last-child{padding-top:26px}#widget-classificacao .chave-2-jogos .placar-jogo-placeholder:first-child{padding-top:22px}#widget-classificacao .chave-2-jogos .placar-jogo-link{margin-top:-8px}#widget-classificacao .chave-3-jogos .placar-jogo:nth-child(-n+4){border-bottom:1px solid #ddd}}@media only screen and (min-width:38.8125em){#widget-classificacao .chave-jogo-espacador{margin-bottom:50px}#widget-classificacao .chave-jogo{height:110px;margin-bottom:20px}#widget-classificacao .chave-jogo-nome{font-size:11px;line-height:18px}#widget-classificacao .chave-jogo-conector-posterior-duplo,#widget-classificacao .chave-2-jogo-conector-posterior-duplo{height:130px;top:55px}#widget-classificacao .chave-1-jogos .placar-jogo-equipes-item{width:33%}#widget-classificacao .chave-1-jogos .placar-jogo-equipes-placar{width:33%}#widget-classificacao .chave-1-jogos .placar-jogo-placeholder .placar-jogo-equipes-item{width:48%}#widget-classificacao .chave-1-jogos .placar-jogo-placeholder .placar-jogo-equipes-item.placar-jogo-equipes-placar{width:4%}#widget-classificacao .chave-2-jogos .chave-jogo-separador{height:100%;left:50%;top:0;width:1px}#widget-classificacao .chave-2-jogos .chave-jogo-nome-centralizador{top:43px}#widget-classificacao .chave-2-jogos .placar-jogo{display:inline-block;vertical-align:top;width:50%}#widget-classificacao .mata-mata-conteudo .chave-2-jogos .placar-jogo{display:inline-block;vertical-align:top;width:49%}#widget-classificacao .chave-2-jogos .placar-jogo:first-child{padding-right:5%}#widget-classificacao .chave-2-jogos .placar-jogo:last-child{padding-left:5%}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-item{width:36%}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-item.placar-jogo-equipes-placar{width:28%}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-nome{display:none}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-sigla{display:inline-block}#widget-classificacao .chave-2-jogos .placar-jogo-placeholder .placar-jogo-equipes-item{width:42%}#widget-classificacao .chave-2-jogos .placar-jogo-placeholder .placar-jogo-equipes-item.placar-jogo-equipes-placar{width:16%}#widget-classificacao .chave-3-jogos .placar-jogo{display:inline-block;vertical-align:top;width:33%}#widget-classificacao .chave-3-jogos .placar-jogo:nth-child(2n){border-left:1px solid #ddd;border-right:1px solid #ddd}#widget-classificacao .chave-3-jogos .placar-jogo-equipes-placeholder{font-size:12px;margin-top:-4px;max-width:63%}}@media only screen and (min-width:62.5625em){#widget-classificacao .chave-1-jogos .tabela-icone-versus{margin-left:16px;margin-right:16px}#widget-classificacao .chave-2-jogos .tabela-icone-versus{margin-left:8px;margin-right:8px}#widget-classificacao .chave-2-jogos .placar-jogo:first-child{padding-right:3%}#widget-classificacao .chave-2-jogos .placar-jogo:last-child{padding-left:3%}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-nome{display:inline-block}#widget-classificacao .chave-2-jogos .placar-jogo-equipes-sigla{display:none}#widget-classificacao .chave-3-jogos .placar-jogo-equipes-placeholder{max-width:65%}#widget-classificacao .placar-jogo-placeholder .placar-jogo-equipes-item{width:42%}#widget-classificacao .placar-jogo-placeholder .placar-jogo-equipes-item.placar-jogo-equipes-placar{width:8%}}#widget-classificacao .tabela-basquete .legenda-grupo:last-child .legenda-label:nth-child(2){display:none}#widget-classificacao .tabela-futebol .mata-mata-conteudo .chave-2-jogos .placar-jogo-equipes-placar{width:26%}#widget-classificacao .tabela-futebol .mata-mata-conteudo .placar-jogo-equipes-placar{width:26%}#widget-classificacao .tabela-futebol .mata-mata-conteudo .placar-jogo-equipes-item{width:33%}#widget-classificacao .tabela-futebol .mata-mata-conteudo .tabela-icone.tabela-icone-versus{background-size:19px auto;height:11px;width:9px;background-position-x:0;background-position-y:100%}#widget-classificacao .tabela-futebol .placar-jogo-equipes-item{width:35%}#widget-classificacao .tabela-futebol .placar-jogo-equipes-placar{width:30%}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-futebol .placar-jogo-equipes-item{width:43%}#widget-classificacao .tabela-futebol .placar-jogo-equipes-placar{width:14%}#widget-classificacao .tabela-futebol .placar-jogo-equipes-escudo-mandante{margin:-5px 0 0 9px}#widget-classificacao .tabela-futebol .placar-jogo-equipes-escudo-visitante{margin:-5px 8px 0 0}#widget-classificacao .tabela-futebol .placar-jogo-equipes-placar-mandante,#widget-classificacao .tabela-futebol .placar-jogo-equipes-placar-visitante{font-size:28px;line-height:28px}#widget-classificacao .tabela-futebol .mata-mata-conteudo .placar-jogo-equipes-placar-mandante,#widget-classificacao .tabela-futebol .mata-mata-conteudo .placar-jogo-equipes-placar-visitante{font-size:21px;line-height:21px}}@media only screen and (min-width:62.5625em){#widget-classificacao .tabela-futebol .placar-jogo-equipes-item{width:30%}#widget-classificacao .tabela-futebol .placar-jogo-equipes-placar{width:40%}}#widget-classificacao .tabela-basquete .placar-jogo-equipes-item{width:31%}#widget-classificacao .tabela-basquete .placar-jogo-equipes-placar{width:38%}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-basquete .placar-jogo-equipes-item{width:42%}#widget-classificacao .tabela-basquete .placar-jogo-equipes-placar{width:16%}#widget-classificacao .tabela-basquete .placar-jogo-equipes-escudo-mandante{margin:-5px 0 0 6px}#widget-classificacao .tabela-basquete .placar-jogo-equipes-escudo-visitante{margin:-5px 6px 0 0}#widget-classificacao .tabela-basquete .placar-jogo-equipes-placar-mandante,#widget-classificacao .tabela-basquete .placar-jogo-equipes-placar-visitante{font-size:26px;line-height:26px}}@media only screen and (min-width:62.5625em){#widget-classificacao .tabela-basquete .placar-jogo .tabela-icone-versus{margin:2px 6px 0}#widget-classificacao .tabela-basquete .placar-jogo-equipes-item{width:27%}#widget-classificacao .tabela-basquete .placar-jogo-equipes-placar{width:46%}}@media only screen and (min-width:38.8125em){#widget-classificacao .tabela-basquete .placar-jogo-equipes{font-size:16px}}#widget-classificacao .tabela-icone-d{background-color:red}#widget-classificacao .tabela-icone-e,#widget-classificacao .tabela-icone-neutra{background-color:#ccc}#widget-classificacao .tabela-icone-v{background-color:#51a81e}#widget-classificacao .tabela-icone-circulo{border-radius:50%}#widget-classificacao .tabela-icone{display:inline-block;height:9px;overflow:hidden;width:9px}#widget-classificacao .tabela-icone-negativa,#widget-classificacao .tabela-icone-positiva{background:url("https://s.glbimg.com/es/ge/static/live/widget_classificacao_responsivo/img/sprite-tabela-icones.svg?5dfb76dc3509") no-repeat left 1px;background-size:15px auto;height:9px;width:8px}#widget-classificacao .tabela-icone-negativa{background-position:right 1px}h1,h2,h3,h4,h5{font-family:sans-serif}
+  </style>
+  <link data-src="https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/8538485e35803378e49f44d73fcdcee8.css" type="text/css" rel="stylesheet" href="assets/8538485e35803378e49f44d73fcdcee8.css">
+</head>
+<body data-generated-at="28-07-2018 23:58:47" class="bs-tabela">
+<div class="glb-grid">
+  <div id="glb-topo" class="glb-topo">
+    <header id="header-produto" class="header-navegacao header- header-editoria " data-analytics="T">
+      <style>
+        .header-navegacao-color {
+          color: #3b9c00;
+        }
+
+        .gui-color-primary-bg-after:after {
+          background-color: #3b9c00;
+        }
+
+        .header-navegacao .logo {
+          width: 32px;
+          height: 24px;
+        }
+
+        .header-navegacao .header-title {
+          padding: 0 32px;
+        }
+
+        @media (max-width: 767px) {
+          .has-not-regua .header-navegacao .header-title {
+            padding: 0 24px 0 74px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .header-navegacao .logo {
+            width: 33px;
+            height: 25px;
+          }
+
+          .header-navegacao .header-title {
+            padding: 0 75px;
+          }
+
+          .header-navegacao .floating-bar .logo {
+            width: 33px;
+            height: 25px;
+          }
+        }
+
+        @media (min-width: 1065px) {
+          .header-navegacao .header-title {
+            padding: 0 145px;
+          }
+        }
+      </style>
+      <div class="header-principal header-navegacao-color">
+        <div class="grid-12 header-navegacao-container row">
+          <div class="area-principal column">
+            <h1 class="header-title">
+              <div class="header-title-content">
+                <a class="header-editoria--link" href="https://globoesporte.globo.com/futebol/brasileirao-serie-a/">brasileirão série a</a>
+              </div>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <main class="glb-grid grid-24" itemscope="" itemtype="http://schema.org/webpage">
+    <div class="row medium-collapse large-uncollapse">
+      <div class="column small-24 medium-centered medium-20 large-22 tabela-body">
+        <div id="widget-classificacao" class="theme">
+          <div id="container-para-tabela-simulador-ou-navegacao-js" class="">
+            <article class="tabela-classificacao tabela-futebol pontos-corridos" itemscope="" itemtype="http://schema.org/SportsEvent">
+              <meta itemprop="name" content="Campeonato Brasileiro 2018">
+              <meta itemprop="startDate" content="2018-04-14">
+              <meta itemprop="endDate" content="2018-12-02">
+              <section class="section-container ">
+                <header>
+                  <h2 class="gui-text-section-title tabela-header-titulo">Tabela</h2>
+                </header>
+                <div class="tabela tabela-pontos-corridos">
+                  <table class="tabela-times">
+                    <colgroup>
+                      <col class="tabela-times-col-posicao">
+                      <col class="tabela-times-col-time">
+                      <col class="tabela-times-col-variacao">
+                    </colgroup>
+                    <thead>
+                    <tr class="tabela-head-linha">
+                      <th class="tabela-times-head" colspan="3">Classificação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #0000ff ">1</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Flamengo</strong>
+                        <span class="tabela-times-time-sigla">FLA</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #00ffff ">2</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">São Paulo</strong>
+                        <span class="tabela-times-time-sigla">SAO</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #008000 ">3</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Atlético-MG</strong>
+                        <span class="tabela-times-time-sigla">CAM</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="">4</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Grêmio</strong>
+                        <span class="tabela-times-time-sigla">GRE</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #ff0000 ">5</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Internacional</strong>
+                        <span class="tabela-times-time-sigla">INT</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #0000ff ">1</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Flamengo</strong>
+                        <span class="tabela-times-time-sigla">FLA</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #00ffff ">2</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">São Paulo</strong>
+                        <span class="tabela-times-time-sigla">SAO</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #008000 ">3</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Atlético-MG</strong>
+                        <span class="tabela-times-time-sigla">CAM</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="">4</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Grêmio</strong>
+                        <span class="tabela-times-time-sigla">GRE</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #ff0000 ">5</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Internacional</strong>
+                        <span class="tabela-times-time-sigla">INT</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #0000ff ">1</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Flamengo</strong>
+                        <span class="tabela-times-time-sigla">FLA</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #00ffff ">2</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">São Paulo</strong>
+                        <span class="tabela-times-time-sigla">SAO</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #008000 ">3</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Atlético-MG</strong>
+                        <span class="tabela-times-time-sigla">CAM</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="">4</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Grêmio</strong>
+                        <span class="tabela-times-time-sigla">GRE</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #ff0000 ">5</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Internacional</strong>
+                        <span class="tabela-times-time-sigla">INT</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #0000ff ">1</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Flamengo</strong>
+                        <span class="tabela-times-time-sigla">FLA</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #00ffff ">2</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">São Paulo</strong>
+                        <span class="tabela-times-time-sigla">SAO</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #008000 ">3</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Atlético-MG</strong>
+                        <span class="tabela-times-time-sigla">CAM</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="">4</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Grêmio</strong>
+                        <span class="tabela-times-time-sigla">GRE</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr class="tabela-body-linha">
+                      <td class="tabela-times-posicao" style="color:  #ff0000 ">5</td>
+                      <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                        <strong class="tabela-times-time-nome" itemprop="name">Internacional</strong>
+                        <span class="tabela-times-time-sigla">INT</span>
+                      </td>
+                      <td class="tabela-times-variacao">
+                        <span>0</span>
+                        <span class="tabela-icone tabela-icone-neutra"></span>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <div class="tabela-scroll overthrow" style="opacity: 1; padding-left: 250px;">
+                    <table class="tabela-pontos">
+                      <thead>
+                      <tr class="tabela-head-linha">
+                        <th>P</th> <th>J</th> <th>V</th> <th>E</th> <th>D</th> <th class="tabela-pontos-th-duplo">GP</th> <th class="tabela-pontos-th-duplo">GC</th> <th class="tabela-pontos-th-duplo">SG</th> <th>%</th> <th class="tabela-pontos-th-longo">ÚLT. JOGOS</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">31</td> <td>15</td> <td>9</td> <td>4</td> <td>2</td> <td>24</td> <td>9</td> <td>15</td> <td>68.9</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">29</td> <td>15</td> <td>8</td> <td>5</td> <td>2</td> <td>23</td> <td>14</td> <td>9</td> <td>64.4</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">26</td> <td>15</td> <td>8</td> <td>2</td> <td>5</td> <td>28</td> <td>22</td> <td>6</td> <td>57.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">26</td> <td>15</td> <td>7</td> <td>5</td> <td>3</td> <td>15</td> <td>7</td> <td>8</td> <td>57.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">26</td> <td>15</td> <td>7</td> <td>5</td> <td>3</td> <td>19</td> <td>12</td> <td>7</td> <td>57.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">24</td> <td>15</td> <td>7</td> <td>3</td> <td>5</td> <td>13</td> <td>11</td> <td>2</td> <td>53.3</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">23</td> <td>15</td> <td>6</td> <td>5</td> <td>4</td> <td>22</td> <td>15</td> <td>7</td> <td>51.1</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">22</td> <td>15</td> <td>6</td> <td>4</td> <td>5</td> <td>17</td> <td>12</td> <td>5</td> <td>48.9</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      <tr class="tabela-body-linha">
+                        <td class="tabela-pontos-ponto">21</td> <td>16</td> <td>6</td> <td>3</td> <td>7</td> <td>18</td> <td>20</td> <td>-2</td> <td>43.8</td> <td class="tabela-pontos-ultimos-jogos"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-e bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-v bs-tabela"></span> <span class="tabela-icone tabela-icone-circulo tabela-icone-d bs-tabela"></span> </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+              <footer class="legenda-classificacao">
+                <div class="legenda-grupos">
+                  <div class="legenda-grupo">
+                    <span class="legenda-label"><span class="tabela-icone" style="background-color:#0000ff;"></span> Libertadores </span>
+                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#008000;"></span> Sul-Americana </span>
+                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#ff0000;"></span> Rebaixados </span>
+                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#00ffff;"></span> Pré-Libertadores </span>
+                  </div>
+                  <div class="legenda-grupo">
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-positiva"></span> subiu </span>
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-negativa"></span> caiu </span>
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-e"></span> manteve </span>
+                  </div>
+                  <div class="legenda-grupo">
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v"></span> vitoria </span>
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e"></span> empate </span>
+                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d"></span> derrota </span>
+                  </div>
+                </div>
+                <span id="ver-regulamento-js" class="legenda-regulamento">ver regulamento</span>
+                <div class="disclaimer"> </div>
+                <div class="regulamento-texto-js"> As 20 equipes se enfrentam em turno e returno e, ao fim das 38 rodadas, o time com o maior número de pontos fica com o título brasileiro, enquanto os quatro últimos são rebaixados para a Série B. Em caso de igualdade na pontuação, são critérios de desempate: 1) mais vitórias, 2) melhor saldo de gols, 3) mais gols pró, 4) confronto direto, 5) menos cartões vermelhos, 6) menos cartões amarelos, 7) sorteio. Os quatro primeiros entram na fase de grupos da Libertadores 2018, enquanto o quinto e o sexto colocados disputam a Pré-Libertadores. Caso o campeão da Libertadores e/ou o campeão da Copa do Brasil e/ou o campeão da Sul-Americana estejam no G-6, a equipe seguinte garante vaga na competição continental. </div>
+              </footer>
+              <aside class="lista-de-jogos lista-de-jogos-fora-grupo" data-url-pattern-navegador-jogos="/servico/backstage/esportes_campeonato/esporte/futebol/modalidade/futebol_de_campo/categoria/profissional/campeonato/campeonato-brasileiro/edicao/campeonato-brasileiro-2018/fases/fase-unica-seriea-2018/rodada/">
+                <header>
+                  <h2 class="gui-text-section-title tabela-header-titulo">JOGOS</h2>
+                </header>
+                <nav class="tabela-navegacao tabela-navegacao-jogos">
+                  <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior tabela-navegacao-setas-ativa"></span>
+                  <span class="tabela-navegacao-seletor" data-rodada="16" data-rodadas-length="38">16ª RODADA</span>
+                  <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo tabela-navegacao-setas-ativa"></span>
+                </nav>
+                <ul class="lista-de-jogos-conteudo jogos" style="opacity: 1; transition: opacity 0.6s;">
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="lista-de-jogos-item">
+                    <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                      <meta itemprop="name" content="Fluminense x Palmeiras">
+                      <meta itemprop="startDate" content="2018-07-25">
+                      <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="https://globoesporte.globo.com/rj/futebol/brasileirao-serie-a/jogo/25-07-2018/fluminense-palmeiras.ghtml">
+                        <div class="placar-jogo-informacoes">Qua 25/07/2018 <span class="placar-jogo-informacoes-local">Maracanã</span> 19:30</div>
+                        <div class="placar-jogo-equipes">
+															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+																<meta itemprop="name" content="Fluminense">
+																<span class="placar-jogo-equipes-sigla" title="Fluminense">FLU</span>
+																<span class="placar-jogo-equipes-nome">Fluminense</span>
+																<img class="placar-jogo-equipes-escudo-mandante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2015/07/21/fluminense_60x60.png" width="30" height="30" title="Fluminense">
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+																<span class="placar-jogo-equipes-placar-mandante">1</span>
+																<span class="tabela-icone tabela-icone-versus"></span>
+																<span class="placar-jogo-equipes-placar-visitante">0</span>
+															</span>
+                          <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="Palmeiras">
+																<img class="placar-jogo-equipes-escudo-visitante" itemprop="image" src="https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png" width="30" height="30" title="Palmeiras">
+																<span class="placar-jogo-equipes-sigla" title="Palmeiras">PAL</span>
+																<span class="placar-jogo-equipes-nome">Palmeiras</span>
+															</span>
+                        </div>
+                        <p class="placar-jogo-complemento">veja como foi</p>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </aside>
+            </article>
+          </div>
+          <section class="artilharia-wrapper">
+            <h2 class="gui-text-section-title artilharia-header-titulo">Principais Artilheiros</h2>
+            <div class="ranking">
+              <div class="ranking-wrapper">
+                <div class="ranking-header">
+                  <div>Ranking</div>
+                  <div class="ranking-headerGols">Gols</div>
+                </div>
+                <div class="ranking-content">
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> 1 </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/bb6dbd41ce03bd76bd06730bbedf0ec7_140x140.png" width="50" height="50" alt="Róger Guedes">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/Atletico-Mineiro-escudo65px.png" width="30" height="30" alt="Atlético-MG">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Róger Guedes</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png" width="50" height="50" alt="Pedro">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/fluminense_60x60.png" width="30" height="30" alt="Fluminense">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> 1 </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/bb6dbd41ce03bd76bd06730bbedf0ec7_140x140.png" width="50" height="50" alt="Róger Guedes">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/Atletico-Mineiro-escudo65px.png" width="30" height="30" alt="Atlético-MG">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Róger Guedes</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png" width="50" height="50" alt="Pedro">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/fluminense_60x60.png" width="30" height="30" alt="Fluminense">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png" width="50" height="50" alt="Pedro">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/fluminense_60x60.png" width="30" height="30" alt="Fluminense">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                  <div class="ranking-item-wrapper">
+                    <div class="ranking-item"> </div>
+                    <div class="jogador">
+                      <div class="jogador-foto">
+                        <img src="assets/8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png" width="50" height="50" alt="Pedro">
+                      </div>
+                      <div class="jogador-escudo">
+                        <img src="assets/fluminense_60x60.png" width="30" height="30" alt="Fluminense">
+                      </div>
+                      <div class="jogador-info">
+                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-posicao">Atacante</div>
+                      </div>
+                      <div class="jogador-gols"> 9 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer desktop theme-hover theme-bg-color-primary">
+      <div class="row">
+        <div class="column small-24">
+          <div class="footer__service">
+            <span class="footer__copyright">© Copyright 2018-2018 Corujito Comunicação e Participações S.A.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="assets/jquery.min.js" type="text/javascript"></script>
+<script src="assets/overthrow.min.js" type="text/javascript"></script>
+<script src="assets/cb8fc482c8c4e1635d6af680a99f0a41.js" type="text/javascript"></script>
+</body>
+</html>

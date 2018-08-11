@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
   devise_for :users
   resources :users
+  resources :championships, only: [] do
+    resources :seasons, only: [:show]
+  end
 end

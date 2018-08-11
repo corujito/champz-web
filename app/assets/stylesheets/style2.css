@@ -1,0 +1,44 @@
+.header-navegacao-color {
+    color: #3b9c00;
+}
+
+.gui-color-primary-bg-after:after {
+    background-color: #3b9c00;
+}
+
+.header-navegacao .logo {
+    width: 32px;
+    height: 24px;
+}
+
+.header-navegacao .header-title {
+    padding: 0 32px;
+}
+
+@media (max-width: 767px) {
+    .has-not-regua .header-navegacao .header-title {
+        padding: 0 24px 0 74px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-navegacao .logo {
+        width: 33px;
+        height: 25px;
+    }
+
+    .header-navegacao .header-title {
+        padding: 0 75px;
+    }
+
+    .header-navegacao .floating-bar .logo {
+        width: 33px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 1065px) {
+    .header-navegacao .header-title {
+        padding: 0 145px;
+    }
+}
