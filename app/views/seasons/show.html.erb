@@ -47,7 +47,7 @@
                           <td class="tabela-times-posicao"><%= row.position %></td>
                           <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
                             <strong class="tabela-times-time-nome" itemprop="name"><%= row.team.popularName %></strong>
-                            <span class="tabela-times-time-sigla"><%= row.team.abbreviation %></span>
+                            <span class="tabela-times-time-sigla"><%= row.team.abbreviation ? row.team.abbreviation : abbreviate_team_name(row.team.popularName) %></span>
                           </td>
                           <td class="tabela-times-variacao">
                             <span>0</span>
@@ -69,7 +69,7 @@
                           <tr class="tabela-body-linha">
                             <td class="tabela-pontos-ponto"><%= row.points %></td> <td><%= row.numberMatches %></td> <td><%= row.wins %></td> <td><%= row.draws %></td> <td><%= row.losts %></td> <td><%= row.proGoals %></td> <td><%= row.againstGoals %></td> <td><%= row.balanceGoals %></td> <td><%= row.percent %></td>
                             <td class="tabela-pontos-ultimos-jogos">
-                              <% row.matchesHistory.each { |history| %>
+                              <% row.matchesHistory.last(5).each { |history| %>
                                 <span class="tabela-icone tabela-icone-circulo tabela-icone-<%= (history == 3) ? "v" : ((history == 1) ? "e" : "d") %> bs-tabela"></span>
                               <% } %>
                             </td>
@@ -80,36 +80,41 @@
                     </div>
                   </div>
                 </section>
-                <footer class="legenda-classificacao">
-                  <div class="legenda-grupos">
-                    <div class="legenda-grupo">
-                      <span class="legenda-label"><span class="tabela-icone" style="background-color:#0000ff;"></span> Libertadores </span>
-                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#008000;"></span> Sul-Americana </span>
-                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#ff0000;"></span> Rebaixados </span>
-                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#00ffff;"></span> Pré-Libertadores </span>
-                    </div>
-                    <div class="legenda-grupo">
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-positiva"></span> subiu </span>
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-negativa"></span> caiu </span>
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-e"></span> manteve </span>
-                    </div>
-                    <div class="legenda-grupo">
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v"></span> vitoria </span>
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e"></span> empate </span>
-                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d"></span> derrota </span>
-                    </div>
-                  </div>
-                  <span id="ver-regulamento-js" class="legenda-regulamento">ver regulamento</span>
-                  <div class="disclaimer"> </div>
-                  <div class="regulamento-texto-js"> As 20 equipes se enfrentam em turno e returno e, ao fim das 38 rodadas, o time com o maior número de pontos fica com o título brasileiro, enquanto os quatro últimos são rebaixados para a Série B. Em caso de igualdade na pontuação, são critérios de desempate: 1) mais vitórias, 2) melhor saldo de gols, 3) mais gols pró, 4) confronto direto, 5) menos cartões vermelhos, 6) menos cartões amarelos, 7) sorteio. Os quatro primeiros entram na fase de grupos da Libertadores 2018, enquanto o quinto e o sexto colocados disputam a Pré-Libertadores. Caso o campeão da Libertadores e/ou o campeão da Copa do Brasil e/ou o campeão da Sul-Americana estejam no G-6, a equipe seguinte garante vaga na competição continental. </div>
-                </footer>
+<!--                <footer class="legenda-classificacao">-->
+<!--                  <div class="legenda-grupos">-->
+<!--                    <div class="legenda-grupo">-->
+<!--                      <span class="legenda-label"><span class="tabela-icone" style="background-color:#0000ff;"></span> Libertadores </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#008000;"></span> Sul-Americana </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#ff0000;"></span> Rebaixados </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone" style="background-color:#00ffff;"></span> Pré-Libertadores </span>-->
+<!--                    </div>-->
+<!--                    <div class="legenda-grupo">-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-positiva"></span> subiu </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-negativa"></span> caiu </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-e"></span> manteve </span>-->
+<!--                    </div>-->
+<!--                    <div class="legenda-grupo">-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v"></span> vitoria </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e"></span> empate </span>-->
+<!--                      <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d"></span> derrota </span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <span id="ver-regulamento-js" class="legenda-regulamento">ver regulamento</span>-->
+<!--                  <div class="disclaimer"> </div>-->
+<!--                  <div class="regulamento-texto-js"><%#= @season.regulation %></div>-->
+<!--                </footer>-->
                 <aside class="lista-de-jogos lista-de-jogos-fora-grupo" data-url-pattern-navegador-jogos="/servico/backstage/esportes_campeonato/esporte/futebol/modalidade/futebol_de_campo/categoria/profissional/campeonato/campeonato-brasileiro/edicao/campeonato-brasileiro-2018/fases/fase-unica-seriea-2018/rodada/">
                   <header>
                     <h2 class="gui-text-section-title tabela-header-titulo">JOGOS</h2>
                   </header>
-                  <% max_round = group.matches.max_by {|x| x.round }.round %>
+                  <%
+                    max_round = group.matches.max_by {|x| x.round }.round
+                    x = group.matches.sort_by {|m| m.round }.detect{|m| m.matchStatus == "SCHEDULED"}
+                    current_round = x ? (x.round != 1 ? x.round-1 : x.round) : max_round
+                    #selecionar current_round olhando a data
+                  %>
                   <% group.matches.group_by { |m| m.round }.each { |round, matches| %>
-                    <div id="tabela-jogos-<%= @phase.id %>-<%= group.id %>-<%= round %>" style="<%= "display:none;" if round != 1 %>">
+                    <div id="tabela-jogos-<%= @phase.id %>-<%= group.id %>-<%= round %>" style="<%= "display:none;" if round != current_round %>">
                       <nav class="tabela-navegacao tabela-navegacao-jogos<%= @phase.id %>-<%= group.id %>-<%= round %>">
                         <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if round > 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirRodada(this, '<%= @phase.id%>-<%= group.id %>-<%= round %>', '<%= @phase.id%>-<%= group.id %>-<%= round-1 %>')"></span>
                         <span class="tabela-navegacao-seletor" data-rodada="<%= round %>" data-rodadas-length="38"><%= round %>ª RODADA</span>
@@ -119,26 +124,26 @@
                         <ul class="lista-de-jogos-conteudo jogos" style="opacity: 1; transition: opacity 0.6s;">
                           <li class="lista-de-jogos-item">
                             <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
-                              <meta itemprop="name" content="<%= match.homeTeam.popularName %> x <%= match.awayTeam.popularName %>">
+                              <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %> x <%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
                               <meta itemprop="startDate" content="2018-07-25">
 <!--                              <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="">-->
                                 <div class="placar-jogo-informacoes"><%= l(DateTime.parse(match.matchDate), format: "%a %d/%m/%Y") %> <span class="placar-jogo-informacoes-local"><%= match.locale %></span> <%= DateTime.parse(match.matchDate).strftime("%H:%M") if match.matchDate and (DateTime.parse(match.matchDate).hour != 0 or DateTime.parse(match.matchDate).min != 0 or DateTime.parse(match.matchDate).sec != 0) %></div>
                                 <div class="placar-jogo-equipes">
 															<span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
-																<meta itemprop="name" content="<%= match.homeTeam.popularName %>">
-																<span class="placar-jogo-equipes-sigla" title="<%= match.homeTeam.popularName %>"><%= match.homeTeam.abbreviation %></span>
-																<span class="placar-jogo-equipes-nome"><%= match.homeTeam.popularName %></span>
-                                <%= image_tag match.homeTeam.symbolImage, class: "placar-jogo-equipes-escudo-mandante", width:"30", height:"30", title:match.homeTeam.popularName, itemprop:"image" %>
+																<meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>">
+																<span class="placar-jogo-equipes-sigla" title="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>"><%= match.homeTeam ? (match.homeTeam.abbreviation ? match.homeTeam.abbreviation : abbreviate_team_name(match.homeTeam.popularName)) : match.homeTeamLabel %></span>
+																<span class="placar-jogo-equipes-nome"><%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %></span>
+                                <%= image_tag (match.homeTeam ? (match.homeTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-mandante", width:"30", height:"30", title:match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel, itemprop:"image" %>
 															</span>
                                   <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
 																<span class="placar-jogo-equipes-placar-mandante"><% if match.matchStatus != "SCHEDULED"%><%= match.homeScore %><% end %></span>
 																<span class="tabela-icone tabela-icone-versus"></span>
 																<span class="placar-jogo-equipes-placar-visitante"><% if match.matchStatus != "SCHEDULED"%><%= match.awayScore %><% end %></span>
 															</span>
-                                  <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="<%= match.awayTeam.popularName %>">
-                                    <%= image_tag match.awayTeam.symbolImage, class: "placar-jogo-equipes-escudo-visitante", width:"30", height:"30", title:match.awayTeam.popularName, itemprop:"image" %>
-                                    <span class="placar-jogo-equipes-sigla" title="<%= match.awayTeam.popularName %>"><%= match.awayTeam.abbreviation %></span>
-																<span class="placar-jogo-equipes-nome"><%= match.awayTeam.popularName %></span>
+                                  <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
+                                    <%= image_tag (match.awayTeam ? (match.awayTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-visitante", width:"30", height:"30", title:match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel, itemprop:"image" %>
+                                    <span class="placar-jogo-equipes-sigla" title="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>"><%= match.awayTeam ? (match.awayTeam.abbreviation ? match.awayTeam.abbreviation : abbreviate_team_name(match.awayTeam.popularName)) : match.awayTeamLabel %></span>
+																<span class="placar-jogo-equipes-nome"><%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %></span>
 															</span>
                                 </div>
 <!--                              </a>-->
