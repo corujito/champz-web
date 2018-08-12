@@ -15,3 +15,16 @@
 //= require rails-ujs
 // require bootstrap-sprockets
 //= require_tree .
+
+function abrirFase(elem, id, idnext) {
+    if ($('#tabela-fase-'+idnext).length != 0) {
+        $('#tabela-fase-'+id).css('display', 'none');
+        $('#tabela-fase-'+idnext).css('display', '');
+    }
+}
+function abrirRodada(elem, id, idnext) {
+    if ($('#tabela-jogos-'+idnext).length != 0) {
+        $('#tabela-jogos-'+id).css('display', 'none');
+        $('#tabela-jogos-'+idnext).css('display', '');
+    }
+}

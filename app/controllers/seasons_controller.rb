@@ -10,9 +10,6 @@ class SeasonsController < ApplicationController
     @championship = @season.championship
 
     @phase = @season.phases[0]
-    @group = @season.phases[0].groups[0]
-    @classification = @season.phases[0].groups[0].classificationTable
-    @matches = @season.phases[0].groups[0].matches
 
   end
 end
