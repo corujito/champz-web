@@ -166,13 +166,13 @@
     "use strict";
     !function (a, t) {
         var e = function (e) {
-            this.$navegador = e, 1 === this.$navegador.length && (this.$tabelasContainer = t("#container-para-tabela-simulador-ou-navegacao-js"), this.$seletorLista = this.$navegador.find(".tabela-navegacao-seletor"), this.$seletorAtual = this.$navegador.find(".tabela-navegacao-seletor-ativo"), this.$setaAnterior = this.$navegador.find(".tabela-navegacao-anterior"), this.$setaProximo = this.$navegador.find(".tabela-navegacao-proximo"), this.$listaDeFases = this.$navegador.find(".fases-popin"), this.$itemFase = this.$listaDeFases.find("li"), this.loader = new a.Loading(t("#widget-classificacao"), this.$tabelasContainer), this.tratarSeletorAtual(), this.indiceTotal = parseInt(this.$navegador.data("fase-total"), 10) - 1, this.indiceAtual = parseInt(this.$seletorAtual.data("fase"), 10) - 1, this.carregandoFase = !1, this.setaAtivaClasse = "tabela-navegacao-setas-ativa", this.seletorAtivoClasse = "tabela-navegacao-seletor-ativo", this.alterarEstilosDasSetas(), this.$setaAnterior.on("click", {
+            this.$navegador = e, 1 === this.$navegador.length && (this.$tabelasContainer = t("#container-para-tabela-simulador-ou-navegacao-js"), this.$seletorLista = this.$navegador.find(".tabela-navegacao-seletor"), this.$seletorAtual = this.$navegador.find(".tabela-navegacao-seletor-ativo"), this.$setaAnterior = this.$navegador.find(".tabela-navegacao-anterior"), this.$setaProximo = this.$navegador.find(".tabela-navegacao-proximo"), this.$listaDeFases = this.$navegador.find(".fases-popin"), this.$itemFase = this.$listaDeFases.find("li"), this.loader = new a.Loading(t("#widget-classificacao"), this.$tabelasContainer), this.indiceTotal = parseInt(this.$navegador.data("fase-total"), 10) - 1, this.indiceAtual = parseInt(this.$seletorAtual.data("fase"), 10) - 1, this.carregandoFase = !1, this.setaAtivaClasse = "tabela-navegacao-setas-ativa", this.seletorAtivoClasse = "tabela-navegacao-seletor-ativo", this.$setaAnterior.on("click", {
                 NavegacaoFases: this,
                 irPara: -1
             }, this.alterarFase), this.$setaProximo.on("click", {
                 NavegacaoFases: this,
                 irPara: 1
-            }, this.alterarFase), this.binds(), this.ancora())
+            }, this.alterarFase))
         };
         a.NavegacaoFases = e
     }(window, jQuery)

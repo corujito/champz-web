@@ -1,0 +1,917 @@
+.post-tabela-classificacao {
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 16px
+}
+
+.post-tabela-classificacao * {
+    -webkit-font-smoothing: antialiased
+}
+
+.post-tabela-classificacao__nome-fase {
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-family: opensans;
+    font-size: .9375em;
+    font-weight: 600;
+    letter-spacing: -.6px
+}
+
+.post-tabela-classificacao__nome-campeonato {
+    -webkit-font-smoothing: antialiased;
+    font-family: opensans;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: -1.3px;
+    line-height: 1.3em;
+    margin-top: .275em
+}
+
+.post-tabela-classificacao__table {
+    margin-top: 1.375em;
+    width: 100%
+}
+
+.post-tabela-classificacao__thead {
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    font-family: ProximaNova;
+    font-size: .6875em;
+    font-weight: 400
+}
+
+.post-tabela-classificacao__thead tr {
+    height: 1.5em
+}
+
+.post-tabela-classificacao__thead--classificacao {
+    text-align: left;
+    text-transform: uppercase;
+    width: 65%
+}
+
+.post-tabela-classificacao__thead--ultimos-jogos {
+    text-align: right;
+    min-width: 65px;
+    width: 21%
+}
+
+.post-tabela-classificacao__thead--vitorias {
+    min-width: 32px;
+    width: 14%
+}
+
+.post-tabela-classificacao__thead--saldo-gols {
+    text-align: right
+}
+
+.post-tabela-classificacao__tr {
+    border-top: 1px solid #eee;
+    height: 2.8125em
+}
+
+.post-tabela-classificacao__tr:last-child .post-tabela-classificacao__tbody--classificacao-wrapper {
+    padding-bottom: 0
+}
+
+.post-tabela-classificacao__tr:last-child .post-tabela-classificacao__tbody--pontos, .post-tabela-classificacao__tr:last-child .post-tabela-classificacao__tbody--vitorias {
+    vertical-align: text-bottom
+}
+
+.post-tabela-classificacao__tr:last-child .post-tabela-classificacao__tbody--saldo-gols {
+    vertical-align: baseline
+}
+
+.post-tabela-classificacao__tr:last-child .post-tabela-classificacao__tbody--ultimos-jogos {
+    padding-top: 6px
+}
+
+.post-tabela-classificacao__tbody--classificacao-wrapper {
+    padding: .5em 0;
+    width: 65%
+}
+
+.post-tabela-classificacao__tbody--classificacao {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.post-tabela-classificacao__tbody--ultimos-jogos {
+    min-width: 65px;
+    padding-left: 16px;
+    vertical-align: middle;
+    width: 21%
+}
+
+.post-tabela-classificacao__tbody--pontos {
+    -webkit-font-smoothing: antialiased
+}
+
+.post-tabela-classificacao__tbody--pontos, .post-tabela-classificacao__tbody--vitorias {
+    color: #333;
+    font-family: opensans;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    text-align: center;
+    vertical-align: middle;
+    width: 14%
+}
+
+.post-tabela-classificacao__tbody--vitorias {
+    min-width: 48px
+}
+
+.post-tabela-classificacao__tbody--saldo-gols {
+    color: #333;
+    font-family: opensans;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    min-width: 16px;
+    text-align: right;
+    vertical-align: middle;
+    width: 7%
+}
+
+.post-tabela-classificacao__posicao {
+    -webkit-font-smoothing: antialiased;
+    color: #999;
+    font-family: opensans;
+    font-size: 1em;
+    font-weight: 700;
+    min-width: .625em
+}
+
+.post-tabela-classificacao__escudo {
+    margin: 4px 2px 0;
+    min-width: 2.5em;
+    text-align: center
+}
+
+.post-tabela-classificacao__sigla {
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    flex-grow: 2;
+    font-family: opensans;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: .2px;
+    min-width: 3.125em
+}
+
+.post-tabela-classificacao__variacao {
+    -webkit-font-smoothing: antialiased;
+    color: #ccc;
+    font-family: opensans;
+    font-size: .875em;
+    font-weight: 700;
+    margin-right: .25em
+}
+
+.post-tabela-classificacao__variacao-icon {
+    margin-right: 1em;
+    height: 8px;
+    width: 8px
+}
+
+.post-tabela-classificacao__variacao-icon--positivo {
+    fill: #3c9c46
+}
+
+.post-tabela-classificacao__variacao-icon--negativo {
+    -webkit-transform: rotate(180deg);
+    fill: red;
+    transform: rotate(180deg)
+}
+
+.post-tabela-classificacao__variacao-icon--neutro {
+    background-color: #ccc;
+    height: 4px;
+    width: 4px;
+    margin-right: 1.1em;
+    margin-left: .15em
+}
+
+.post-tabela-classificacao__variacao-icon--neutro .icon-arrow {
+    display: none
+}
+
+.post-tabela-classificacao__ultimos-jogos-itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start
+}
+
+.post-tabela-classificacao__icon-aproveitamento {
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    margin: 0 3px;
+    width: 6px
+}
+
+.post-tabela-classificacao__icon-aproveitamento--v {
+    background-color: #51a81e
+}
+
+.post-tabela-classificacao__icon-aproveitamento--e {
+    background-color: #ccc
+}
+
+.post-tabela-classificacao__icon-aproveitamento--d {
+    background-color: red
+}
+
+.post-tabela-classificacao__chaves-wrapper {
+    margin-top: .875em
+}
+
+.post-tabela-classificacao__chave {
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #bebebe;
+    margin-top: .4375em;
+    padding: .625em;
+    position: relative;
+    z-index: 9
+}
+
+.post-tabela-classificacao__chave--anterior {
+    position: absolute;
+    border-bottom: 1px solid #bebebe;
+    top: calc(50% - 2px);
+    left: -20px;
+    width: 20px
+}
+
+.post-tabela-classificacao__confronto--wrapper {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em .9375em;
+    padding-bottom: .625em
+}
+
+.post-tabela-classificacao__confronto--wrapper:first-of-type .post-tabela-classificacao__confronto--info {
+    margin-top: .675em
+}
+
+.post-tabela-classificacao__confronto--wrapper:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+.post-tabela-classificacao__confronto--info {
+    color: #666;
+    font-family: ProximaNova;
+    font-size: .625em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.post-tabela-classificacao__confronto--placar {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center
+}
+
+.post-tabela-classificacao__confronto--lugar {
+    font-weight: 400
+}
+
+.post-tabela-classificacao__picture {
+    align-items: center;
+    display: flex;
+    flex-grow: 1
+}
+
+.post-tabela-classificacao__picture--mandante {
+    justify-content: flex-end
+}
+
+.post-tabela-classificacao__org-name {
+    color: #666;
+    font-family: opensans;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: -.7px;
+    text-align: right;
+    text-decoration: none
+}
+
+.post-tabela-classificacao__org-badge {
+    height: 30px;
+    margin: 0 .9375em;
+    max-width: 30px;
+    width: auto
+}
+
+.post-tabela-classificacao__score {
+    align-items: center;
+    color: #666;
+    display: flex;
+    flex-grow: 2;
+    font-family: opensans;
+    font-size: 1em;
+    justify-content: center;
+    letter-spacing: -.7px;
+    max-width: 10px
+}
+
+.post-tabela-classificacao__vs-icon {
+    width: .5em;
+    align-self: stretch
+}
+
+.post-tabela-classificacao__border-subsequente {
+    border: 1px solid #bebebe;
+    border-left: none;
+    content: "";
+    display: block;
+    height: 40%;
+    position: absolute;
+    right: 8px;
+    top: 38%;
+    width: 20px;
+    z-index: 0
+}
+
+.post-tabela-classificacao__border-subsequente--3-jogos {
+    height: 41%;
+    top: 35%
+}
+
+.post-tabela-classificacao__border-subsequente--1-jogos {
+    height: 35%;
+    top: 45%
+}
+
+.post-tabela-classificacao__border-subsequente--linha {
+    position: absolute;
+    border-bottom: 1px solid #bebebe;
+    top: calc(50% - 1px);
+    right: -9px;
+    width: 9px
+}
+
+.video-fd .bstn-fd-item-cover {
+    height: 100% !important;
+    border-radius: 0 !important
+}
+
+.post-bastian-products {
+    overflow: hidden
+}
+
+.post-bastian-products__header {
+    border-bottom: 1px solid #eee;
+    padding: 16px
+}
+
+.post-bastian-products__footer {
+    border-top: 1px solid #eee;
+    padding: 16px;
+    max-height: 48px
+}
+
+.post-bastian-products__footer-link {
+    font-family: opensans, opensans-bastian, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -.7px
+}
+
+.post-bastian-products__arrow {
+    margin-left: 6px;
+    fill: currentColor;
+    vertical-align: middle
+}
+
+.post-bastian-products__arrow svg {
+    width: 14px;
+    height: 14px
+}
+
+.post-bastian-products__title {
+    font-family: opensans, opensans-bastian, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.4px;
+    color: #333
+}
+
+.post-bastian-products__content {
+    padding: 0 24px
+}
+
+.post-bastian-products__section {
+    padding: 16px 0
+}
+
+.post-bastian-products__section + .post-bastian-products__section {
+    border-top: 1px solid #eee
+}
+
+.post-lib ul {
+    counter-reset: item
+}
+
+.post-lib__item {
+    display: flex
+}
+
+.post-lib__column-right {
+    padding-right: 0
+}
+
+.post-lib__column-right__thumbnail {
+    position: relative;
+    max-height: 94px
+}
+
+.post-lib__column-right__thumbnail:before {
+    border-radius: 2px;
+    width: 93px;
+    height: 94px;
+    content: "";
+    opacity: .5;
+    background-image: linear-gradient(202deg, transparent, #000);
+    position: absolute
+}
+
+.post-lib__column-right__thumbnail img {
+    border-radius: 2px;
+    width: 94px;
+    height: 93px
+}
+
+.post-lib__column-left {
+    float: left
+}
+
+.post-lib__column-left__headline {
+    color: #333;
+    font-family: opensans-semibold, opensans-semibold-bastian, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.25;
+    letter-spacing: -.7px;
+    margin-bottom: .5rem
+}
+
+.post-lib__column-left__title {
+    margin-bottom: 16px;
+    width: 100%;
+    word-wrap: break-word;
+    font-family: opensans, opensans-bastian, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+.post-lib__column-left__description {
+    font-family: proximanova\,proximanova-bastian, Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+    color: #999
+}
+
+.post-list ul {
+    counter-reset: item
+}
+
+.post-list__item {
+    display: flex
+}
+
+.post-list__column-right {
+    padding-right: 0;
+    padding-left: 1rem
+}
+
+.post-list__column-right__image-squad {
+    position: relative;
+    max-height: 94px
+}
+
+.post-list__column-right__image-squad:before {
+    border-radius: 2px;
+    width: 94px;
+    height: 94px;
+    content: "";
+    opacity: .5;
+    background-image: linear-gradient(202deg, transparent, #000);
+    position: absolute
+}
+
+.post-list__column-right__image-squad__icon_player {
+    position: absolute;
+    left: 8px;
+    bottom: 8px
+}
+
+.post-list__column-right__image-squad img {
+    border-radius: 2px;
+    width: 94px;
+    height: 94px
+}
+
+.post-list__column-right__image-circle {
+    position: relative;
+    max-height: 94px
+}
+
+.post-list__column-right__image-circle:before {
+    border-radius: 50%;
+    width: 94px;
+    height: 94px;
+    content: "";
+    opacity: .5;
+    background-image: linear-gradient(202deg, transparent, #000);
+    position: absolute
+}
+
+.post-list__column-right__image-circle__icon_player {
+    position: absolute;
+    left: 8px;
+    bottom: 8px
+}
+
+.post-list__column-right__image-circle img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 94px;
+    height: 94px
+}
+
+.post-list__column-left {
+    flex: 1
+}
+
+.post-list__column-left__headline {
+    color: #333;
+    font-family: opensans-semibold, opensans-semibold-bastian, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.25;
+    letter-spacing: -.7px;
+    margin-bottom: .5rem
+}
+
+.post-list__column-left__title {
+    margin-bottom: 16px;
+    width: 100%;
+    word-wrap: break-word;
+    font-family: opensans, opensans-bastian, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+.post-list__column-left__description {
+    font-family: proximanova\,proximanova-bastian, Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+    color: #999
+}
+
+.post-list--align-right .post-list__item {
+    flex-direction: row-reverse
+}
+
+.post-list--align-right .post-list__column-right {
+    padding-left: 0
+}
+
+.post-list--align-right .post-list__column-left {
+    padding-left: 1rem;
+    display: flex;
+    align-items: center
+}
+
+.post-list--align-right .post-list__column-left__title {
+    margin-bottom: 0;
+    display: block;
+    position: absolute
+}
+
+.post-list--align-right .post-list__column-left__headline {
+    margin-bottom: 4.5rem
+}
+
+.post-list--align-right .post-list__column-left__description {
+    display: block;
+    position: absolute;
+    margin-top: 30px
+}
+
+.post-lista-jogos__tipo-lista {
+    -webkit-font-smoothing: antialiased;
+    border-bottom: 15px solid transparent;
+    box-shadow: 0 1px 0 #eaeaea;
+    margin-bottom: 15px;
+    font-family: OpenSans;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.8px;
+    text-align: left;
+    text-transform: lowercase;
+    color: #333
+}
+
+.post-lista-jogos__tipo-lista:first-letter {
+    text-transform: uppercase
+}
+
+.post-lista-jogos__tipo-table {
+    width: 100%
+}
+
+.post-lista-jogos__tbody {
+    text-align: center
+}
+
+.post-lista-jogos__tbody:first-child .post-lista-jogos__campeonato {
+    border-top: 0;
+    padding-top: 0
+}
+
+.post-lista-jogos__mais-jogos {
+    -webkit-font-smoothing: antialiased;
+    border-top: 14px solid transparent;
+    box-shadow: 0 -1px 0 #eaeaea;
+    font-family: opensans;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: -.6px
+}
+
+.post-lista-jogos__campeonato {
+    -webkit-font-smoothing: antialiased;
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+    color: #333;
+    font-family: proximanova-regular;
+    font-size: .685em;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1.5em 0
+}
+
+.post-lista-jogos__campeonato strong {
+    font-family: proximanova-bold;
+    font-weight: lighter
+}
+
+.post-lista-jogos__campeonato__tr {
+    -webkit-font-smoothing: antialiased;
+    background-color: #37ab00;
+    border-radius: 3px;
+    color: #fff;
+    font-family: proximanova;
+    font-weight: 700;
+    font-size: 1.091em;
+    margin-right: .5em;
+    padding: 0 .818em;
+    height: 20px;
+    line-height: 21px;
+    min-width: 100px
+}
+
+.post-lista-jogos__tr {
+    justify-content: left
+}
+
+@media screen and (max-width: 1100px) {
+    .post-lista-jogos__tr .post-lista-jogos__campeonato--edicao {
+        text-align: left;
+        display: inline-block;
+        line-height: 1em;
+        width: 59%
+    }
+}
+
+.post-lista-jogos__confronto--wrapper {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em .9375em;
+    padding-bottom: .625em
+}
+
+.post-lista-jogos__confronto--wrapper:first-of-type .post-tabela-classificacao__confronto--info {
+    margin-top: .675em
+}
+
+.post-lista-jogos__confronto--wrapper:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+.post-lista-jogos__confronto--info {
+    color: #666;
+    font-family: ProximaNova;
+    font-size: .625em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.post-lista-jogos__confronto--placar {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    padding: 0 0 1.5em
+}
+
+.post-lista-jogos__confronto--lugar {
+    font-weight: 400
+}
+
+.post-lista-jogos__picture {
+    align-items: center;
+    display: flex;
+    flex-grow: 1
+}
+
+.post-lista-jogos__picture--mandante {
+    justify-content: flex-end
+}
+
+.post-lista-jogos__org-name {
+    color: #666;
+    font-family: opensans;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: -.7px;
+    text-decoration: none;
+    width: 2.8125em
+}
+
+.post-lista-jogos__org-name--mandante {
+    text-align: right
+}
+
+.post-lista-jogos__org-name--visitante {
+    text-align: left
+}
+
+.post-lista-jogos__org-badge {
+    height: 30px;
+    margin: 0 .5em;
+    max-width: 30px;
+    align-self: center;
+    width: auto
+}
+
+.post-lista-jogos__placar--mandante, .post-lista-jogos__placar--visitante {
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-family: opensans;
+    font-size: 1.875em;
+    font-weight: 700;
+    min-width: 50px;
+    text-align: left;
+    overflow: hidden;
+    position: relative
+}
+
+.post-lista-jogos__placar--penalti.post-lista-jogos__placar--mandante {
+    padding-right: .6em
+}
+
+.post-lista-jogos__placar--penalti.post-lista-jogos__placar--visitante {
+    padding-left: .6em
+}
+
+.post-lista-jogos__placar--penalti small {
+    color: #707070;
+    font-size: .4em;
+    font-weight: 500;
+    position: absolute;
+    top: 30%;
+    margin: 0 2px
+}
+
+.post-lista-jogos__placar--mandante {
+    padding-left: .3em;
+    padding-right: .2em;
+    text-align: right
+}
+
+.post-lista-jogos__placar--mandante small {
+    right: 0
+}
+
+.post-lista-jogos__placar--visitante {
+    padding-right: .3em;
+    padding-left: .2em
+}
+
+.post-lista-jogos__placar--visitante small {
+    left: 0
+}
+
+.post-lista-jogos__score {
+    align-items: center;
+    color: #666;
+    display: flex;
+    flex-grow: 2;
+    font-family: opensans;
+    font-size: 1em;
+    justify-content: center;
+    letter-spacing: -.7px;
+    max-width: 10px;
+    line-height: 1em;
+    padding-bottom: 5px
+}
+
+.post-lista-jogos__vs-icon {
+    width: .5em;
+    align-self: center
+}
+
+.post-lista-jogos__border-subsequente {
+    border: 1px solid #bebebe;
+    border-left: none;
+    content: "";
+    display: block;
+    height: 40%;
+    position: absolute;
+    right: 8px;
+    top: 38%;
+    width: 20px;
+    z-index: 0
+}
+
+.post-lista-jogos__border-subsequente--3-jogos {
+    height: 41%;
+    top: 35%
+}
+
+.post-lista-jogos__border-subsequente--1-jogos {
+    height: 35%;
+    top: 45%
+}
+
+.post-lista-jogos__border-subsequente--linha {
+    position: absolute;
+    border-bottom: 1px solid #bebebe;
+    top: calc(50% - 1px);
+    right: -9px;
+    width: 9px
+}
+
+.post-mais-lidas ol {
+    counter-reset: item
+}
+
+@media (max-width: 540px) {
+    .post-mais-lidas__section:nth-last-of-type(-n+2) {
+        display: none
+    }
+}
+
+.post-mais-lidas__item {
+    display: flex;
+    align-items: center
+}
+
+.post-mais-lidas__item:before {
+    content: counter(item);
+    counter-increment: item;
+    width: 12px;
+    font-size: 20px;
+    color: #999
+}
+
+.post-mais-lidas__item:before, .post-mais-lidas__title {
+    font-family: opensans, opensans-bastian, Arial, sans-serif
+}
+
+.post-mais-lidas__title {
+    padding-left: 16px;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    font-weight: 700
+}

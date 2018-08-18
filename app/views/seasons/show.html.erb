@@ -1,162 +1,158 @@
 <% content_for :title, "tabela | #{@championship.name}" %>
-<div class="glb-grid">
-  <div id="glb-topo" class="glb-topo">
-    <header id="header-produto" class="header-navegacao header- header-editoria " data-analytics="T">
-      <div class="header-principal header-navegacao-color">
-        <div class="grid-12 header-navegacao-container row">
-          <div class="area-principal column">
-            <h1 class="header-title">
-              <div class="header-title-content">
-                <a class="header-editoria--link" href="<%= @championship.webSite %>"><%= @championship.name %></a>
-              </div>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </header>
-  </div>
-  <main class="glb-grid grid-24" itemscope="" itemtype="http://schema.org/webpage">
+<% content_for :website, @championship.webSite %>
+<% content_for :championship_name, @championship.name %>
+
+<main class="glb-grid grid-24" itemscope="" itemtype="http://schema.org/webpage">
     <div class="row medium-collapse large-uncollapse">
       <div class="column small-24 medium-centered medium-20 large-22 tabela-body">
         <div id="widget-classificacao" class="theme">
-          <div id="container-para-tabela-simulador-ou-navegacao-js" class="dentro">
-            <article class="tabela-classificacao tabela-futebol pontos-corridos-grupado" itemscope="" itemtype="http://schema.org/SportsEvent">
-              <meta itemprop="name" content="<%= "#{@championship.name} #{@season.title}" %>">
-              <meta itemprop="startDate" content="2018-04-14">
-              <meta itemprop="endDate" content="2018-12-02">
-              <% @phase.groups.each { |group| %>
-                <section class="section-container ">
-                  <header>
-                    <h2 class="gui-text-section-title tabela-header-titulo"><%= group.name %></h2>
-                  </header>
-                  <div class="tabela tabela-com-jogos-por-grupo">
-                    <table class="tabela-times">
-                      <colgroup>
-                        <col class="tabela-times-col-posicao">
-                        <col class="tabela-times-col-time">
-                        <col class="tabela-times-col-variacao">
-                      </colgroup>
-                      <thead>
-                      <tr class="tabela-head-linha">
-                        <th class="tabela-times-head" colspan="3">Classificação</th>
-                      </tr>
-                      </thead>
-                      <% group.classificationTable.rows.each { |row| %>
-                        <tbody>
-                        <tr class="tabela-body-linha">
-                          <td class="tabela-times-posicao"><%= row.position %></td>
-                          <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
-                            <strong class="tabela-times-time-nome" itemprop="name"><%= row.team.popularName %></strong>
-                            <span class="tabela-times-time-sigla"><%= row.team.abbreviation ? row.team.abbreviation : abbreviate_team_name(row.team.popularName) %></span>
-                          </td>
-                          <td class="tabela-times-variacao">
-                            <span>0</span>
-                            <span class="tabela-icone tabela-icone-neutra"></span>
-                          </td>
-                        </tr>
-                        </tbody>
-                      <% } %>
-                    </table>
-                    <div class="tabela-scroll overthrow" style="opacity: 1; padding-left: 250px;">
-                      <table class="tabela-pontos">
-                        <thead>
-                        <tr class="tabela-head-linha">
-                          <th>P</th> <th>J</th> <th>V</th> <th>E</th> <th>D</th> <th class="tabela-pontos-th-duplo">GP</th> <th class="tabela-pontos-th-duplo">GC</th> <th class="tabela-pontos-th-duplo">SG</th> <th>%</th> <th class="tabela-pontos-th-longo">ÚLT. JOGOS</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <% group.classificationTable.rows.each { |row| %>
-                          <tr class="tabela-body-linha">
-                            <td class="tabela-pontos-ponto"><%= row.points %></td> <td><%= row.numberMatches %></td> <td><%= row.wins %></td> <td><%= row.draws %></td> <td><%= row.losts %></td> <td><%= row.proGoals %></td> <td><%= row.againstGoals %></td> <td><%= row.balanceGoals %></td> <td><%= number_to_percentage(row.percent, precision: 1, format: "%n") %></td>
-                            <td class="tabela-pontos-ultimos-jogos">
-                              <% row.matchesHistory.last(5).each { |history| %>
-                                <span class="tabela-icone tabela-icone-circulo tabela-icone-<%= (history == 3) ? "v" : ((history == 1) ? "e" : "d") %> bs-tabela"></span>
-                              <% } %>
-                            </td>
+          <%
+            max_phases = @season.phases.count
+            #selecionar current_phase olhando a data
+          %>
+          <% @season.phases.each_with_index { |phase, index| %>
+            <div id="tabela-fases-<%= @season.id %>-<%= index %>" style="<%= "display:none;" if index != 0 %>">
+              <nav class="tabela-navegacao tabela-navegacao-fases" data-fase-total="6">
+                <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if index > 0 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= index %>', '<%= @season.id%>-<%= index-1 %>')"></span>
+                <span class="tabela-navegacao-seletor tabela-navegacao-seletor-ativo" data-fase="<%= index+1 %>" data-gui-popin=".fases-popin"><%= phase.name %></span>
+                <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo  <% if index < max_phases - 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= index %>', '<%= @season.id%>-<%= index+1 %>')"></span>
+              </nav>
+              <div id="container-para-tabela-simulador-ou-navegacao-js" class="dentro" style="opacity: 1; transition: opacity 0.6s ease 0s;">
+                <article class="tabela-classificacao tabela-futebol  pontos-corridos-grupado" itemscope="" itemtype="http://schema.org/SportsEvent">
+                  <meta itemprop="name" content="">
+                  <meta itemprop="startDate" content="">
+                  <meta itemprop="endDate" content="">
+                  <% phase.groups.each { |group| %>
+                    <section class="section-container">
+                      <header><h2 class="gui-text-section-title tabela-header-titulo"><%= group.name %></h2></header>
+                      <div class="tabela tabela-com-jogos-por-grupo">
+                        <table class="tabela-times">
+                          <colgroup>
+                            <col class="tabela-times-col-posicao">
+                            <col class="tabela-times-col-time">
+                            <col class="tabela-times-col-variacao">
+                          </colgroup>
+                          <thead>
+                          <tr class="tabela-head-linha">
+                            <th class="tabela-times-head" colspan="3">Classificação</th>
                           </tr>
-                        <% } %>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <aside class="lista-de-jogos lista-de-jogos-dentro-grupo" data-url-pattern-navegador-jogos="/servico/backstage/esportes_campeonato/esporte/futebol/modalidade/futebol_de_campo/categoria/profissional/campeonato/campeonato-brasileiro/edicao/campeonato-brasileiro-2018/fases/fase-unica-seriea-2018/rodada/">
-                    <header>
-                      <h2 class="gui-text-section-title tabela-header-titulo">JOGOS</h2>
-                    </header>
-                    <%
-                      max_round = group.matches.max_by {|x| x.round }.round
-                      x = group.matches.sort_by {|m| m.round }.detect{|m| m.matchStatus == "SCHEDULED"}
-                      current_round = x ? (x.round != 1 ? x.round-1 : x.round) : max_round
-                      #selecionar current_round olhando a data
-                    %>
-                    <% group.matches.group_by { |m| m.round }.each { |round, matches| %>
-                      <div id="tabela-jogos-<%= @phase.id %>-<%= group.id %>-<%= round %>" style="<%= "display:none;" if round != current_round %>">
-                        <nav class="tabela-navegacao tabela-navegacao-jogos<%= @phase.id %>-<%= group.id %>-<%= round %>">
-                          <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if round > 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirRodada(this, '<%= @phase.id%>-<%= group.id %>-<%= round %>', '<%= @phase.id%>-<%= group.id %>-<%= round-1 %>')"></span>
-                          <span class="tabela-navegacao-seletor" data-rodada="<%= round %>" data-rodadas-length="38"><%= round %>ª RODADA</span>
-                          <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo <% if round < max_round %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirRodada(this, '<%= @phase.id%>-<%= group.id %>-<%= round %>', '<%= @phase.id%>-<%= group.id %>-<%= round+1 %>')"></span>
-                        </nav>
-                        <% matches.sort_by{:date}.each do |match| %>
-                          <ul class="lista-de-jogos-conteudo jogos" style="opacity: 1; transition: opacity 0.6s;">
-                            <li class="lista-de-jogos-item">
-                              <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
-                                <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %> x <%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
-                                <meta itemprop="startDate" content="2018-07-25">
-    <!--                              <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="">-->
-                                  <div class="placar-jogo-informacoes"><%= l(DateTime.parse(match.matchDate), format: "%a %d/%m/%Y") %> <span class="placar-jogo-informacoes-local"><%= match.locale %></span> <%= DateTime.parse(match.matchDate).strftime("%H:%M") if match.matchDate and (DateTime.parse(match.matchDate).hour != 0 or DateTime.parse(match.matchDate).min != 0 or DateTime.parse(match.matchDate).sec != 0) %></div>
-                                  <div class="placar-jogo-equipes">
-                                <span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
-                                  <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>">
-                                  <span class="placar-jogo-equipes-sigla" title="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>"><%= match.homeTeam ? (match.homeTeam.abbreviation ? match.homeTeam.abbreviation : abbreviate_team_name(match.homeTeam.popularName)) : match.homeTeamLabel %></span>
-                                  <span class="placar-jogo-equipes-nome"><%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %></span>
-                                  <%= image_tag (match.homeTeam ? (match.homeTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-mandante", width:"30", height:"30", title:match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel, itemprop:"image" %>
-                                </span>
-                                    <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
-                                  <span class="placar-jogo-equipes-placar-mandante"><% if match.matchStatus != "SCHEDULED"%><%= match.homeScore %><% end %></span>
-                                  <span class="tabela-icone tabela-icone-versus"></span>
-                                  <span class="placar-jogo-equipes-placar-visitante"><% if match.matchStatus != "SCHEDULED"%><%= match.awayScore %><% end %></span>
-                                </span>
-                                    <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam"><meta itemprop="name" content="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
-                                      <%= image_tag (match.awayTeam ? (match.awayTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-visitante", width:"30", height:"30", title:match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel, itemprop:"image" %>
-                                      <span class="placar-jogo-equipes-sigla" title="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>"><%= match.awayTeam ? (match.awayTeam.abbreviation ? match.awayTeam.abbreviation : abbreviate_team_name(match.awayTeam.popularName)) : match.awayTeamLabel %></span>
-                                  <span class="placar-jogo-equipes-nome"><%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %></span>
-                                </span>
-                                  </div>
-    <!--                              </a>-->
-                              </div>
-                            </li>
-                          </ul>
-                        <% end %>
+                          </thead>
+                          <tbody>
+                          <% group.classificationTable.rows.each { |row| %>
+                            <tr class="tabela-body-linha">
+                              <td class="tabela-times-posicao" style=""><%= row.position %></td>
+                              <td class="tabela-times-time" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                                <a class="tabela-times-time-link" href="" title="<%= row.team.popularName %>" alt="<%= row.team.popularName %>" itemprop="url"><strong class="tabela-times-time-nome" itemprop="name"><%= row.team.popularName %></strong><span class="tabela-times-time-sigla"><%= row.team.abbreviation ? row.team.abbreviation : abbreviate_team_name(row.team.popularName) %></span></a>
+                              </td>
+                              <td class="tabela-times-variacao">
+                                <!-- span>1</span><span class="tabela-icone tabela-icone-positiva"></span-->
+                              </td>
+                            </tr>
+                          <% } %>
+                          </tbody>
+                        </table>
+                        <div class="tabela-scroll overthrow" style="opacity: 1; padding-left: 239px;">
+                          <table class="tabela-pontos">
+                            <thead>
+                            <tr class="tabela-head-linha">
+                              <th>P</th>
+                              <th>J</th>
+                              <th>V</th>
+                              <th>E</th>
+                              <th>D</th>
+                              <th class="tabela-pontos-th-duplo">GP</th>
+                              <th class="tabela-pontos-th-duplo">GC</th>
+                              <th class="tabela-pontos-th-duplo">SG</th>
+                              <th>%</th>
+                              <th class="tabela-pontos-th-longo">ÚLT. JOGOS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% group.classificationTable.rows.each { |row| %>
+                              <tr class="tabela-body-linha">
+                                <td class="tabela-pontos-ponto"><%= row.points %></td> <td><%= row.numberMatches %></td> <td><%= row.wins %></td> <td><%= row.draws %></td> <td><%= row.losts %></td> <td><%= row.proGoals %></td> <td><%= row.againstGoals %></td> <td><%= row.balanceGoals %></td> <td><%= number_to_percentage(row.percent, precision: 1, format: "%n") %></td>
+                                <td class="tabela-pontos-ultimos-jogos">
+                                  <% row.matchesHistory.last(5).each { |history| %>
+                                    <span class="tabela-icone tabela-icone-circulo tabela-icone-<%= (history == 3) ? "v" : ((history == 1) ? "e" : "d") %> bs-tabela"></span>
+                                  <% } %>
+                                </td>
+                              </tr>
+                            <% } %>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-                    <% } %>
-                  </aside>
-                </section>
-              <% } %>
-              <footer class="legenda-classificacao">
-                <div class="legenda-grupos">
-                  <div class="legenda-grupo">
-                    <span class="legenda-label"><span class="tabela-icone" style="background-color:#0000ff;"></span> Libertadores </span>
-                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#008000;"></span> Sul-Americana </span>
-                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#ff0000;"></span> Rebaixados </span>
-                    <span class="legenda-label"> <span class="tabela-icone" style="background-color:#00ffff;"></span> Pré-Libertadores </span>
-                  </div>
-                  <div class="legenda-grupo">
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-positiva"></span> subiu </span>
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-negativa"></span> caiu </span>
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-e"></span> manteve </span>
-                  </div>
-                  <div class="legenda-grupo">
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-v"></span> vitoria </span>
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-e"></span> empate </span>
-                    <span class="legenda-label"> <span class="tabela-icone tabela-icone-circulo tabela-icone-d"></span> derrota </span>
-                  </div>
-                </div>
-                <span id="ver-regulamento-js" class="legenda-regulamento">ver regulamento</span>
-                <div class="disclaimer"> </div>
-                <div class="regulamento-texto-js"><%= @season.regulation %></div>
-              </footer>
-            </article>
-          </div>
+                      <aside class="lista-de-jogos lista-de-jogos-dentro-grupo">
+                        <header><h2 class="gui-text-section-title tabela-header-titulo">JOGOS</h2></header>
+                        <%
+                          max_round = group.matches.max_by {|x| x.round }.round
+                          x = group.matches.sort_by {|m| m.round }.detect{|m| m.matchStatus == "SCHEDULED"}
+                          current_round = x ? (x.round != 1 ? x.round-1 : x.round) : max_round
+                          #selecionar current_round olhando a data
+                        %>
+                        <% group.matches.group_by { |m| m.round }.each { |round, matches| %>
+                          <div id="tabela-jogos-<%= phase.id %>-<%= group.id %>-<%= round %>" style="<%= "display:none;" if round != current_round %>">
+                            <nav class="tabela-navegacao tabela-navegacao-jogos<%= phase.id %>-<%= group.id %>-<%= round %>">
+                              <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if round > 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirRodada(this, '<%= phase.id%>-<%= group.id %>-<%= round %>', '<%= phase.id%>-<%= group.id %>-<%= round-1 %>')"></span>
+                              <span class="tabela-navegacao-seletor" data-rodada="<%= round %>" data-rodadas-length="38"><%= round %>ª RODADA</span>
+                              <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo <% if round < max_round %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirRodada(this, '<%= phase.id%>-<%= group.id %>-<%= round %>', '<%= phase.id%>-<%= group.id %>-<%= round+1 %>')"></span>
+                            </nav>
+                            <% matches.sort_by{:date}.each do |match| %>
+                              <ul class="lista-de-jogos-conteudo" style="opacity: 1; transition: opacity 0.6s ease 0s;">
+                                <li class="lista-de-jogos-item">
+                                  <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
+                                    <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %> x <%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
+                                    <meta itemprop="startDate" content="2018-06-25">
+                                    <!--                              <a class="placar-jogo-link placar-jogo-link-confronto-js theme-color-primary" href="">-->
+                                    <div class="placar-jogo-informacoes"><%= l(DateTime.parse(match.matchDate), format: "%a %d/%m/%Y") %> <span class="placar-jogo-informacoes-local"><%= match.locale %></span> <%= DateTime.parse(match.matchDate).strftime("%H:%M") if match.matchDate and (DateTime.parse(match.matchDate).hour != 0 or DateTime.parse(match.matchDate).min != 0 or DateTime.parse(match.matchDate).sec != 0) %></div>
+                                    <div class="placar-jogo-equipes">
+                                  <span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                                    <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>">
+                                    <span class="placar-jogo-equipes-sigla" title="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>"><%= match.homeTeam ? (match.homeTeam.abbreviation ? match.homeTeam.abbreviation : abbreviate_team_name(match.homeTeam.popularName)) : match.homeTeamLabel %></span>
+                                    <span class="placar-jogo-equipes-nome"><%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %></span>
+                                    <%= image_tag (match.homeTeam ? (match.homeTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-mandante", width:"30", height:"30", title:match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel, itemprop:"image" %>
+                                  </span>
+                                      <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
+                                    <span class="placar-jogo-equipes-placar-mandante"><% if match.matchStatus != "SCHEDULED"%><%= match.homeScore %><% end %></span>
+                                    <span class="tabela-icone tabela-icone-versus"></span>
+                                    <span class="placar-jogo-equipes-placar-visitante"><% if match.matchStatus != "SCHEDULED"%><%= match.awayScore %><% end %></span>
+                                  </span>
+                                      <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
+                                    <meta itemprop="name" content="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
+                                        <%= image_tag (match.awayTeam ? (match.awayTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-visitante", width:"30", height:"30", title:match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel, itemprop:"image" %>
+                                        <span class="placar-jogo-equipes-sigla" title="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>"><%= match.awayTeam ? (match.awayTeam.abbreviation ? match.awayTeam.abbreviation : abbreviate_team_name(match.awayTeam.popularName)) : match.awayTeamLabel %></span>
+                                    <span class="placar-jogo-equipes-nome"><%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %></span>
+                                  </span>
+                                    </div>
+                                    <!-- p class="placar-jogo-complemento">veja como foi</p-->
+                                    <!--                              </a>-->
+                                  </div>
+                                </li>
+                              </ul>
+                            <% end %>
+                          </div>
+                        <% } %>
+                      </aside>
+                    </section>
+                  <% } %>
+                  <footer class="legenda-classificacao">
+                    <div class="legenda-grupos">
+                      <div class="legenda-grupo">
+                        <span class="legenda-label"><span class="tabela-icone" style="background-color:#0000ff;"></span> Classificados</span>
+                      </div>
+                      <div class="legenda-grupo">
+                        <span class="legenda-label"><span class="tabela-icone tabela-icone-positiva"></span> subiu</span><span class="legenda-label"><span class="tabela-icone tabela-icone-negativa"></span> caiu</span><span class="legenda-label"><span class="tabela-icone tabela-icone-e"></span> manteve</span>
+                      </div>
+                      <div class="legenda-grupo">
+                        <span class="legenda-label"><span class="tabela-icone tabela-icone-circulo tabela-icone-v"></span> vitoria</span><span class="legenda-label"><span class="tabela-icone tabela-icone-circulo tabela-icone-e"></span> empate</span><span class="legenda-label"><span class="tabela-icone tabela-icone-circulo tabela-icone-d"></span> derrota</span>
+                      </div>
+                    </div>
+                    <div class="disclaimer"></div>
+                  </footer>
+                </article>
+              </div>
+            </div>
+          <% } %>
           <section class="artilharia-wrapper">
             <h2 class="gui-text-section-title artilharia-header-titulo">Principais Artilheiros</h2>
             <div class="ranking">
@@ -167,118 +163,645 @@
                 </div>
                 <div class="ranking-content">
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> 1 </div>
+                    <div class="ranking-item"> 1</div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "bb6dbd41ce03bd76bd06730bbedf0ec7_140x140.png", width:"50", height:"50", alt: "Róger Guedes" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Harry Kane">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "Atletico-Mineiro-escudo65px.png", width:"30", height:"30", alt: "Atlético-MG" %>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="Inglaterra">
                       </div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Róger Guedes</div>
+                        <div class="jogador-nome">Harry Kane</div>
                         <div class="jogador-posicao">Atacante</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 6</div>
                     </div>
                   </div>
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> </div>
+                    <div class="ranking-item"> 2</div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png", width:"50", height:"50", alt: "Pedro" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Griezmann">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "fluminense_60x60.png", width:"30", height:"30", alt: "Fluminense" %>
-                      </div>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="França"></div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-nome">Griezmann</div>
                         <div class="jogador-posicao">Atacante</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 4</div>
                     </div>
                   </div>
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> 1 </div>
+                    <div class="ranking-item"></div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "bb6dbd41ce03bd76bd06730bbedf0ec7_140x140.png", width:"50", height:"50", alt: "Róger Guedes" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Cristiano Ronaldo">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "Atletico-Mineiro-escudo65px.png", width:"30", height:"30", alt: "Atlético-MG" %>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="Portugal">
                       </div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Róger Guedes</div>
+                        <div class="jogador-nome">Cristiano Ronaldo</div>
                         <div class="jogador-posicao">Atacante</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 4</div>
                     </div>
                   </div>
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> </div>
+                    <div class="ranking-item"> 3</div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png", width:"50", height:"50", alt: "Pedro" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Mina">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "fluminense_60x60.png", width:"30", height:"30", alt: "Fluminense" %>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="Colômbia">
                       </div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Pedro</div>
-                        <div class="jogador-posicao">Atacante</div>
+                        <div class="jogador-nome">Mina</div>
+                        <div class="jogador-posicao">Zagueiro Direito</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 3</div>
                     </div>
                   </div>
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> </div>
+                    <div class="ranking-item"></div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png", width:"50", height:"50", alt: "Pedro" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Cristiano Ronaldo">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "fluminense_60x60.png", width:"30", height:"30", alt: "Fluminense" %>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="Portugal">
                       </div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-nome">Cristiano Ronaldo</div>
                         <div class="jogador-posicao">Atacante</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 4</div>
                     </div>
                   </div>
                   <div class="ranking-item-wrapper">
-                    <div class="ranking-item"> </div>
+                    <div class="ranking-item"></div>
                     <div class="jogador">
                       <div class="jogador-foto">
-                        <%= image_tag "8a0f5cf3775be841f66c7bbb1bdf14d1_140x140.png", width:"50", height:"50", alt: "Pedro" %>
+                        <img src="/assets/no_image_jogador.png" width="50" height="50" alt="Cristiano Ronaldo">
                       </div>
                       <div class="jogador-escudo">
-                        <%= image_tag "fluminense_60x60.png", width:"30", height:"30", alt: "Fluminense" %>
+                        <img src="/assets/no_image.png" width="30" height="30" alt="Portugal">
                       </div>
                       <div class="jogador-info">
-                        <div class="jogador-nome">Pedro</div>
+                        <div class="jogador-nome">Cristiano Ronaldo</div>
                         <div class="jogador-posicao">Atacante</div>
                       </div>
-                      <div class="jogador-gols"> 9 </div>
+                      <div class="jogador-gols"> 4</div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- ranking wrapper --> </div> <!-- ranking --> </section>
+        </div>
+      </div>
+    </div>
+    <div class="tabela-feed">
+      <div class="row feed tabela-feed theme theme-border-color-primary">
+        <h3 class="feed__legend"> Mais da Copa do Mundo </h3>
+        <div class="theme">
+          <div id="bstn-launcher">
+            <style type="text/css">
+            .bstn-dtqs {
+              margin-bottom: 9px
+            }
+
+            .bstn-dtq {
+              display: none
+            }
+
+            @media (max-width: 539px) {
+              .scoreboard-bastian-feed.destaque {
+                margin-bottom: 4px;
+                min-width: 304px;
+                padding-bottom: 4px;
+                width: 60%
+              }
+            }
+
+            @media (min-width: 540px) {
+              .bstn-dtqs > div {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                height: 460px
+              }
+
+              .scoreboard-bastian-feed.destaque {
+                width: 80%
+              }
+            }
+
+            @media (min-width: 1000px) {
+              .bstn-dtqs > div {
+                grid-auto-columns: 1fr;
+                grid-auto-rows: 1fr;
+                grid-gap: 12px;
+                height: 560px
+              }
+
+              .variation-uber .bstn-dtq-relateditem {
+                display: none
+              }
+
+              .variation-uber .with-related:after {
+                display: none
+              }
+            }
+
+            #feed-placeholder, .bstn-fd, .bstn-feed, .feed-root {
+              contain: layout style
+            }
+
+            .bastian-page {
+              contain: layout paint style
+            }
+
+            .post-notifier-pushstream {
+              display: none
+            }
+
+            .bstn-feed .bastian-card-mobile, .bstn-item-shape, .tag-manager-publicidade-banner_feed_esppub--visivel .tag-manager-publicidade-banner_feed_esppub {
+              background-color: #fff;
+              contain: layout paint style;
+              margin: 16px 0 0;
+              overflow: hidden
+            }
+
+            .feed-media-wrapper {
+              margin: 24px -24px 0
+            }
+
+            .bstn-fd-item-cover {
+              background-color: #ccc;
+              background-position: 50%;
+              background-size: cover;
+              height: 0;
+              overflow: hidden;
+              padding-top: 56.25%;
+              position: relative;
+              width: 100%
+            }
+
+            .bstn-fd-cover-picture {
+              height: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 100%
+            }
+
+            .bstn-fd-picture-image {
+              color: transparent;
+              height: 100%;
+              width: 100%
+            }
+
+            .feed-post-body {
+              padding: 24px 24px 0
+            }
+
+            .feed-post-link {
+              display: block;
+              text-decoration: none
+            }
+
+            .feed-post-header {
+              color: #333;
+              font: 16px/20px Arial, sans-serif;
+              letter-spacing: -.32px
+            }
+
+            .bstn-aovivo-label, .feed-post-header-chapeu {
+              vertical-align: middle
+            }
+
+            .bstn-aovivo-label {
+              background: red;
+              border-radius: 3px;
+              color: #fff;
+              display: inline-block;
+              font: 700 11px Arial, sans-serif;
+              margin: 0 8px 0 0;
+              padding: 3px 8px 2px;
+              position: relative;
+              text-transform: uppercase
+            }
+
+            .feed-post-body-title {
+              font: 700 20px/24px Arial, sans-serif;
+              letter-spacing: -.72px;
+              margin-top: 8px;
+              word-wrap: break-word
+            }
+
+            .feed-post-body-title:first-child {
+              margin-top: 0
+            }
+
+            .bstn-related .feed-post-body-title {
+              display: block;
+              font-size: 16px;
+              letter-spacing: -.48px;
+              line-height: 20px;
+              margin-top: 24px
+            }
+
+            .feed-post-body-resumo {
+              color: #555;
+              font: 16px/20px Arial, sans-serif;
+              letter-spacing: -.32px;
+              margin-top: 8px
+            }
+
+            .feed-post-metadata {
+              align-items: center;
+              color: #555;
+              display: block;
+              font: 12px/12px Arial, sans-serif;
+              justify-content: flex-start;
+              letter-spacing: 0;
+              margin: 24px 0 0
+            }
+
+            .feed-post-metadata:last-child {
+              margin: 24px 0
+            }
+
+            .feed-media-wrapper + .feed-post-metadata {
+              margin: 16px 0
+            }
+
+            .bstn-related .feed-post-metadata {
+              margin: 16px 0 0
+            }
+
+            .feed-post-datetime {
+              white-space: nowrap
+            }
+
+            .feed-post-metadata > :after {
+              content: "\2014";
+              margin-left: 4px
+            }
+
+            .feed-post-metadata > :last-child:after {
+              display: none
+            }
+
+            .feed-post-metadata-section:before {
+              content: "Em "
+            }
+
+            .bstn-related {
+              margin: 24px 0
+            }
+
+            .feed-media-wrapper ~ .bstn-related {
+              margin: 16px 0 24px
+            }
+
+            .bstn-relateditems {
+              list-style-type: none
+            }
+
+            .bstn-relateditem {
+              background-color: #fff;
+              border-top: 1px solid #ddd;
+              color: #999;
+              margin-top: 16px;
+              padding: 0
+            }
+
+            .bstn-relateditem + .bstn-relateditem {
+              margin-top: 24px
+            }
+
+            .bstn-face-temporeal .bstn-aovivo-label {
+              background-color: #3b9c00
+            }
+
+            .label-tempo-real, .scoreboard-bastian-feed {
+              display: none
+            }
+
+            .highlight-bastian-feed {
+              color: #555;
+              display: none;
+              display: block;
+              font-size: 16px;
+              letter-spacing: -.32px;
+              line-height: 20px;
+              margin: 8px 0 0
+            }
+
+            .highlight-bastian-feed .time {
+              font-size: 12px;
+              line-height: 16px;
+              margin-bottom: 8px
+            }
+
+            .highlight-bastian-feed .text {
+              margin-bottom: 4px
+            }
+
+            .load-more {
+              margin: 16px 24px 0;
+              text-align: center;
+              text-transform: uppercase
+            }
+
+            .load-more a {
+              color: #fff;
+              display: block;
+              font: 700 14px Arial, sans-serif;
+              padding: 15px 0
+            }
+
+            @media (max-width: 539px) {
+              body {
+                background-color: #eee;
+                margin: 0
+              }
+
+              .areatemplate-esquerda {
+                float: left;
+                margin-top: 12px !important;
+                padding-left: 12px;
+                padding-right: 12px;
+                width: 100%
+              }
+            }
+
+            @media (min-width: 540px) {
+              .bstn-fd .bstn-item-shape {
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+                margin: 32px 0 0
+              }
+
+              #bstn-rtcl .bstn-item-shape {
+                background-color: #fff;
+                contain: layout paint style;
+                overflow: hidden
+              }
+
+              .no-image .feed-post {
+                min-height: auto
+              }
+
+              .feed-post:after {
+                background-color: #c8c8c8;
+                content: "";
+                display: block;
+                height: 1px;
+                margin-top: 32px
+              }
+
+              .feed-post-body {
+                align-items: start;
+                column-gap: 16px;
+                display: grid;
+                grid-column-gap: 16px;
+                grid-template-columns: repeat(auto-fit, minmax(45%, -webkit-max-content));
+                grid-template-columns: repeat(auto-fit, minmax(45%, max-content));
+                grid-template-rows: repeat(5, auto);
+                padding: 0
+              }
+
+              .feed-post-header {
+                font-size: 15px;
+                grid-column: 2;
+                letter-spacing: -.75px;
+                line-height: normal;
+                padding-bottom: 8px
+              }
+
+              .feed-post-body-title {
+                font-size: 24px;
+                grid-column: 2;
+                letter-spacing: -1.25px;
+                line-height: 28px;
+                margin: 4px 0 0
+              }
+
+              .feed-post-body-title:first-child {
+                margin-top: 0
+              }
+
+              .bstn-related .feed-post-body-title {
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: -.3px;
+                line-height: normal
+              }
+
+              .feed-post-body-resumo {
+                grid-column: 2;
+                letter-spacing: -.3px;
+                margin: 4px 0 7px
+              }
+
+              .feed-media-wrapper {
+                grid-column: 1;
+                grid-row: 1/span 5;
+                margin: 0
+              }
+
+              .feed-post-metadata {
+                color: #999;
+                font-size: 11px;
+                grid-column: 2;
+                line-height: 11px;
+                margin: 6px 0 0;
+                text-transform: uppercase
+              }
+
+              .feed-media-wrapper + .feed-post-metadata, .feed-post-metadata:last-child {
+                margin: 6px 0 0
+              }
+
+              .bstn-related .feed-post-metadata {
+                display: none
+              }
+
+              .bstn-related ~ .feed-post-metadata {
+                margin-top: 6px
+              }
+
+              .bstn-related {
+                display: block;
+                grid-column: 2;
+                grid-row: 3;
+                margin: 6px 0 0 1px
+              }
+
+              .bstn-relateditems {
+                list-style-type: disc;
+                padding: 0 0 0 16px
+              }
+
+              .bstn-relateditem {
+                background-color: transparent;
+                border: 0;
+                margin: 2px 0;
+                padding: 4px 0
+              }
+
+              .bstn-relateditem + .bstn-relateditem {
+                margin-top: 2px
+              }
+
+              .bstn-fd .tag-manager-publicidade-container--visivel, .bstn-feed .bastian-card-mobile, .tag-manager-publicidade-banner_feed_esppub--visivel .tag-manager-publicidade-banner_feed_esppub {
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+                margin: 32px 0 0
+              }
+
+              .bs-home .areatemplate-direita, .bs-home .areatemplate-esquerda {
+                margin-top: 40px
+              }
+            }</style>
+            <div id="bstn-feed-launcher">
+              <div class="feed-root">
+                <div id="feed-placeholder" class="feed-placeholder">
+                  <div class="_s">
+                    <div class="bstn-fd bstn-cls-deprecated_ bastian bstn-feed _bstn-cls-deprecated elastic bstn-fd-csr bstn-cls-deprecated_ bstn-feed-csr _bstn-cls-deprecated">
+                      <div class="post-notifier-pushstream gui-color-primary-bg bstn-fd-visible-top"></div>
+                      <div class="_i">
+                        <div class="_s">
+                          <div class="bastian-page" data-index="1">
+                            <div class="_i">
+                              <div class="_s">
+                                <div class="bastian-feed-item" data-type="basico" data-index="1">
+                                  <div class="feed-post bstn-item-shape type-basico" id="3dccb133-39ac-42e9-8b2f-e4a11f77156a">
+                                    <div class="feed-post-body">
+                                      <div class="feed-post-header with-post-chapeu">
+                                        <span class="feed-post-header-chapeu">GloboEsporte.com</span></div>
+                                      <div class="feed-post-body-title gui-color-primary gui-color-hover ">
+                                        <div class="_o">
+                                          <div class="_s">
+                                            <a href="http://app.globoesporte.globo.com/futebol/copa-do-mundo/simulador-da-copa-do-mundo-2018/" class="feed-post-link gui-color-primary gui-color-hover">Faça
+                                              as contas no simulador da Copa do Mundo. Quem avança em cada grupo?</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="feed-post-body-resumo">
+                                        <div class="_o">O GloboEsporte.com ajuda você a fazer as contas para descobrir
+                                          quem se classifica, os confrontos do mata-mata e quem leva a taça na Rússia
+                                        </div>
+                                      </div>
+                                      <div class="feed-media-wrapper">
+                                        <div class="_o">
+                                          <a href="http://app.globoesporte.globo.com/futebol/copa-do-mundo/simulador-da-copa-do-mundo-2018/" class="feed-post-figure-link gui-image-hover">
+                                            <div class="bstn-fd-item-cover ">
+                                              <picture class="bstn-fd-cover-picture">
+                                                <img class="bstn-fd-picture-image" alt="Foto: (Reuters/Maxim Shemetov)" title="Foto: (Reuters/Maxim Shemetov)" srcset="https://s2.glbimg.com/3wybWHQVFTvPZO4gYiWTnhBjdLM=/0x0:2000x1372/540x304/smart/http://s2.glbimg.com/W_7np_0yQAs79zr58PKYZb67AbI=/0x0:2000x1372/2000x1372/s.glbimg.com/es/ge/f/original/2017/12/01/2017-12-01t153113z_982302685_rc1a46304170_rtrmadp_3_soccer-worldcup-draw_Tewhguu.jpg 1x,https://s2.glbimg.com/bbAB-DAlaZX9aI5efij4a51x3QQ=/0x0:2000x1372/810x456/smart/http://s2.glbimg.com/W_7np_0yQAs79zr58PKYZb67AbI=/0x0:2000x1372/2000x1372/s.glbimg.com/es/ge/f/original/2017/12/01/2017-12-01t153113z_982302685_rc1a46304170_rtrmadp_3_soccer-worldcup-draw_Tewhguu.jpg 1.5x,https://s2.glbimg.com/6DtXLm7T024nuv6ebIPoEYHwiho=/0x0:2000x1372/1080x608/smart/http://s2.glbimg.com/W_7np_0yQAs79zr58PKYZb67AbI=/0x0:2000x1372/2000x1372/s.glbimg.com/es/ge/f/original/2017/12/01/2017-12-01t153113z_982302685_rc1a46304170_rtrmadp_3_soccer-worldcup-draw_Tewhguu.jpg 2x" src="/assets/2017-12-01t153113z_982302685_rc1a46304170_rtrmadp_3_soccer-worldcup-draw_Tewhguu.jpg">
+                                              </picture>
+                                            </div>
+                                          </a></div>
+                                      </div>
+                                      <div class="feed-post-metadata"><span class="feed-post-datetime">Há 2 meses</span>
+                                        <span class="feed-post-metadata-section"> GloboEsporte.com </span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="_s">
+                                <div class="bastian-feed-item" data-type="cobertura" data-index="2">
+                                  <div class="feed-post bstn-item-shape type-cobertura" id="5d8d8e87-61fb-409b-b298-0a7499c2a187">
+                                    <div class="feed-post-body">
+                                      <div class="feed-post-header"><span class="bstn-aovivo-label">ao vivo</span></div>
+                                      <div class="feed-post-body-title gui-color-primary gui-color-hover ">
+                                        <div class="_o">
+                                          <div class="_s">
+                                            <a href="https://globoesporte.globo.com/futebol/copa-do-mundo/ao-vivo/a-copa-do-mundo-na-russia.ghtml" class="feed-post-link gui-color-primary gui-color-hover">Direto
+                                              da Rússia</a></div>
+                                        </div>
+                                      </div>
+                                      <div class="feed-post-body-resumo">
+                                        <div class="_o">Começou! Acompanhe em tempo real tudo o que rola no país da
+                                          Copa!
+                                        </div>
+                                      </div>
+                                      <div class="feed-media-wrapper">
+                                        <div class="_o">
+                                          <a href="https://globoesporte.globo.com/futebol/copa-do-mundo/ao-vivo/a-copa-do-mundo-na-russia.ghtml" class="feed-post-figure-link gui-image-hover">
+                                            <div class="bstn-fd-item-cover ">
+                                              <picture class="bstn-fd-cover-picture">
+                                                <img class="bstn-fd-picture-image" alt="Foto: (Lucas Figueiredo/CBF)" title="Foto: (Lucas Figueiredo/CBF)" srcset="https://s2.glbimg.com/L65AK0l69Cb6If-0JAVT7PEEVL8=/0x0:1034x642/540x304/smart/http://s2.glbimg.com/oQRjYgnHtATiOBU58DHdMxzSql4=/98x158:1132x800/1034x642/s.glbimg.com/es/ge/f/original/2018/06/14/dfp5_6lxkainqnx.jpg 1x,https://s2.glbimg.com/E6alr9xlp0JrSwcW7eDBvnvUZOk=/0x0:1034x642/810x456/smart/http://s2.glbimg.com/oQRjYgnHtATiOBU58DHdMxzSql4=/98x158:1132x800/1034x642/s.glbimg.com/es/ge/f/original/2018/06/14/dfp5_6lxkainqnx.jpg 1.5x,https://s2.glbimg.com/7oUM4_thVwpsE5mEBMIax4IJiQ0=/0x0:1034x642/1080x608/smart/http://s2.glbimg.com/oQRjYgnHtATiOBU58DHdMxzSql4=/98x158:1132x800/1034x642/s.glbimg.com/es/ge/f/original/2018/06/14/dfp5_6lxkainqnx.jpg 2x" src="/assets/dfp5_6lxkainqnx.jpg">
+                                              </picture>
+                                            </div>
+                                          </a></div>
+                                      </div>
+                                      <div class="feed-post-metadata"><span class="feed-post-datetime">Há 2 meses</span>
+                                        <span class="feed-post-metadata-section"> copa do mundo </span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="_s">
+                                <div class="bastian-feed-item" data-type="advertise" data-index="3">
+                                  <div class="bstn-feed-ad">
+                                    <div class="_preempt-visibility">
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="_s">
+                                <div class="bastian-feed-item" data-type="materia" data-index="4">
+                                  <div class="feed-post bstn-item-shape type-materia" id="ccdca22d9f8ae8dff7e7d21d4ddbacc4">
+                                    <div class="feed-post-body">
+                                      <div class="feed-post-header"></div>
+                                      <div class="feed-post-body-title gui-color-primary gui-color-hover ">
+                                        <div class="_o">
+                                          <div class="_s">
+                                            <a href="https://globoesporte.globo.com/futebol/selecao-brasileira/noticia/entenda-como-funciona-o-novo-ranking-da-fifa-baseado-no-metodo-elo.ghtml" class="feed-post-link gui-color-primary gui-color-hover">Entenda
+                                              como funciona o novo ranking da Fifa baseado no método Elo</a></div>
+                                        </div>
+                                      </div>
+                                      <div class="feed-post-body-resumo">
+                                        <div class="_o">GloboEsporte.com mostra como é a fórmula originada no xadrez,
+                                          para medir a força relativa dos oponentes, e sua adaptação com o algoritmo
+                                          SUM, desenvolvido para o futebol
+                                        </div>
+                                      </div>
+                                      <div class="feed-media-wrapper">
+                                        <div class="_o">
+                                          <a href="https://globoesporte.globo.com/futebol/selecao-brasileira/noticia/entenda-como-funciona-o-novo-ranking-da-fifa-baseado-no-metodo-elo.ghtml" class="feed-post-figure-link gui-image-hover">
+                                            <div class="bstn-fd-item-cover ">
+                                              <picture class="bstn-fd-cover-picture">
+                                                <img class="bstn-fd-picture-image" srcset="https://s2.glbimg.com/C-rnh8yLziltUUKostl94p8NtNk=/540x304/top/smart/http://s.glbimg.com/es/ge/f/original/2018/02/20/2018-02-20t124418z_1689928921_rc1869f3b920_rtrmadp_3_soccer-worldcup-jordan.jpg 1x,https://s2.glbimg.com/X8d6LAGzkQtqt-gP5GzbO__Xfr4=/810x456/top/smart/http://s.glbimg.com/es/ge/f/original/2018/02/20/2018-02-20t124418z_1689928921_rc1869f3b920_rtrmadp_3_soccer-worldcup-jordan.jpg 1.5x,https://s2.glbimg.com/i-6v1Bqv6hYPIPwSx8w8BMGu1B8=/1080x608/top/smart/http://s.glbimg.com/es/ge/f/original/2018/02/20/2018-02-20t124418z_1689928921_rc1869f3b920_rtrmadp_3_soccer-worldcup-jordan.jpg 2x" src="/assets/2018-02-20t124418z_1689928921_rc1869f3b920_rtrmadp_3_soccer-worldcup-jordan.jpg">
+                                              </picture>
+                                            </div>
+                                          </a></div>
+                                      </div>
+                                      <div class="feed-post-metadata"><span class="feed-post-datetime">Há 2 dias</span>
+                                        <span class="feed-post-metadata-section"> seleção brasileira </span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="footer desktop theme-hover theme-bg-color-primary">
-      <div class="row">
-        <div class="column small-24">
-          <div class="footer__service">
-            <span class="footer__copyright">© Copyright 2018-2018 Corujito Comunicação e Participações S.A.</span>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-</div>
+  </main>

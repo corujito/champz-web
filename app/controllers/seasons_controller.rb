@@ -9,7 +9,6 @@ class SeasonsController < ApplicationController
     @season = @season_summary.season
     @championship = @season.championship
 
-    @phase = @season.phases[0]
     @top_strikers = []
   end
 end

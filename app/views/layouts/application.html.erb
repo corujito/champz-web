@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <!-- tentar remover -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) + " | Champz.com" : "Champz.com" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Champz Web" %>">
@@ -14,12 +13,100 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-<!--    <header>-->
-      <%#= render 'layouts/navigation' %>
-<!--    </header>-->
+    <!--    <header>-->
+    <%#= render 'layouts/navigation' %>
+    <!--    </header>-->
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
+      <%= render 'layouts/messages' %>
+      <div class="glb-grid">
+        <div id="glb-topo" class="glb-topo">
+          <header id="header-produto" class="header-navegacao header- header-editoria header-ready header-personalized" data-analytics="T">
+            <style>
+              .header-navegacao-color {
+                color: #3b9c00;
+              }
+
+              .gui-color-primary-bg-after:after {
+                background-color: #3b9c00;
+              }
+
+              .header-navegacao .logo {
+                width: 32px;
+                height: 24px;
+              }
+
+              .header-navegacao .header-title {
+                padding: 0 32px;
+              }
+
+              @media (max-width: 767px) {
+                .has-not-regua .header-navegacao .header-title {
+                  padding: 0 24px 0 74px;
+                }
+              }
+
+              @media (min-width: 768px) {
+                .header-navegacao .logo {
+                  width: 33px;
+                  height: 25px;
+                }
+
+                .header-navegacao .header-title {
+                  padding: 0 75px;
+                }
+
+                .header-navegacao .floating-bar .logo {
+                  width: 33px;
+                  height: 25px;
+                }
+              }
+
+              @media (min-width: 1065px) {
+                .header-navegacao .header-title {
+                  padding: 0 145px;
+                }
+              }
+            </style>
+            <div class="gui-color-primary-bg header-principal header-navegacao-color">
+              <div class="grid-12 header-navegacao-container row">
+                <div class="area-principal column">
+                  <h1 class="header-title">
+                    <div class="header-title-content">
+                      <a class="header-editoria--link ellip-line" href="<%= yield(:website) %>"><%= yield(:championship_name) %></a>
+                    </div>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="floating-bar">
+              <div class="gui-color-primary-bg header-principal header-navegacao-color">
+                <div class="grid-12 header-navegacao-container row">
+                  <div class="area-principal column">
+                    <h1 class="header-title">
+                      <div class="header-title-content">
+                        <a class="header-editoria--link ellip-line" href="<%= yield(:website) %>"><%= yield(:championship_name) %></a>
+                      </div>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+        <%= yield %>
+
+        <footer>
+          <div class="footer desktop theme-hover theme-bg-color-primary">
+            <div class="row">
+              <div class="column small-24">
+                <div class="footer__service">
+                  <span class="footer__copyright">© Copyright 2018-2018 Corujito Comunicação e Participações S.A.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </main>
   </body>
 </html>

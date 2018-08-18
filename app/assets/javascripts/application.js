@@ -17,9 +17,9 @@
 //= require_tree .
 
 function abrirFase(elem, id, idnext) {
-    if ($('#tabela-fase-'+idnext).length != 0) {
-        $('#tabela-fase-'+id).css('display', 'none');
-        $('#tabela-fase-'+idnext).css('display', '');
+    if ($('#tabela-fases-'+idnext).length != 0) {
+        $('#tabela-fases-'+id).css('display', 'none');
+        $('#tabela-fases-'+idnext).css('display', '');
     }
 }
 function abrirRodada(elem, id, idnext) {
