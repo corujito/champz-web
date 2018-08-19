@@ -12,15 +12,17 @@
           %>
           <% @season.phases.sort_by {|p| p.order}.each { |phase| %>
             <div id="tabela-fases-<%= @season.id %>-<%= phase.order %>" style="<%= "display:none;" if phase.order != 1 %>">
-              <nav class="tabela-navegacao tabela-navegacao-fases" data-fase-total="6">
-                <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if phase.order > 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= phase.order %>', '<%= @season.id%>-<%= phase.order-1 %>')"></span>
-                <span class="tabela-navegacao-seletor tabela-navegacao-seletor-ativo" data-fase="<%= phase.order+1 %>" data-gui-popin=".fases-popin"><%= phase.name %></span>
-                <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo  <% if phase.order < max_phases %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= phase.order %>', '<%= @season.id%>-<%= phase.order+1 %>')"></span>
-              </nav>
+              <% if max_phases > 1 %>
+                <nav class="tabela-navegacao tabela-navegacao-fases" data-fase-total="6">
+                  <span class="gui-icon gui-icon-arrow-left-highlight tabela-navegacao-setas tabela-navegacao-anterior <% if phase.order > 1 %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= phase.order %>', '<%= @season.id%>-<%= phase.order-1 %>')"></span>
+                  <span class="tabela-navegacao-seletor tabela-navegacao-seletor-ativo" data-fase="<%= phase.order+1 %>" data-gui-popin=".fases-popin"><%= phase.name %></span>
+                  <span class="gui-icon gui-icon-arrow-right-highlight tabela-navegacao-setas tabela-navegacao-proximo  <% if phase.order < max_phases %>tabela-navegacao-setas-ativa<% end %>" onclick="abrirFase(this, '<%= @season.id%>-<%= phase.order %>', '<%= @season.id%>-<%= phase.order+1 %>')"></span>
+                </nav>
+              <% end %>
               <% if phase.order == 1 %>
-                <%= render :partial => 'tabela_e_jogos_grupos', locals: {phase: phase} %>
+                <%= render :partial => 'tabela_e_jogos_grupos', locals: {phase: phase, max_phases: max_phases} %>
               <% else %>
-                <%= render :partial => 'jogos_playoffs', locals: {phase: phase} %>
+                <%= render :partial => 'jogos_playoffs', locals: {phase: phase, max_phases: max_phases} %>
               <% end %>
             </div>
           <% } %>

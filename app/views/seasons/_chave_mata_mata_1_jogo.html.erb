@@ -1,42 +1,5 @@
 <div class="chave-jogo chave-1-jogos chave-jogo-com-chave-anterior">
-  <div class="placar-jogo" itemscope="" itemtype="http://schema.org/SportsEvent">
-    <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %> x <%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
-    <meta itemprop="startDate" content="2018-07-06">
-    <!--                <a class="placar-jogo-link placar-jogo-link-confronto-js" href="">-->
-    <div class="placar-jogo-informacoes"><%= l(DateTime.parse(match.matchDate), format: "%a %d/%m/%Y") %>
-      <span class="placar-jogo-informacoes-local"><%= match.locale %></span> <%= DateTime.parse(match.matchDate).strftime("%H:%M") if match.matchDate and (DateTime.parse(match.matchDate).hour != 0 or DateTime.parse(match.matchDate).min != 0 or DateTime.parse(match.matchDate).sec != 0) %>
-    </div>
-    <div class="placar-jogo-equipes">
-      <span class="placar-jogo-equipes-item placar-jogo-equipes-mandante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
-        <meta itemprop="name" content="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>">
-        <span class="placar-jogo-equipes-sigla" title="<%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %>"><%= match.homeTeam ? (match.homeTeam.abbreviation ? match.homeTeam.abbreviation : abbreviate_team_name(match.homeTeam.popularName)) : match.homeTeamLabel %></span>
-        <span class="placar-jogo-equipes-nome"><%= match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel %></span>
-        <%= image_tag (match.homeTeam ? (match.homeTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-mandante", width: "30", height: "30", title: match.homeTeam ? match.homeTeam.popularName : match.homeTeamLabel, itemprop: "image" %>
-      </span>
-      <span class="placar-jogo-equipes-item placar-jogo-equipes-placar">
-        <span class="placar-jogo-equipes-placar-mandante"><% if match.matchStatus != "SCHEDULED" %><%= match.homeScore %><% end %></span>
-
-        <% if match.homePenaltyScore and match.awayPenaltyScore %>
-          <span class="placar-jogo-equipes-placar-separador">
-            (<span class="placar-jogo-equipes-placar-penalties"><%= match.homePenaltyScore %></span>
-            <span class="tabela-icone tabela-icone-versus"></span>
-            <span class="placar-jogo-equipes-placar-penalties"><%= match.awayPenaltyScore %></span>)
-          </span>
-        <% else %>
-          <span class="tabela-icone tabela-icone-versus"></span>
-        <% end %>
-        <span class="placar-jogo-equipes-placar-visitante"><% if match.matchStatus != "SCHEDULED" %><%= match.awayScore %><% end %></span>
-      </span>
-      <span class="placar-jogo-equipes-item placar-jogo-equipes-visitante" itemprop="performer" itemscope="" itemtype="http://schema.org/SportsTeam">
-        <meta itemprop="name" content="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>">
-        <%= image_tag (match.awayTeam ? (match.awayTeam.symbolImage || "no_image.png") : "no_image.png"), class: "placar-jogo-equipes-escudo-visitante", width: "30", height: "30", title: match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel, itemprop: "image" %>
-        <span class="placar-jogo-equipes-sigla" title="<%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %>"><%= match.awayTeam ? (match.awayTeam.abbreviation ? match.awayTeam.abbreviation : abbreviate_team_name(match.awayTeam.popularName)) : match.awayTeamLabel %></span>
-        <span class="placar-jogo-equipes-nome"><%= match.awayTeam ? match.awayTeam.popularName : match.awayTeamLabel %></span>
-      </span>
-    </div>
-    <!--                  <p class="placar-jogo-complemento">veja como foi</p>-->
-    <!--                </a>-->
-  </div>
+  <%= render :partial => 'placar_jogo', locals: {match: match} %>
   <div class="chave-jogo-conector-anterior"></div>
   <div class="chave-jogo-separador">
     <div class="chave-jogo-nome-centralizador"><span class="chave-jogo-nome"><%= group.name %></span></div>

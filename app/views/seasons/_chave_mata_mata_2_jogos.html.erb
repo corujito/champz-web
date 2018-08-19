@@ -1,0 +1,7 @@
+<div class="chave-jogo chave-2-jogos ">
+  <%= render :partial => 'placar_jogo', locals: {match: matches.first} %>
+  <div class="chave-jogo-separador">
+    <div class="chave-jogo-nome-centralizador"><span class="chave-jogo-nome"><%= group.name %></span></div>
+  </div>
+  <%= render :partial => 'placar_jogo', locals: {match: matches.last} %>
+</div>

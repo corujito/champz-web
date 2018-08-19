@@ -13,21 +13,30 @@
         <%
           group1 = groups_matches[0]
           group2 = groups_matches[1]
+          chave_de_1_jogo = (group1.matches.count == 1)
         %>
         <div class="chave-jogo-espacador chave-jogo-com-chave-posterior">
-          <div class="chave-jogo-conector-posterior chave-jogo-conector-posterior-duplo chave-1-jogo-conector-posterior-duplo">
-            <div class="chave-jogo-conector-linha"></div>
-          </div>
+          <% if groups_matches.count == 2 and @season.phases.count != phase.order %>
+            <div class="chave-jogo-conector-posterior chave-jogo-conector-posterior-duplo <% if chave_de_1_jogo then %>chave-1-jogo-conector-posterior-duplo<% else %>chave-2-jogo-conector-posterior-duplo<% end %>">
+              <div class="chave-jogo-conector-linha"></div>
+            </div>
+          <% end %>
 
-          <% group1.matches.group_by { |m| m.round }.each { |round, matches| %>
-            <% match = matches.first %>
-            <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: match, group: group1} %>
-          <% } %>
+          <% matches = group1.matches.sort_by { |m| m.round } %>
+          <% if matches.count == 1 %>
+            <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: matches.first, group: group1} %>
+          <% else %>
+            <%= render :partial => 'chave_mata_mata_2_jogos', locals: {matches: matches, group: group1} %>
+          <% end %>
 
-          <% group2.matches.group_by { |m| m.round }.each { |round, matches| %>
-            <% match = matches.first %>
-            <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: match, group: group2} %>
-          <% } %>
+          <% if group2 %>
+            <% matches = group2.matches.sort_by { |m| m.round } %>
+            <% if matches.count == 1 %>
+              <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: matches.first, group: group2} %>
+            <% else %>
+              <%= render :partial => 'chave_mata_mata_2_jogos', locals: {matches: matches, group: group2} %>
+            <% end %>
+          <% end %>
         </div>
       <% } %>
 
