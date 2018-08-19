@@ -1,0 +1,36 @@
+<div id="container-para-tabela-simulador-ou-navegacao-js" class="dentro" style="opacity: 1; transition: opacity 0.6s ease 0s;">
+  <article class="tabela-classificacao">
+    <header>
+      <h2 class="gui-text-section-title tabela-header-titulo">CONFRONTOS</h2>
+    </header>
+
+    <section class="mata-mata-conteudo" itemscope="" itemtype="http://schema.org/SportsEvent">
+      <meta itemprop="name" content="">
+      <meta itemprop="startDate" content="">
+      <meta itemprop="endDate" content="">
+
+      <% phase.groups.each_slice(2) { |groups_matches| %>
+        <%
+          group1 = groups_matches[0]
+          group2 = groups_matches[1]
+        %>
+        <div class="chave-jogo-espacador chave-jogo-com-chave-posterior">
+          <div class="chave-jogo-conector-posterior chave-jogo-conector-posterior-duplo chave-1-jogo-conector-posterior-duplo">
+            <div class="chave-jogo-conector-linha"></div>
+          </div>
+
+          <% group1.matches.group_by { |m| m.round }.each { |round, matches| %>
+            <% match = matches.first %>
+            <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: match, group: group1} %>
+          <% } %>
+
+          <% group2.matches.group_by { |m| m.round }.each { |round, matches| %>
+            <% match = matches.first %>
+            <%= render :partial => 'chave_mata_mata_1_jogo', locals: {match: match, group: group2} %>
+          <% } %>
+        </div>
+      <% } %>
+
+    </section>
+  </article>
+</div>
