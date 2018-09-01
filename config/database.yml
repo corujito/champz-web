@@ -52,7 +52,8 @@ test:
 
 production:
   adapter:  postgresql
-  host:     <%= ENV['DATABASE_HOST'] %>
+  host:     <%= ENV['CHAMPZ_WEB_POSTGRESDB_SERVICE_SERVICE_HOST'] %>
+  port:     <%= ENV['CHAMPZ_WEB_POSTGRESDB_SERVICE_SERVICE_PORT'] %>
   encoding: unicode
   database: champz-web_production
   pool:     5

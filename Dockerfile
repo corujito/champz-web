@@ -14,7 +14,8 @@ RUN apk update && \
 RUN mkdir /app
 WORKDIR /app
 
-#ENV RAILS_SERVE_STATIC_FILES 1
+# comentar linha abaixo qdo servir arquivos fora do rails
+ENV RAILS_SERVE_STATIC_FILES 1
 ENV RAILS_LOG_TO_STDOUT 1
 ENV RAILS_ENV production
 ENV RACK_ENV production
